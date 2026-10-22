@@ -24,7 +24,8 @@
 .blogo{display:flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:14px;aspect-ratio:3/1;background:#fff;padding:10px}
 .blogo img{max-width:72%;max-height:100%;width:auto;object-fit:contain}
 .bcol p{margin:0;color:var(--ink-2)}
-.bcol .link{align-self:flex-start}
+.bcol .link{align-self:flex-start;margin-top:auto}
+.ccard img{border:1px solid var(--line)}
 @media(max-width:640px){.brands2{grid-template-columns:1fr;gap:16px}}
 @media(max-width:1020px){.brands2{gap:16px}.bcol{padding:16px}}
 .nav>li>a{padding:26px 12px;font-size:15px}
@@ -56,9 +57,13 @@
 .vid{position:relative;border-radius:var(--r-lg);overflow:hidden;background:#0d2b2d}
 .vid video{width:100%;aspect-ratio:4/3;object-fit:cover}
 article.card .ph img{transform:scale(.9) translateY(4%)}article.card:hover .ph img{transform:scale(.94) translateY(4%)}
-.vid .cap{position:absolute;left:14px;bottom:12px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;padding:4px 10px;border-radius:99px}
+.vid .cap{position:absolute;right:14px;bottom:12px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;padding:4px 10px;border-radius:99px}
 .consult{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border-radius:var(--r-lg);overflow:hidden;color:#fff;border:1px solid var(--line)}
-.consult .t{padding:40px;background:var(--head-color)}.consult h2{color:#fff}
+.consult .t{padding:40px;background:var(--head-color);display:flex;flex-direction:column;justify-content:center}
+.consult form>b{font-family:var(--head);color:var(--head-color);font-size:20px!important}
+.consult select{color:#757575;padding:0 8px}
+.authorbox{display:flex;gap:14px;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;margin:28px 0}.authorbox span{width:52px;height:52px;border-radius:50%;background:var(--head-color);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--head);font-weight:700;flex:none}.authorbox small{color:var(--muted)}
+.art-body img{margin-left:auto;margin-right:auto}.consult h2{color:#fff}
 .consult form{background:#fff;color:var(--ink);padding:30px;display:grid;gap:10px;align-content:center}
 .consult select,.consult input{height:48px;border-radius:10px;border:1.5px solid var(--line-strong);padding:0 12px;background:#fff}
 @media(max-width:820px){.consult{grid-template-columns:1fr}.consult .t{padding:24px}.consult form{padding:20px}}
@@ -66,6 +71,7 @@ article.card .ph img{transform:scale(.9) translateY(4%)}article.card:hover .ph i
 .proof div{display:flex;gap:12px;align-items:center;padding:18px 20px;font-weight:700;font-size:14.5px;border-right:1px solid var(--line)}
 .proof div:last-child{border-right:0}.proof svg{width:26px;height:26px;flex:none;color:var(--accent-text)}
 .proof small{display:block;color:var(--muted);font-weight:600;font-size:12.5px}
+@media(max-width:520px){.proof{grid-template-columns:1fr}.proof div{border-right:0!important;border-bottom:1px solid var(--line)}.proof div:last-child{border-bottom:0}}
 @media(max-width:820px){.proof{grid-template-columns:1fr 1fr}.proof div:nth-child(2){border-right:0}.proof div:nth-child(-n+2){border-bottom:1px solid var(--line)}.proof div{padding:14px 12px;font-size:13.5px}}
 .m-sec details summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:10px 0;font-weight:800}
 .m-sec details summary::-webkit-details-marker{display:none}
@@ -79,6 +85,7 @@ article.card .ph img{transform:scale(.9) translateY(4%)}article.card:hover .ph i
 .range b{font-family:var(--head);font-size:20px;color:var(--head-color);display:block}
 .range span{font-size:13.5px;color:var(--muted)}
 @media(max-width:900px){.ranges{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.ranges h3{font-size:18px}}
 </style>
 <link rel="icon" href="img/brand-mono.webp"></head>
 <body class=" has-bnav" data-root="">
@@ -90,6 +97,7 @@ article.card .ph img{transform:scale(.9) translateY(4%)}article.card:hover .ph i
   <ul class="nav"><li><a href="shop.html">Shop by concern</a><div class="mega"><div class="wrap mega-in"><div><h4>By skin concern</h4><a href="shop.html?concern=pigmentation">Pigmentation and dullness</a><a href="shop.html?concern=aging">Anti-aging and firming</a><a href="shop.html?concern=oily">Oily and acne-prone</a><a href="shop.html?concern=sensitive">Sensitive and redness</a><a href="shop.html?concern=dry">Dry and dehydrated</a><a href="shop.html?concern=feet">Hands and feet</a></div><div><h4>By Repêchage range</h4><a href="shop.html?concern=pigmentation">Biolight</a><a href="shop.html?concern=aging">Vita Cura</a><a href="shop.html?concern=oily">Hydra Medic</a><a href="shop.html?concern=sensitive">Hydra 4 and Red-Out</a><a href="shop.html?concern=dry">Hydra Dew Pure</a><a href="repechage.html">All Repêchage</a></div><div><h4>By product</h4><a href="shop.html?cat=cleansers">Cleansers</a><a href="shop.html?cat=toners">Toners and mists</a><a href="shop.html?cat=serums">Serums</a><a href="shop.html?cat=moisturizers">Moisturizers</a><a href="shop.html?cat=masks">Masks and exfoliants</a><a href="shop.html?cat=eyes">Eye care</a><a href="shop.html?cat=kits">Starter kits</a></div><a class="mega-card" href="shop.html?cat=kits"><img src="img/card-biolight-starter-kit.webp" alt=""><div><span class="eyebrow">New to Repêchage?</span><p style="margin:6px 0 10px;font-weight:700">Try a full routine in travel sizes with a starter kit.</p><span class="link">Shop starter kits</span></div></a></div></div></li><li><a href="repechage.html">Repêchage</a></li><li><a href="voesh.html">VOESH</a></li><li><a href="shop.html?cat=kits">Starter kits</a></li><li><a href="professionals.html">Professionals</a></li><li><a href="learn.html">Learn</a></li></ul>
   <div class="hdr-icons">
     <button class="ibtn" data-open="search" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+    <a class="ibtn wa-h" href="https://wa.me/?text=Hi%20JB%20Skincare%2C%20I%20would%20like%20some%20advice" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3a13 13 0 00-11.2 19.6L3 29l6.6-1.7A13 13 0 1016 3zm0 23.6a10.6 10.6 0 01-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1116 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 01-4.3-3.8c-.3-.6.3-.5 1-1.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 00-.9.4 3.6 3.6 0 00-1.1 2.7 6.3 6.3 0 001.3 3.3 14.4 14.4 0 005.5 4.8c2 .9 2.8 1 3.8.8a3.2 3.2 0 002.1-1.5 2.6 2.6 0 00.2-1.5c-.1-.2-.3-.3-.6-.4z"/></svg></a>
     <a class="ibtn t-hide-sm" href="account.html" aria-label="Account" style="display:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></a>
     <button class="ibtn" data-open="cart" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg><span class="count" data-count style="display:none">0</span></button>
   </div>
@@ -104,23 +112,23 @@ article.card .ph img{transform:scale(.9) translateY(4%)}article.card:hover .ph i
 <option value="best">Bestsellers</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></div></div>
 <div class="grid" id="shopGrid"><article class="card" data-cat="moisturizers repechage" data-concern="pigmentation" data-price="13500" data-rank="0">
 <a class="ph" href="p/biolight-brightening-overnight-cream.html"><span class="badge">Bestseller</span><img src="img/card-biolight-brightening-overnight-cream.webp" alt="Biolight Brightening Overnight Cream" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation and dullness</span><h3><a href="p/biolight-brightening-overnight-cream.html">Biolight Brightening Overnight Cream</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation</span><h3><a href="p/biolight-brightening-overnight-cream.html">Biolight Brightening Overnight Cream</a></h3>
 <p class="sub">Repêchage · 50 ml</p>
 <div class="row"><span class="price">₹13,500</span><button class="add" data-add="biolight-brightening-overnight-cream">Add to cart</button></div></div></article><article class="card" data-cat="serums repechage" data-concern="aging dry" data-price="7640" data-rank="1">
 <a class="ph" href="p/c-serum-seaweed-filtrate.html"><span class="badge">Bestseller</span><img src="img/card-c-serum-seaweed-filtrate.webp" alt="C-Serum Seaweed Filtrate" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging and firming</span><h3><a href="p/c-serum-seaweed-filtrate.html">C&#8209;Serum Seaweed Filtrate</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging, firming</span><h3><a href="p/c-serum-seaweed-filtrate.html">C&#8209;Serum Seaweed Filtrate</a></h3>
 <p class="sub">Repêchage · 50 ml</p>
 <div class="row"><span class="price">₹7,640</span><button class="add" data-add="c-serum-seaweed-filtrate">Add to cart</button></div></div></article><article class="card" data-cat="toners repechage" data-concern="dry sensitive" data-price="4500" data-rank="2">
 <a class="ph" href="p/algo-mist-hydrating-seaweed-and-mineral-water-spray.html"><span class="badge">Bestseller</span><img src="img/card-algo-mist-hydrating-seaweed-and-mineral-water-spray.webp" alt="Algo Mist Hydrating Seaweed and Mineral Water Spray" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive and redness</span><h3><a href="p/algo-mist-hydrating-seaweed-and-mineral-water-spray.html">Algo Mist Hydrating Seaweed and Mineral Water Spray</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive skin, redness</span><h3><a href="p/algo-mist-hydrating-seaweed-and-mineral-water-spray.html">Algo Mist Hydrating Seaweed and Mineral Water Spray</a></h3>
 <p class="sub">Repêchage · 180 ml</p>
 <div class="row"><span class="price">₹4,500</span><button class="add" data-add="algo-mist-hydrating-seaweed-and-mineral-water-spray">Add to cart</button></div></div></article><article class="card" data-cat="masks repechage" data-concern="pigmentation oily" data-price="4320" data-rank="3">
 <a class="ph" href="p/one-minute-exfoliating-mask.html"><span class="badge">Bestseller</span><img src="img/card-one-minute-exfoliating-mask.webp" alt="One-Minute Exfoliating Mask" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation and dullness</span><h3><a href="p/one-minute-exfoliating-mask.html">One&#8209;Minute Exfoliating Mask</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation</span><h3><a href="p/one-minute-exfoliating-mask.html">One&#8209;Minute Exfoliating Mask</a></h3>
 <p class="sub">Repêchage · 70 ml</p>
 <div class="row"><span class="price">₹4,320</span><button class="add" data-add="one-minute-exfoliating-mask">Add to cart</button></div></div></article><article class="card" data-cat="kits repechage" data-concern="pigmentation" data-price="8100" data-rank="4">
 <a class="ph" href="p/biolight-starter-kit.html"><img src="img/card-biolight-starter-kit.webp" alt="Biolight Starter Kit" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation and dullness</span><h3><a href="p/biolight-starter-kit.html">Biolight Starter Kit</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation</span><h3><a href="p/biolight-starter-kit.html">Biolight Starter Kit</a></h3>
 <p class="sub">Repêchage</p>
 <div class="row"><span class="price">₹8,100</span><button class="add" data-add="biolight-starter-kit">Add to cart</button></div></div></article><article class="card" data-cat="socks voesh" data-concern="feet" data-price="750" data-rank="5">
 <a class="ph" href="p/heel-socks.html"><img src="img/card-heel-socks.webp" alt="VOESH Moisturizing Heel Socks" loading="lazy" width="600" height="600"></a>
@@ -132,111 +140,111 @@ article.card .ph img{transform:scale(.9) translateY(4%)}article.card:hover .ph i
 <p class="sub">VOESH</p>
 <div class="row"><span class="price">₹1,250</span><button class="add" data-add="peeling-socks">Add to cart</button></div></div></article><article class="card" data-cat="pedicure voesh" data-concern="feet" data-price="950" data-rank="7">
 <a class="ph" href="p/pedi-in-a-box-deluxe-4-step.html"><img src="img/card-pedi-in-a-box-deluxe-4-step-lavender-relieve.webp" alt="Pedi in a Box Deluxe, 4 Step" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure at home</span><h3><a href="p/pedi-in-a-box-deluxe-4-step.html">Pedi in a Box Deluxe, 4&nbsp;Step</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure</span><h3><a href="p/pedi-in-a-box-deluxe-4-step.html">Pedi in a Box Deluxe, 4&nbsp;Step</a></h3>
 <p class="sub">VOESH · 18 scents</p>
 <div class="row"><span class="price">₹950</span><a class="add" href="p/pedi-in-a-box-deluxe-4-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="cleansers repechage" data-concern="pigmentation" data-price="4400" data-rank="8">
 <a class="ph" href="p/biolight-brightening-cleanser-with-laminaria-complex.html"><img src="img/card-biolight-brightening-cleanser-with-laminaria-complex.webp" alt="Biolight Brightening Cleanser with Laminaria Complex" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation and dullness</span><h3><a href="p/biolight-brightening-cleanser-with-laminaria-complex.html">Biolight Brightening Cleanser with Laminaria Complex</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation</span><h3><a href="p/biolight-brightening-cleanser-with-laminaria-complex.html">Biolight Brightening Cleanser with Laminaria Complex</a></h3>
 <p class="sub">Repêchage · 180 ml</p>
 <div class="row"><span class="price">₹4,400</span><button class="add" data-add="biolight-brightening-cleanser-with-laminaria-complex">Add to cart</button></div></div></article><article class="card" data-cat="toners repechage" data-concern="pigmentation" data-price="4400" data-rank="9">
 <a class="ph" href="p/biolight-brightening-toner-with-laminaria-complex.html"><img src="img/card-biolight-brightening-toner-with-laminaria-complex.webp" alt="Biolight Brightening Toner with Laminaria Complex" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation and dullness</span><h3><a href="p/biolight-brightening-toner-with-laminaria-complex.html">Biolight Brightening Toner with Laminaria Complex</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation</span><h3><a href="p/biolight-brightening-toner-with-laminaria-complex.html">Biolight Brightening Toner with Laminaria Complex</a></h3>
 <p class="sub">Repêchage · 180 ml</p>
 <div class="row"><span class="price">₹4,400</span><button class="add" data-add="biolight-brightening-toner-with-laminaria-complex">Add to cart</button></div></div></article><article class="card" data-cat="serums repechage" data-concern="pigmentation" data-price="8100" data-rank="10">
 <a class="ph" href="p/biolight-brightening-skin-correct-serum.html"><img src="img/card-biolight-brightening-skin-correct-serum.webp" alt="Biolight Brightening Skin Correct Serum" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation and dullness</span><h3><a href="p/biolight-brightening-skin-correct-serum.html">Biolight Brightening Skin Correct Serum</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation</span><h3><a href="p/biolight-brightening-skin-correct-serum.html">Biolight Brightening Skin Correct Serum</a></h3>
 <p class="sub">Repêchage · 30 ml</p>
 <div class="row"><span class="price">₹8,100</span><button class="add" data-add="biolight-brightening-skin-correct-serum">Add to cart</button></div></div></article><article class="card" data-cat="moisturizers repechage" data-concern="pigmentation" data-price="11250" data-rank="11">
 <a class="ph" href="p/biolight-brightening-daytime-protection-cream.html"><img src="img/card-biolight-brightening-daytime-protection-cream.webp" alt="Biolight Brightening Daytime Protection Cream" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation and dullness</span><h3><a href="p/biolight-brightening-daytime-protection-cream.html">Biolight Brightening Daytime Protection Cream</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation</span><h3><a href="p/biolight-brightening-daytime-protection-cream.html">Biolight Brightening Daytime Protection Cream</a></h3>
 <p class="sub">Repêchage · 50 ml</p>
 <div class="row"><span class="price">₹11,250</span><button class="add" data-add="biolight-brightening-daytime-protection-cream">Add to cart</button></div></div></article><article class="card" data-cat="eyes repechage" data-concern="pigmentation" data-price="7375" data-rank="12">
 <a class="ph" href="p/biolight-brightening-frost-bright-eye-contour-gel.html"><img src="img/card-biolight-brightening-frost-bright-eye-contour-gel.webp" alt="Biolight Brightening Frost Bright Eye Contour Gel" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation and dullness</span><h3><a href="p/biolight-brightening-frost-bright-eye-contour-gel.html">Biolight Brightening Frost Bright Eye Contour Gel</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation</span><h3><a href="p/biolight-brightening-frost-bright-eye-contour-gel.html">Biolight Brightening Frost Bright Eye Contour Gel</a></h3>
 <p class="sub">Repêchage · 15 ml</p>
 <div class="row"><span class="price">₹7,375</span><button class="add" data-add="biolight-brightening-frost-bright-eye-contour-gel">Add to cart</button></div></div></article><article class="card" data-cat="serums repechage" data-concern="aging" data-price="6600" data-rank="13">
 <a class="ph" href="p/vita-cura-opti-lift-serum.html"><img src="img/card-vita-cura-opti-lift-serum.webp" alt="Vita Cura Opti-Lift Serum" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging and firming</span><h3><a href="p/vita-cura-opti-lift-serum.html">Vita Cura Opti&#8209;Lift Serum</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging, firming</span><h3><a href="p/vita-cura-opti-lift-serum.html">Vita Cura Opti&#8209;Lift Serum</a></h3>
 <p class="sub">Repêchage · 15 ml</p>
 <div class="row"><span class="price">₹6,600</span><button class="add" data-add="vita-cura-opti-lift-serum">Add to cart</button></div></div></article><article class="card" data-cat="cleansers repechage" data-concern="aging" data-price="4675" data-rank="14">
 <a class="ph" href="p/vita-cura-triple-action-cleansing-cream.html"><img src="img/card-vita-cura-triple-action-cleansing-cream.webp" alt="Vita Cura Triple Action Cleansing Cream" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging and firming</span><h3><a href="p/vita-cura-triple-action-cleansing-cream.html">Vita Cura Triple Action Cleansing Cream</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging, firming</span><h3><a href="p/vita-cura-triple-action-cleansing-cream.html">Vita Cura Triple Action Cleansing Cream</a></h3>
 <p class="sub">Repêchage · 177 ml</p>
 <div class="row"><span class="price">₹4,675</span><button class="add" data-add="vita-cura-triple-action-cleansing-cream">Add to cart</button></div></div></article><article class="card" data-cat="toners repechage" data-concern="aging" data-price="3900" data-rank="15">
 <a class="ph" href="p/vita-cura-renewal-toner.html"><img src="img/card-vita-cura-renewal-toner.webp" alt="Vita Cura Renewal Toner" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging and firming</span><h3><a href="p/vita-cura-renewal-toner.html">Vita Cura Renewal Toner</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging, firming</span><h3><a href="p/vita-cura-renewal-toner.html">Vita Cura Renewal Toner</a></h3>
 <p class="sub">Repêchage · 177 ml</p>
 <div class="row"><span class="price">₹3,900</span><button class="add" data-add="vita-cura-renewal-toner">Add to cart</button></div></div></article><article class="card" data-cat="serums repechage" data-concern="aging" data-price="7560" data-rank="16">
 <a class="ph" href="p/vita-cura-cell-renewal-serum.html"><img src="img/card-vita-cura-cell-renewal-serum.webp" alt="Vita Cura Cell Renewal Serum" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging and firming</span><h3><a href="p/vita-cura-cell-renewal-serum.html">Vita Cura Cell Renewal Serum</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging, firming</span><h3><a href="p/vita-cura-cell-renewal-serum.html">Vita Cura Cell Renewal Serum</a></h3>
 <p class="sub">Repêchage · 30 ml</p>
 <div class="row"><span class="price">₹7,560</span><button class="add" data-add="vita-cura-cell-renewal-serum">Add to cart</button></div></div></article><article class="card" data-cat="kits repechage" data-concern="aging" data-price="7200" data-rank="17">
 <a class="ph" href="p/vita-cura-starter-kit.html"><img src="img/card-vita-cura-starter-kit.webp" alt="Vita Cura Starter Kit" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging and firming</span><h3><a href="p/vita-cura-starter-kit.html">Vita Cura Starter Kit</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging, firming</span><h3><a href="p/vita-cura-starter-kit.html">Vita Cura Starter Kit</a></h3>
 <p class="sub">Repêchage</p>
 <div class="row"><span class="price">₹7,200</span><button class="add" data-add="vita-cura-starter-kit">Add to cart</button></div></div></article><article class="card" data-cat="serums repechage" data-concern="aging" data-price="11700" data-rank="18">
 <a class="ph" href="p/vita-cura-b3-serum-complex.html"><img src="img/card-vita-cura-b3-serum-complex.webp" alt="Vita Cura B3 Serum Complex" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging and firming</span><h3><a href="p/vita-cura-b3-serum-complex.html">Vita Cura B3 Serum Complex</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging, firming</span><h3><a href="p/vita-cura-b3-serum-complex.html">Vita Cura B3 Serum Complex</a></h3>
 <p class="sub">Repêchage · 50 ml</p>
 <div class="row"><span class="price">₹11,700</span><button class="add" data-add="vita-cura-b3-serum-complex">Add to cart</button></div></div></article><article class="card" data-cat="serums repechage" data-concern="aging" data-price="15300" data-rank="19">
 <a class="ph" href="p/vita-cura-elixir-complex.html"><img src="img/card-vita-cura-elixir-complex.webp" alt="Vita Cura Elixir Complex" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging and firming</span><h3><a href="p/vita-cura-elixir-complex.html">Vita Cura Elixir Complex</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging, firming</span><h3><a href="p/vita-cura-elixir-complex.html">Vita Cura Elixir Complex</a></h3>
 <p class="sub">Repêchage · 50 ml</p>
 <div class="row"><span class="price">₹15,300</span><button class="add" data-add="vita-cura-elixir-complex">Add to cart</button></div></div></article><article class="card" data-cat="cleansers repechage" data-concern="oily" data-price="3775" data-rank="20">
 <a class="ph" href="p/hydra-medic-face-wash-foaming-gel-cleanser.html"><img src="img/card-hydra-medic-face-wash-foaming-gel-cleanser.webp" alt="Hydra Medic Face Wash Foaming Gel Cleanser" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily and acne&#8209;prone</span><h3><a href="p/hydra-medic-face-wash-foaming-gel-cleanser.html">Hydra Medic Face Wash Foaming Gel Cleanser</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/hydra-medic-face-wash-foaming-gel-cleanser.html">Hydra Medic Face Wash Foaming Gel Cleanser</a></h3>
 <p class="sub">Repêchage · 177 ml</p>
 <div class="row"><span class="price">₹3,775</span><button class="add" data-add="hydra-medic-face-wash-foaming-gel-cleanser">Add to cart</button></div></div></article><article class="card" data-cat="toners repechage" data-concern="oily" data-price="3500" data-rank="21">
 <a class="ph" href="p/hydra-medic-astringent-blemish-control.html"><img src="img/card-hydra-medic-astringent-blemish-control.webp" alt="Hydra Medic Astringent Blemish Control" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily and acne&#8209;prone</span><h3><a href="p/hydra-medic-astringent-blemish-control.html">Hydra Medic Astringent Blemish Control</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/hydra-medic-astringent-blemish-control.html">Hydra Medic Astringent Blemish Control</a></h3>
 <p class="sub">Repêchage · 177 ml</p>
 <div class="row"><span class="price">₹3,500</span><button class="add" data-add="hydra-medic-astringent-blemish-control">Add to cart</button></div></div></article><article class="card" data-cat="moisturizers repechage" data-concern="oily" data-price="4500" data-rank="22">
 <a class="ph" href="p/hydra-medic-mattifying-moisturizer.html"><img src="img/card-hydra-medic-mattifying-moisturizer.webp" alt="Hydra Medic Mattifying Moisturizer" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily and acne&#8209;prone</span><h3><a href="p/hydra-medic-mattifying-moisturizer.html">Hydra Medic Mattifying Moisturizer</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/hydra-medic-mattifying-moisturizer.html">Hydra Medic Mattifying Moisturizer</a></h3>
 <p class="sub">Repêchage · 60 ml</p>
 <div class="row"><span class="price">₹4,500</span><button class="add" data-add="hydra-medic-mattifying-moisturizer">Add to cart</button></div></div></article><article class="card" data-cat="serums repechage" data-concern="oily" data-price="3775" data-rank="23">
 <a class="ph" href="p/hydra-medic-beta-hydroxy-serum.html"><img src="img/card-hydra-medic-beta-hydroxy-serum.webp" alt="Hydra Medic Beta Hydroxy Serum" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily and acne&#8209;prone</span><h3><a href="p/hydra-medic-beta-hydroxy-serum.html">Hydra Medic Beta Hydroxy Serum</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/hydra-medic-beta-hydroxy-serum.html">Hydra Medic Beta Hydroxy Serum</a></h3>
 <p class="sub">Repêchage · 60 ml</p>
 <div class="row"><span class="price">₹3,775</span><button class="add" data-add="hydra-medic-beta-hydroxy-serum">Add to cart</button></div></div></article><article class="card" data-cat="masks repechage" data-concern="oily" data-price="2880" data-rank="24">
 <a class="ph" href="p/hydra-medic-clear-complexion-drying-lotion.html"><img src="img/card-hydra-medic-clear-complexion-drying-lotion.webp" alt="Hydra Medic Clear Complexion Drying Lotion" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily and acne&#8209;prone</span><h3><a href="p/hydra-medic-clear-complexion-drying-lotion.html">Hydra Medic Clear Complexion Drying Lotion</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/hydra-medic-clear-complexion-drying-lotion.html">Hydra Medic Clear Complexion Drying Lotion</a></h3>
 <p class="sub">Repêchage · 7.5 ml</p>
 <div class="row"><span class="price">₹2,880</span><button class="add" data-add="hydra-medic-clear-complexion-drying-lotion">Add to cart</button></div></div></article><article class="card" data-cat="masks repechage" data-concern="oily" data-price="3050" data-rank="25">
 <a class="ph" href="p/hydra-medic-sea-mud-perfecting-mask.html"><img src="img/card-hydra-medic-sea-mud-perfecting-mask.webp" alt="Hydra Medic Sea Mud Perfecting Mask" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily and acne&#8209;prone</span><h3><a href="p/hydra-medic-sea-mud-perfecting-mask.html">Hydra Medic Sea Mud Perfecting Mask</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/hydra-medic-sea-mud-perfecting-mask.html">Hydra Medic Sea Mud Perfecting Mask</a></h3>
 <p class="sub">Repêchage · 120 ml</p>
 <div class="row"><span class="price">₹3,050</span><button class="add" data-add="hydra-medic-sea-mud-perfecting-mask">Add to cart</button></div></div></article><article class="card" data-cat="kits repechage" data-concern="oily" data-price="6300" data-rank="26">
 <a class="ph" href="p/hydra-medic-starter-kit.html"><img src="img/card-hydra-medic-starter-kit.webp" alt="Hydra Medic Starter Kit" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily and acne&#8209;prone</span><h3><a href="p/hydra-medic-starter-kit.html">Hydra Medic Starter Kit</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/hydra-medic-starter-kit.html">Hydra Medic Starter Kit</a></h3>
 <p class="sub">Repêchage</p>
 <div class="row"><span class="price">₹6,300</span><button class="add" data-add="hydra-medic-starter-kit">Add to cart</button></div></div></article><article class="card" data-cat="moisturizers repechage" data-concern="aging" data-price="7650" data-rank="27">
 <a class="ph" href="p/opti-firm-lift-cream.html"><img src="img/card-opti-firm-lift-cream.webp" alt="Opti-Firm Lift Cream" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging and firming</span><h3><a href="p/opti-firm-lift-cream.html">Opti&#8209;Firm Lift Cream</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging, firming</span><h3><a href="p/opti-firm-lift-cream.html">Opti&#8209;Firm Lift Cream</a></h3>
 <p class="sub">Repêchage · 30 ml</p>
 <div class="row"><span class="price">₹7,650</span><button class="add" data-add="opti-firm-lift-cream">Add to cart</button></div></div></article><article class="card" data-cat="serums repechage" data-concern="aging" data-price="6300" data-rank="28">
 <a class="ph" href="p/opti-firm-renewal-complex.html"><img src="img/card-opti-firm-renewal-complex.webp" alt="Opti-Firm Renewal Complex" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging and firming</span><h3><a href="p/opti-firm-renewal-complex.html">Opti&#8209;Firm Renewal Complex</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging, firming</span><h3><a href="p/opti-firm-renewal-complex.html">Opti&#8209;Firm Renewal Complex</a></h3>
 <p class="sub">Repêchage · 30 ml</p>
 <div class="row"><span class="price">₹6,300</span><button class="add" data-add="opti-firm-renewal-complex">Add to cart</button></div></div></article><article class="card" data-cat="eyes repechage" data-concern="aging" data-price="7650" data-rank="29">
 <a class="ph" href="p/opti-firm-eye-contour.html"><img src="img/card-opti-firm-eye-contour.webp" alt="Opti-Firm Eye Contour" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging and firming</span><h3><a href="p/opti-firm-eye-contour.html">Opti&#8209;Firm Eye Contour</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging, firming</span><h3><a href="p/opti-firm-eye-contour.html">Opti&#8209;Firm Eye Contour</a></h3>
 <p class="sub">Repêchage · 15 ml</p>
 <div class="row"><span class="price">₹7,650</span><button class="add" data-add="opti-firm-eye-contour">Add to cart</button></div></div></article><article class="card" data-cat="masks repechage" data-concern="pigmentation" data-price="6120" data-rank="30">
 <a class="ph" href="p/rapidex-marine-and-alpha-hydroxy-acid-rapid-exfoliator.html"><img src="img/card-rapidex-marine-and-alpha-hydroxy-acid-rapid-exfoliator.webp" alt="Rapidex Marine and Alpha Hydroxy Acid Rapid Exfoliator" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation and dullness</span><h3><a href="p/rapidex-marine-and-alpha-hydroxy-acid-rapid-exfoliator.html">Rapidex Marine and Alpha Hydroxy Acid Rapid Exfoliator</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation</span><h3><a href="p/rapidex-marine-and-alpha-hydroxy-acid-rapid-exfoliator.html">Rapidex Marine and Alpha Hydroxy Acid Rapid Exfoliator</a></h3>
 <p class="sub">Repêchage · 1.5 ml</p>
 <div class="row"><span class="price">₹6,120</span><button class="add" data-add="rapidex-marine-and-alpha-hydroxy-acid-rapid-exfoliator">Add to cart</button></div></div></article><article class="card" data-cat="moisturizers repechage" data-concern="dry aging" data-price="6750" data-rank="31">
 <a class="ph" href="p/hydro-complex-pfs-cream-for-dry-skin.html"><img src="img/card-hydro-complex-pfs-cream-for-dry-skin.webp" alt="Hydro-Complex PFS Cream for Dry Skin" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging and firming</span><h3><a href="p/hydro-complex-pfs-cream-for-dry-skin.html">Hydro&#8209;Complex PFS Cream for Dry Skin</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging, firming</span><h3><a href="p/hydro-complex-pfs-cream-for-dry-skin.html">Hydro&#8209;Complex PFS Cream for Dry Skin</a></h3>
 <p class="sub">Repêchage · 43 ml</p>
 <div class="row"><span class="price">₹6,750</span><button class="add" data-add="hydro-complex-pfs-cream-for-dry-skin">Add to cart</button></div></div></article><article class="card" data-cat="moisturizers repechage" data-concern="oily" data-price="6850" data-rank="32">
 <a class="ph" href="p/hydro-complex-pfs-cream-for-oily-combination-skin.html"><img src="img/card-hydro-complex-pfs-cream-for-oily-combination-skin.webp" alt="Hydro-Complex PFS Cream for Oily/Combination Skin" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily and acne&#8209;prone</span><h3><a href="p/hydro-complex-pfs-cream-for-oily-combination-skin.html">Hydro&#8209;Complex PFS Cream for Oily/Combination Skin</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/hydro-complex-pfs-cream-for-oily-combination-skin.html">Hydro&#8209;Complex PFS Cream for Oily/Combination Skin</a></h3>
 <p class="sub">Repêchage · 43 ml</p>
 <div class="row"><span class="price">₹6,850</span><button class="add" data-add="hydro-complex-pfs-cream-for-oily-combination-skin">Add to cart</button></div></div></article><article class="card" data-cat="serums repechage" data-concern="aging" data-price="8100" data-rank="33">
 <a class="ph" href="p/triple-action-peptide-serum.html"><img src="img/card-triple-action-peptide-serum.webp" alt="Triple Action Peptide Serum" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging and firming</span><h3><a href="p/triple-action-peptide-serum.html">Triple Action Peptide Serum</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging, firming</span><h3><a href="p/triple-action-peptide-serum.html">Triple Action Peptide Serum</a></h3>
 <p class="sub">Repêchage · 30 ml</p>
 <div class="row"><span class="price">₹8,100</span><button class="add" data-add="triple-action-peptide-serum">Add to cart</button></div></div></article><article class="card" data-cat="eyes repechage" data-concern="" data-price="3420" data-rank="34">
 <a class="ph" href="p/opti-cleanse-oil-free-eye-make-up-remover.html"><img src="img/card-opti-cleanse-oil-free-eye-make-up-remover.webp" alt="Opti-Cleanse Oil Free Eye Make-up Remover" loading="lazy" width="600" height="600"></a>
@@ -244,103 +252,103 @@ article.card .ph img{transform:scale(.9) translateY(4%)}article.card:hover .ph i
 <p class="sub">Repêchage · 120 ml</p>
 <div class="row"><span class="price">₹3,420</span><button class="add" data-add="opti-cleanse-oil-free-eye-make-up-remover">Add to cart</button></div></div></article><article class="card" data-cat="toners repechage" data-concern="dry sensitive" data-price="1800" data-rank="35">
 <a class="ph" href="p/travel-size-algo-mist.html"><img src="img/card-travel-size-algo-mist.webp" alt="Travel Size Algo Mist" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive and redness</span><h3><a href="p/travel-size-algo-mist.html">Travel Size Algo Mist</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive skin, redness</span><h3><a href="p/travel-size-algo-mist.html">Travel Size Algo Mist</a></h3>
 <p class="sub">Repêchage · 60 ml</p>
 <div class="row"><span class="price">₹1,800</span><button class="add" data-add="travel-size-algo-mist">Add to cart</button></div></div></article><article class="card" data-cat="cleansers repechage" data-concern="dry oily" data-price="4100" data-rank="36">
 <a class="ph" href="p/sea-cleanse-foaming-seaweed-cleanser.html"><img src="img/card-sea-cleanse-foaming-seaweed-cleanser.webp" alt="Sea Cleanse Foaming Seaweed Cleanser" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily and acne&#8209;prone</span><h3><a href="p/sea-cleanse-foaming-seaweed-cleanser.html">Sea Cleanse Foaming Seaweed Cleanser</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/sea-cleanse-foaming-seaweed-cleanser.html">Sea Cleanse Foaming Seaweed Cleanser</a></h3>
 <p class="sub">Repêchage · 150 ml</p>
 <div class="row"><span class="price">₹4,100</span><button class="add" data-add="sea-cleanse-foaming-seaweed-cleanser">Add to cart</button></div></div></article><article class="card" data-cat="moisturizers repechage" data-concern="sensitive dry" data-price="6750" data-rank="37">
 <a class="ph" href="p/mineral-face-shield.html"><img src="img/card-mineral-face-shield.webp" alt="Mineral Face Shield" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive and redness</span><h3><a href="p/mineral-face-shield.html">Mineral Face Shield</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive skin, redness</span><h3><a href="p/mineral-face-shield.html">Mineral Face Shield</a></h3>
 <p class="sub">Repêchage · 60 ml</p>
 <div class="row"><span class="price">₹6,750</span><button class="add" data-add="mineral-face-shield">Add to cart</button></div></div></article><article class="card" data-cat="kits repechage" data-concern="dry" data-price="7200" data-rank="38">
 <a class="ph" href="p/hydra-blue-starter-kit.html"><img src="img/card-hydra-blue-starter-kit.webp" alt="Hydra Blue Starter Kit" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry and dehydrated</span><h3><a href="p/hydra-blue-starter-kit.html">Hydra Blue Starter Kit</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry skin</span><h3><a href="p/hydra-blue-starter-kit.html">Hydra Blue Starter Kit</a></h3>
 <p class="sub">Repêchage</p>
 <div class="row"><span class="price">₹7,200</span><button class="add" data-add="hydra-blue-starter-kit">Add to cart</button></div></div></article><article class="card" data-cat="cleansers repechage" data-concern="dry" data-price="4850" data-rank="39">
 <a class="ph" href="p/hydra-dew-pure-gentle-foaming-cleanser.html"><img src="img/card-hydra-dew-pure-gentle-foaming-cleanser.webp" alt="Hydra Dew Pure Gentle Foaming Cleanser" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry and dehydrated</span><h3><a href="p/hydra-dew-pure-gentle-foaming-cleanser.html">Hydra Dew Pure Gentle Foaming Cleanser</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry skin</span><h3><a href="p/hydra-dew-pure-gentle-foaming-cleanser.html">Hydra Dew Pure Gentle Foaming Cleanser</a></h3>
 <p class="sub">Repêchage · 150 ml</p>
 <div class="row"><span class="price">₹4,850</span><button class="add" data-add="hydra-dew-pure-gentle-foaming-cleanser">Add to cart</button></div></div></article><article class="card" data-cat="toners repechage" data-concern="dry" data-price="6835" data-rank="40">
 <a class="ph" href="p/hydra-dew-pure-facial-essence-mist.html"><img src="img/card-hydra-dew-pure-facial-essence-mist.webp" alt="Hydra Dew Pure Facial Essence Mist" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry and dehydrated</span><h3><a href="p/hydra-dew-pure-facial-essence-mist.html">Hydra Dew Pure Facial Essence Mist</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry skin</span><h3><a href="p/hydra-dew-pure-facial-essence-mist.html">Hydra Dew Pure Facial Essence Mist</a></h3>
 <p class="sub">Repêchage · 120 ml</p>
 <div class="row"><span class="price">₹6,835</span><button class="add" data-add="hydra-dew-pure-facial-essence-mist">Add to cart</button></div></div></article><article class="card" data-cat="moisturizers repechage" data-concern="dry" data-price="6835" data-rank="41">
 <a class="ph" href="p/hydra-dew-pure-facial-moisturizer.html"><img src="img/card-hydra-dew-pure-facial-moisturizer.webp" alt="Hydra Dew Pure Facial Moisturizer" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry and dehydrated</span><h3><a href="p/hydra-dew-pure-facial-moisturizer.html">Hydra Dew Pure Facial Moisturizer</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry skin</span><h3><a href="p/hydra-dew-pure-facial-moisturizer.html">Hydra Dew Pure Facial Moisturizer</a></h3>
 <p class="sub">Repêchage · 50 ml</p>
 <div class="row"><span class="price">₹6,835</span><button class="add" data-add="hydra-dew-pure-facial-moisturizer">Add to cart</button></div></div></article><article class="card" data-cat="eyes repechage" data-concern="dry" data-price="6115" data-rank="42">
 <a class="ph" href="p/hydra-dew-pure-eye-contour-cream.html"><img src="img/card-hydra-dew-pure-eye-contour-cream.webp" alt="Hydra Dew Pure Eye Contour Cream" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry and dehydrated</span><h3><a href="p/hydra-dew-pure-eye-contour-cream.html">Hydra Dew Pure Eye Contour Cream</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry skin</span><h3><a href="p/hydra-dew-pure-eye-contour-cream.html">Hydra Dew Pure Eye Contour Cream</a></h3>
 <p class="sub">Repêchage · 15 ml</p>
 <div class="row"><span class="price">₹6,115</span><button class="add" data-add="hydra-dew-pure-eye-contour-cream">Add to cart</button></div></div></article><article class="card" data-cat="moisturizers repechage" data-concern="dry" data-price="7100" data-rank="43">
 <a class="ph" href="p/hydra-dew-pure-elixir-balm.html"><img src="img/card-hydra-dew-pure-elixir-balm.webp" alt="Hydra Dew Pure Elixir Balm" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry and dehydrated</span><h3><a href="p/hydra-dew-pure-elixir-balm.html">Hydra Dew Pure Elixir Balm</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry skin</span><h3><a href="p/hydra-dew-pure-elixir-balm.html">Hydra Dew Pure Elixir Balm</a></h3>
 <p class="sub">Repêchage · 50 ml</p>
 <div class="row"><span class="price">₹7,100</span><button class="add" data-add="hydra-dew-pure-elixir-balm">Add to cart</button></div></div></article><article class="card" data-cat="moisturizers repechage" data-concern="dry" data-price="6750" data-rank="44">
 <a class="ph" href="p/hydra-dew-pure-night-cream.html"><img src="img/card-hydra-dew-pure-night-cream.webp" alt="Hydra Dew Pure Night Cream" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry and dehydrated</span><h3><a href="p/hydra-dew-pure-night-cream.html">Hydra Dew Pure Night Cream</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry skin</span><h3><a href="p/hydra-dew-pure-night-cream.html">Hydra Dew Pure Night Cream</a></h3>
 <p class="sub">Repêchage · 30 ml</p>
 <div class="row"><span class="price">₹6,750</span><button class="add" data-add="hydra-dew-pure-night-cream">Add to cart</button></div></div></article><article class="card" data-cat="serums repechage" data-concern="dry" data-price="7100" data-rank="45">
 <a class="ph" href="p/hydra-dew-pure-moisturizing-lift-serum.html"><img src="img/card-hydra-dew-pure-moisturizing-lift-serum.webp" alt="Hydra Dew Pure Moisturizing Lift Serum" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry and dehydrated</span><h3><a href="p/hydra-dew-pure-moisturizing-lift-serum.html">Hydra Dew Pure Moisturizing Lift Serum</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry skin</span><h3><a href="p/hydra-dew-pure-moisturizing-lift-serum.html">Hydra Dew Pure Moisturizing Lift Serum</a></h3>
 <p class="sub">Repêchage · 50 ml</p>
 <div class="row"><span class="price">₹7,100</span><button class="add" data-add="hydra-dew-pure-moisturizing-lift-serum">Add to cart</button></div></div></article><article class="card" data-cat="kits repechage" data-concern="dry" data-price="7200" data-rank="46">
 <a class="ph" href="p/hydra-dew-pure-starter-collection.html"><img src="img/card-hydra-dew-pure-starter-collection.webp" alt="Hydra Dew Pure Starter Collection" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry and dehydrated</span><h3><a href="p/hydra-dew-pure-starter-collection.html">Hydra Dew Pure Starter Collection</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry skin</span><h3><a href="p/hydra-dew-pure-starter-collection.html">Hydra Dew Pure Starter Collection</a></h3>
 <p class="sub">Repêchage</p>
 <div class="row"><span class="price">₹7,200</span><button class="add" data-add="hydra-dew-pure-starter-collection">Add to cart</button></div></div></article><article class="card" data-cat="cleansers repechage" data-concern="sensitive" data-price="4500" data-rank="47">
 <a class="ph" href="p/hydra-4-cleanser-for-sensitive-skin.html"><img src="img/card-hydra-4-cleanser-for-sensitive-skin.webp" alt="Hydra 4 Cleanser for Sensitive Skin" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive and redness</span><h3><a href="p/hydra-4-cleanser-for-sensitive-skin.html">Hydra 4 Cleanser for Sensitive Skin</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive skin, redness</span><h3><a href="p/hydra-4-cleanser-for-sensitive-skin.html">Hydra 4 Cleanser for Sensitive Skin</a></h3>
 <p class="sub">Repêchage · 177 ml</p>
 <div class="row"><span class="price">₹4,500</span><button class="add" data-add="hydra-4-cleanser-for-sensitive-skin">Add to cart</button></div></div></article><article class="card" data-cat="toners repechage" data-concern="sensitive" data-price="4050" data-rank="48">
 <a class="ph" href="p/hydra-4-tonic-for-sensitive-skin.html"><img src="img/card-hydra-4-tonic-for-sensitive-skin.webp" alt="Hydra 4 Tonic for Sensitive Skin" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive and redness</span><h3><a href="p/hydra-4-tonic-for-sensitive-skin.html">Hydra 4 Tonic for Sensitive Skin</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive skin, redness</span><h3><a href="p/hydra-4-tonic-for-sensitive-skin.html">Hydra 4 Tonic for Sensitive Skin</a></h3>
 <p class="sub">Repêchage · 177 ml</p>
 <div class="row"><span class="price">₹4,050</span><button class="add" data-add="hydra-4-tonic-for-sensitive-skin">Add to cart</button></div></div></article><article class="card" data-cat="moisturizers repechage" data-concern="sensitive" data-price="4500" data-rank="49">
 <a class="ph" href="p/hydra-4-day-protection-cream-for-sensitive-skin.html"><img src="img/card-hydra-4-day-protection-cream-for-sensitive-skin.webp" alt="Hydra 4 Day Protection Cream for Sensitive Skin" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive and redness</span><h3><a href="p/hydra-4-day-protection-cream-for-sensitive-skin.html">Hydra 4 Day Protection Cream for Sensitive Skin</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive skin, redness</span><h3><a href="p/hydra-4-day-protection-cream-for-sensitive-skin.html">Hydra 4 Day Protection Cream for Sensitive Skin</a></h3>
 <p class="sub">Repêchage · 50 ml</p>
 <div class="row"><span class="price">₹4,500</span><button class="add" data-add="hydra-4-day-protection-cream-for-sensitive-skin">Add to cart</button></div></div></article><article class="card" data-cat="masks repechage" data-concern="sensitive" data-price="3775" data-rank="50">
 <a class="ph" href="p/hydra-4-mask-for-sensitive-skin.html"><img src="img/card-hydra-4-mask-for-sensitive-skin.webp" alt="Hydra 4 Mask for Sensitive Skin" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive and redness</span><h3><a href="p/hydra-4-mask-for-sensitive-skin.html">Hydra 4 Mask for Sensitive Skin</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive skin, redness</span><h3><a href="p/hydra-4-mask-for-sensitive-skin.html">Hydra 4 Mask for Sensitive Skin</a></h3>
 <p class="sub">Repêchage · 60 ml</p>
 <div class="row"><span class="price">₹3,775</span><button class="add" data-add="hydra-4-mask-for-sensitive-skin">Add to cart</button></div></div></article><article class="card" data-cat="kits repechage" data-concern="sensitive" data-price="6650" data-rank="51">
 <a class="ph" href="p/hydra-4-starter-kit.html"><img src="img/card-hydra-4-starter-kit.webp" alt="Hydra 4 Starter Kit" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive and redness</span><h3><a href="p/hydra-4-starter-kit.html">Hydra 4 Starter Kit</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive skin, redness</span><h3><a href="p/hydra-4-starter-kit.html">Hydra 4 Starter Kit</a></h3>
 <p class="sub">Repêchage</p>
 <div class="row"><span class="price">₹6,650</span><button class="add" data-add="hydra-4-starter-kit">Add to cart</button></div></div></article><article class="card" data-cat="cleansers repechage" data-concern="sensitive" data-price="5400" data-rank="52">
 <a class="ph" href="p/hydra-4-red-out-calming-cleanser.html"><img src="img/card-hydra-4-red-out-calming-cleanser.webp" alt="Red-Out Calming Cleanser" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive and redness</span><h3><a href="p/hydra-4-red-out-calming-cleanser.html">Red&#8209;Out Calming Cleanser</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive skin, redness</span><h3><a href="p/hydra-4-red-out-calming-cleanser.html">Red&#8209;Out Calming Cleanser</a></h3>
 <p class="sub">Repêchage · 177 ml</p>
 <div class="row"><span class="price">₹5,400</span><button class="add" data-add="hydra-4-red-out-calming-cleanser">Add to cart</button></div></div></article><article class="card" data-cat="serums repechage" data-concern="sensitive" data-price="8275" data-rank="53">
 <a class="ph" href="p/red-out-serum.html"><img src="img/card-red-out-serum.webp" alt="Red-Out Serum" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive and redness</span><h3><a href="p/red-out-serum.html">Red&#8209;Out Serum</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive skin, redness</span><h3><a href="p/red-out-serum.html">Red&#8209;Out Serum</a></h3>
 <p class="sub">Repêchage · 30 ml</p>
 <div class="row"><span class="price">₹8,275</span><button class="add" data-add="red-out-serum">Add to cart</button></div></div></article><article class="card" data-cat="cleansers repechage" data-concern="oily" data-price="3775" data-rank="54">
 <a class="ph" href="p/t-zone-balance-cleansing-complex.html"><img src="img/card-t-zone-balance-cleansing-complex.webp" alt="T-Zone Balance Cleansing Complex" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily and acne&#8209;prone</span><h3><a href="p/t-zone-balance-cleansing-complex.html">T&#8209;Zone Balance Cleansing Complex</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/t-zone-balance-cleansing-complex.html">T&#8209;Zone Balance Cleansing Complex</a></h3>
 <p class="sub">Repêchage · 177 ml</p>
 <div class="row"><span class="price">₹3,775</span><button class="add" data-add="t-zone-balance-cleansing-complex">Add to cart</button></div></div></article><article class="card" data-cat="moisturizers repechage" data-concern="oily" data-price="3500" data-rank="55">
 <a class="ph" href="p/t-zone-balance-toning-complex.html"><img src="img/card-t-zone-balance-toning-complex.webp" alt="T-Zone Balance Toning Complex" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily and acne&#8209;prone</span><h3><a href="p/t-zone-balance-toning-complex.html">T&#8209;Zone Balance Toning Complex</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/t-zone-balance-toning-complex.html">T&#8209;Zone Balance Toning Complex</a></h3>
 <p class="sub">Repêchage · 177 ml</p>
 <div class="row"><span class="price">₹3,500</span><button class="add" data-add="t-zone-balance-toning-complex">Add to cart</button></div></div></article><article class="card" data-cat="moisturizers repechage" data-concern="oily" data-price="3775" data-rank="56">
 <a class="ph" href="p/t-zone-balance-moisture-complex.html"><img src="img/card-t-zone-balance-moisture-complex.webp" alt="T-Zone Balance Moisture Complex" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily and acne&#8209;prone</span><h3><a href="p/t-zone-balance-moisture-complex.html">T&#8209;Zone Balance Moisture Complex</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/t-zone-balance-moisture-complex.html">T&#8209;Zone Balance Moisture Complex</a></h3>
 <p class="sub">Repêchage · 60 ml</p>
 <div class="row"><span class="price">₹3,775</span><button class="add" data-add="t-zone-balance-moisture-complex">Add to cart</button></div></div></article><article class="card" data-cat="masks repechage" data-concern="pigmentation" data-price="4400" data-rank="57">
 <a class="ph" href="p/honey-and-almond-scrub.html"><img src="img/card-honey-and-almond-scrub.webp" alt="Honey and Almond Scrub" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation and dullness</span><h3><a href="p/honey-and-almond-scrub.html">Honey and Almond Scrub</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation</span><h3><a href="p/honey-and-almond-scrub.html">Honey and Almond Scrub</a></h3>
 <p class="sub">Repêchage · 125 ml</p>
 <div class="row"><span class="price">₹4,400</span><button class="add" data-add="honey-and-almond-scrub">Add to cart</button></div></div></article><article class="card" data-cat="cleansers repechage" data-concern="oily" data-price="4050" data-rank="58">
 <a class="ph" href="p/hydra-refine-cleansing-mousse.html"><img src="img/card-hydra-refine-cleansing-mousse.webp" alt="Hydra Refine Cleansing Mousse" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily and acne&#8209;prone</span><h3><a href="p/hydra-refine-cleansing-mousse.html">Hydra Refine Cleansing Mousse</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/hydra-refine-cleansing-mousse.html">Hydra Refine Cleansing Mousse</a></h3>
 <p class="sub">Repêchage · 150 ml</p>
 <div class="row"><span class="price">₹4,050</span><button class="add" data-add="hydra-refine-cleansing-mousse">Add to cart</button></div></div></article><article class="card" data-cat="masks repechage" data-concern="oily" data-price="3400" data-rank="59">
 <a class="ph" href="p/hydra-refine-astrigent-pads.html"><img src="img/card-hydra-refine-astrigent-pads.webp" alt="Hydra Refine Astringent Pads" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily and acne&#8209;prone</span><h3><a href="p/hydra-refine-astrigent-pads.html">Hydra Refine Astringent Pads</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/hydra-refine-astrigent-pads.html">Hydra Refine Astringent Pads</a></h3>
 <p class="sub">Repêchage</p>
 <div class="row"><span class="price">₹3,400</span><button class="add" data-add="hydra-refine-astrigent-pads">Add to cart</button></div></div></article><article class="card" data-cat="body repechage" data-concern="feet" data-price="3100" data-rank="60">
 <a class="ph" href="p/seaweed-body-cream.html"><img src="img/card-seaweed-body-cream.webp" alt="Seaweed Body Cream" loading="lazy" width="600" height="600"></a>
@@ -352,7 +360,7 @@ article.card .ph img{transform:scale(.9) translateY(4%)}article.card:hover .ph i
 <p class="sub">Repêchage · 60 ml</p>
 <div class="row"><span class="price">₹2,750</span><button class="add" data-add="sea-spa-hand-cream">Add to cart</button></div></div></article><article class="card" data-cat="socks voesh" data-concern="feet" data-price="900" data-rank="62">
 <a class="ph" href="p/collagen-socks-cannabis-sativa-seed-oil.html"><img src="img/card-collagen-socks-cannabis-sativa-seed-oil.webp" alt="Collagen Socks - Cannabis Sativa Seed Oil" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Hands and feet</span><h3><a href="p/collagen-socks-cannabis-sativa-seed-oil.html">Collagen Socks &#8209; Cannabis Sativa Seed Oil</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Hands and feet</span><h3><a href="p/collagen-socks-cannabis-sativa-seed-oil.html">Collagen Socks&nbsp;&#8209; Cannabis Sativa Seed Oil</a></h3>
 <p class="sub">VOESH</p>
 <div class="row"><span class="price">₹900</span><button class="add" data-add="collagen-socks-cannabis-sativa-seed-oil">Add to cart</button></div></div></article><article class="card" data-cat="pedicure voesh" data-concern="feet" data-price="200" data-rank="63">
 <a class="ph" href="p/callus-remover-gel.html"><img src="img/card-callus-remover-gel.webp" alt="Callus Remover Gel" loading="lazy" width="600" height="600"></a>
@@ -360,27 +368,27 @@ article.card .ph img{transform:scale(.9) translateY(4%)}article.card:hover .ph i
 <p class="sub">VOESH</p>
 <div class="row"><span class="price">₹200</span><button class="add" data-add="callus-remover-gel">Add to cart</button></div></div></article><article class="card" data-cat="socks voesh" data-concern="feet" data-price="2290" data-rank="64">
 <a class="ph" href="p/peeling-socks-duo.html"><img src="img/card-peeling-socks-duo.webp" alt="VOESH Peeling Socks Duo - 2 Pairs" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Hands and feet</span><h3><a href="p/peeling-socks-duo.html">VOESH Peeling Socks Duo &#8209; 2 Pairs</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Hands and feet</span><h3><a href="p/peeling-socks-duo.html">VOESH Peeling Socks Duo&nbsp;&#8209; 2 Pairs</a></h3>
 <p class="sub">VOESH</p>
 <div class="row"><span class="price">₹2,290</span><button class="add" data-add="peeling-socks-duo">Add to cart</button></div></div></article><article class="card" data-cat="pedicure voesh" data-concern="feet" data-price="750" data-rank="65">
 <a class="ph" href="p/pedi-in-a-box-basic-3-step.html"><img src="img/card-pedi-in-a-box-basic-3-step-green-tea-detox.webp" alt="Pedi in a Box Basic, 3 Step" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure at home</span><h3><a href="p/pedi-in-a-box-basic-3-step.html">Pedi in a Box Basic, 3&nbsp;Step</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure</span><h3><a href="p/pedi-in-a-box-basic-3-step.html">Pedi in a Box Basic, 3&nbsp;Step</a></h3>
 <p class="sub">VOESH · 4 scents</p>
 <div class="row"><span class="price">₹750</span><a class="add" href="p/pedi-in-a-box-basic-3-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="pedicure voesh" data-concern="feet" data-price="1500" data-rank="66">
 <a class="ph" href="p/pedi-in-a-box-o2-fizz-5-step.html"><img src="img/card-pedi-in-a-box-o2-fizz-5-step-lavender-vanilla.webp" alt="Pedi in a Box O2 Fizz, 5 Step" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure at home</span><h3><a href="p/pedi-in-a-box-o2-fizz-5-step.html">Pedi in a Box O2 Fizz, 5&nbsp;Step</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure</span><h3><a href="p/pedi-in-a-box-o2-fizz-5-step.html">Pedi in a Box O2 Fizz, 5&nbsp;Step</a></h3>
 <p class="sub">VOESH · 5 scents</p>
 <div class="row"><span class="price">₹1,500</span><a class="add" href="p/pedi-in-a-box-o2-fizz-5-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="pedicure voesh" data-concern="feet" data-price="1100" data-rank="67">
 <a class="ph" href="p/pedi-in-a-box-glimmer-5-step.html"><img src="img/card-pedi-in-a-box-glimmer-5-step-golden-vanilla.webp" alt="Pedi in a Box Glimmer, 5 Step" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure at home</span><h3><a href="p/pedi-in-a-box-glimmer-5-step.html">Pedi in a Box Glimmer, 5&nbsp;Step</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure</span><h3><a href="p/pedi-in-a-box-glimmer-5-step.html">Pedi in a Box Glimmer, 5&nbsp;Step</a></h3>
 <p class="sub">VOESH · 2 scents</p>
 <div class="row"><span class="price">₹1,100</span><a class="add" href="p/pedi-in-a-box-glimmer-5-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="pedicure voesh" data-concern="feet" data-price="1500" data-rank="68">
 <a class="ph" href="p/pedi-in-a-box-ultimate-6-step.html"><img src="img/card-pedi-in-a-box-ultimate-6-step-aloe-aloe.webp" alt="Pedi in a Box Ultimate, 6 Step" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure at home</span><h3><a href="p/pedi-in-a-box-ultimate-6-step.html">Pedi in a Box Ultimate, 6&nbsp;Step</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure</span><h3><a href="p/pedi-in-a-box-ultimate-6-step.html">Pedi in a Box Ultimate, 6&nbsp;Step</a></h3>
 <p class="sub">VOESH · 4 scents</p>
 <div class="row"><span class="price">₹1,500</span><a class="add" href="p/pedi-in-a-box-ultimate-6-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="pedicure voesh" data-concern="feet" data-price="750" data-rank="69">
 <a class="ph" href="p/mani-in-a-box-waterless-3-step.html"><img src="img/card-mani-in-a-box-waterless-3-step-green-tea.webp" alt="Mani in a Box Waterless, 3 Step" loading="lazy" width="600" height="600"></a>
-<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure at home</span><h3><a href="p/mani-in-a-box-waterless-3-step.html">Mani in a Box Waterless, 3&nbsp;Step</a></h3>
+<div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure</span><h3><a href="p/mani-in-a-box-waterless-3-step.html">Mani in a Box Waterless, 3&nbsp;Step</a></h3>
 <p class="sub">VOESH · 3 scents</p>
 <div class="row"><span class="price">From ₹750</span><a class="add" href="p/mani-in-a-box-waterless-3-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="socks voesh" data-concern="feet" data-price="900" data-rank="70">
 <a class="ph" href="p/collagen-gloves.html"><img src="img/card-collagen-gloves-cannabis-sativa-seed-oil.webp" alt="Collagen Gloves" loading="lazy" width="600" height="600"></a>
@@ -389,7 +397,7 @@ article.card .ph img{transform:scale(.9) translateY(4%)}article.card:hover .ph i
 <div class="row"><span class="price">₹900</span><a class="add" href="p/collagen-gloves.html" style="display:inline-flex;align-items:center;justify-content:center">Choose type</a></div></div></article></div><div style="height:60px"></div></div><script>window.SHOP_META={"": ["All products", "Every Repêchage and VOESH product we import, bestsellers first."], "repechage": ["Repêchage", "Professional seaweed skincare from New Jersey, USA, since 1980."], "voesh": ["VOESH New York", "Spa pedicures, socks and gloves for home."], "pigmentation": ["Pigmentation and dullness", "Brighten and even out the look of skin tone with Biolight."], "aging": ["Anti-aging and firming", "Firm, smooth and hydrate mature skin with Vita Cura and Opti-Firm."], "oily": ["Oily and acne-prone", "Clear, balance and mattify with Hydra Medic and T-Zone Balance."], "sensitive": ["Sensitive and redness", "Calm skin that reacts easily with Hydra 4 and Red-Out."], "dry": ["Dry and dehydrated", "Lasting hydration with Hydra Dew Pure, Algo Mist and seaweed creams."], "feet": ["Hands and feet", "Spa pedicures, heel socks and gloves from VOESH New York."], "cleansers": ["Cleansers", ""], "toners": ["Toners and mists", ""], "serums": ["Serums", ""], "moisturizers": ["Moisturizers", ""], "masks": ["Masks and exfoliants", ""], "eyes": ["Eye care", ""], "kits": ["Starter kits", ""], "pedicure": ["Pedicure and manicure", ""], "socks": ["Socks and gloves", ""], "body": ["Body and hands", ""]};</script></main>
 <footer class="ftr"><div class="wrap"><div class="ftr-g">
 <div class="col1"><div style="display:flex;align-items:center;gap:10px;margin-bottom:14px"><img src="img/brand-mono-white.webp" alt="" style="height:44px"><b style="font-family:var(--head);font-size:24px;color:#fff">JB Skincare</b></div>
-<p class="about"><b>India's home of Repêchage and VOESH.</b> The exclusive importer of Repêchage since 2012, and the importer of VOESH New York. Genuine products, direct from the brands, with free advice from Repêchage-trained experts.</p>
+<p class="about"><b>India's home of Repêchage and VOESH.</b> The exclusive importer of Repêchage since 2012, and the importer of VOESH New York. Genuine products, direct from the brands, with free advice from Repêchage‑trained experts.</p>
 <p class="small">J B Skin Care Pvt Ltd, A2/97, Rajouri Garden, New Delhi</p></div>
 <div><h4>Shop</h4><ul><li><a href="shop.html?cat=repechage">Repêchage</a></li><li><a href="shop.html?cat=voesh">VOESH</a></li><li><a href="shop.html?cat=kits">Starter kits</a></li><li><a href="shop.html">All products</a></li><li><a href="https://www.jbskincare.in" rel="noopener">Stock clearance</a></li></ul></div>
 <div><h4>Help</h4><ul><li><a href="consultation.html">Free skin consultation</a></li><li><a href="policies.html">Shipping and delivery</a></li><li><a href="policies.html#returns">Returns</a></li><li><a href="policies.html#faq">FAQs</a></li><li><a href="https://wa.me/?text=Hi%20JB%20Skincare%2C%20I%20would%20like%20some%20advice">WhatsApp us</a></li></ul></div>
@@ -400,7 +408,7 @@ article.card .ph img{transform:scale(.9) translateY(4%)}article.card:hover .ph i
 <aside class="sheet left" id="menu" aria-label="Menu"><div class="sheet-h"><b>Menu</b><button class="ibtn" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
 <div class="sheet-b"><div class="m-sec"><h4>Shop by skin concern</h4><div class="m-chips"><a href="shop.html?concern=pigmentation">Pigmentation and dullness</a><a href="shop.html?concern=aging">Anti-aging and firming</a><a href="shop.html?concern=oily">Oily and acne-prone</a><a href="shop.html?concern=sensitive">Sensitive and redness</a><a href="shop.html?concern=dry">Dry and dehydrated</a><a href="shop.html?concern=feet">Hands and feet</a></div></div><div class="m-sec"><details><summary>Repêchage</summary><a href="repechage.html">The Repêchage story</a><a href="shop.html?cat=repechage">All Repêchage products</a><a href="shop.html?cat=kits">Starter kits</a><a href="shop.html?concern=pigmentation">Biolight</a><a href="shop.html?concern=aging">Vita Cura</a><a href="shop.html?concern=oily">Hydra Medic</a><a href="shop.html?concern=sensitive">Hydra 4 and Red-Out</a><a href="shop.html?concern=dry">Hydra Dew Pure</a></details><details><summary>VOESH</summary><a href="voesh.html">About VOESH</a><a href="shop.html?cat=pedicure">Pedicure and manicure kits</a><a href="shop.html?cat=socks">Socks and gloves</a></details><details><summary>Professionals</summary><a href="professionals.html">For salons, spas and clinics</a><a href="professionals.html#four-layer">The Four Layer Facial</a><a href="professionals.html#bulk">Back bar and bulk orders</a></details><a href="learn.html">Learn</a></div><div class="m-sec"><a class="btn block" href="consultation.html">Free skin consultation</a><a href="https://wa.me/?text=Hi%20JB%20Skincare%2C%20I%20would%20like%20some%20advice" style="margin-top:8px">Chat on WhatsApp</a><a href="about.html">About JB Skincare</a><a href="policies.html">Shipping and returns</a><a href="https://www.jbskincare.in" rel="noopener">Stock clearance</a></div></div></aside>
 <aside class="sheet right" id="cart" aria-label="Cart"><div class="sheet-h"><b>Your cart</b><button class="ibtn" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
-<div class="sheet-b"><div class="banner-note" style="margin-top:12px"><svg style="width:22px;height:22px;flex:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Free shipping on every order. Ships within 3 days.</div><div id="cartItems"></div></div>
+<div class="sheet-b"><div class="banner-note" style="margin-top:12px"><svg style="width:22px;height:22px;flex:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Free shipping on every order. Ships within 3 days.</div><div id="cartItems"></div></div>
 <div class="cart-foot" id="cartFoot">
   <div class="sumrow"><span>Subtotal</span><b data-sub>₹0</b></div>
   <div class="sumrow"><span>Shipping</span><span class="free">Free</span></div>
@@ -409,7 +417,7 @@ article.card .ph img{transform:scale(.9) translateY(4%)}article.card:hover .ph i
   <p class="small muted" style="margin:0;text-align:center">UPI and cards accepted · 100% genuine products</p>
 </div></aside>
 <div class="search" id="search" role="dialog" aria-label="Search"><div class="search-h"><svg style="width:22px;height:22px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-<input id="searchInput" type="search" placeholder="Search products and concerns" aria-label="Search products"><button class="ibtn" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+<input id="searchInput" type="search" placeholder="Search products" aria-label="Search products"><button class="ibtn" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
 <div class="search-b"><div class="chips" style="margin-bottom:16px"><a class="chip" href="shop.html?concern=pigmentation">Pigmentation and dullness</a><a class="chip" href="shop.html?concern=aging">Anti-aging and firming</a><a class="chip" href="shop.html?concern=oily">Oily and acne-prone</a><a class="chip" href="shop.html?concern=sensitive">Sensitive and redness</a><a class="chip" href="shop.html?concern=dry">Dry and dehydrated</a><a class="chip" href="shop.html?concern=feet">Hands and feet</a></div><div class="s-res" id="searchRes"></div></div></div>
 <a class="wa" href="https://wa.me/?text=Hi%20JB%20Skincare%2C%20I%20would%20like%20some%20advice" aria-label="Chat on WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3a13 13 0 00-11.2 19.6L3 29l6.6-1.7A13 13 0 1016 3zm0 23.6a10.6 10.6 0 01-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1116 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 01-4.3-3.8c-.3-.6.3-.5 1-1.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 00-.9.4 3.6 3.6 0 00-1.1 2.7 6.3 6.3 0 001.3 3.3 14.4 14.4 0 005.5 4.8c2 .9 2.8 1 3.8.8a3.2 3.2 0 002.1-1.5 2.6 2.6 0 00.2-1.5c-.1-.2-.3-.3-.6-.4z"/></svg></a>
 <div class="pv">Design preview by LockNCode · <a href="preview-notes.html">what changed</a></div>
