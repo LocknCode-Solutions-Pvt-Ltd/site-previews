@@ -9,25 +9,22 @@
 .logo small{font-family:var(--head);font-style:italic;font-size:13.5px;color:var(--accent-text);letter-spacing:.01em;padding-left:2px}
 @media(max-width:1020px){.logo{align-items:center}.logo img{height:28px}.logo small{font-size:12px}}
 .hero{position:relative;background:#e9c99a;overflow:hidden}
-.hero picture img{width:100%;height:min(80vh,720px);min-height:520px;object-fit:cover;object-position:70% 50%}
+.hero picture img{width:100%;height:min(80vh,720px);min-height:520px;object-fit:cover;object-position:100% 6%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(250,238,222,.62) 0%,rgba(250,238,222,.38) 34%,rgba(250,238,222,0) 56%);pointer-events:none}
+.hero .hc{z-index:1}.hero h1 span{white-space:nowrap}.hero .cta .btn:not(.ghost){background:var(--navy)}.hero .cta .btn:not(.ghost):hover{background:#102c4f}
 .hero .hc{position:absolute;inset:0;display:flex;align-items:center}
 .hero .hc .wrap{width:100%}
 .hero .box{max-width:560px}
 .hero h1{color:var(--navy);font-size:clamp(40px,5.6vw,76px);line-height:1.02;margin:12px 0 16px;letter-spacing:-.02em}
-.hero p.l{font-size:18.5px;color:#3b3226;max-width:470px}
+.hero p.l{font-size:18.5px;color:#2a2219;max-width:470px}
 .hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
 .hero .meta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:6px;font-weight:700}
 .zero{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.72);backdrop-filter:blur(6px);border-radius:99px;padding:7px 14px 7px 8px;font-weight:800;font-size:13px;color:var(--navy);letter-spacing:.06em}
 .zero b{background:var(--navy);color:#fff;border-radius:99px;padding:3px 9px;font-size:12px}
-@media(max-width:720px){.hero{display:flex;flex-direction:column;background:linear-gradient(#f7ead6,#efd6b0)}.hero .hc{position:static;order:0;padding:22px 0 6px}.hero picture{order:1}.hero picture img{height:auto;min-height:0;aspect-ratio:5/4;object-position:50% 88%}.hero h1{font-size:42px;margin:10px 0 10px}.hero p.l{font-size:16px;margin-bottom:6px}.hero .cta{margin-top:14px}.hero .cta .btn{flex:1 1 auto;padding:0 16px;white-space:nowrap}}.hero .stars small{color:#5a4a36}.circles img{transform:scale(1.55) translateY(4%)}.card .ph img{transform:scale(1.06)}.card:hover .ph img{transform:scale(1.1)}.tile{background:var(--pk-bg)}.tile img{mix-blend-mode:normal;transform:scale(1.25)}.tile:hover{background:#efe2d0}.kitband img{transform:scale(1.35);transform-origin:52% 62%}.sec-h .link{white-space:nowrap}
+@media(max-width:900px){.hero::after{display:none}.hero{display:flex;flex-direction:column;background:linear-gradient(#f7ead6,#efd6b0)}.hero .hc{position:static;order:0;padding:22px 0 6px}.hero picture{order:1}.hero picture img{height:auto;min-height:0;aspect-ratio:5/4;object-position:50% 88%}.hero h1{font-size:42px;margin:10px 0 10px}.hero p.l{font-size:16px;margin-bottom:6px}.hero .cta{margin-top:14px}.hero .cta .btn{flex:1 1 auto;padding:0 16px;white-space:nowrap}}.hero .stars small{color:#5a4a36}.circles img{transform:scale(1.55) translateY(4%)}article.card .ph img{transform:scale(.92) translateY(5%)}article.card:hover .ph img{transform:scale(.96) translateY(5%)}.bcard:hover .ph img{transform:scale(1.03)}.tile{background:var(--pk-bg);padding:8px 8px 14px}.tile img{mix-blend-mode:normal;width:100%;border-radius:12px}.tile:hover{background:#efe2d0}.kitband img{transform:scale(1.35);transform-origin:52% 62%}.sec-h .link{white-space:nowrap}
 .mark{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:132px;height:132px;border-radius:50%;border:2px solid var(--navy);color:var(--navy);text-align:center;font-weight:800;line-height:1.05;font-size:13px;letter-spacing:.06em}
 .mark b{font-family:var(--head);font-size:40px;letter-spacing:-.02em}
-.lines3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
-.lines3 div{background:#fff;border-radius:var(--r);padding:18px;border:1px solid var(--line)}
-.lines3 span{display:block;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:6px}
-.lines3 q{font-family:var(--head);font-size:20px;color:var(--navy);quotes:none;font-style:italic}
-@media(max-width:820px){.lines3{grid-template-columns:1fr}}
-.use{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:820px){.use{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .use a{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;display:block}
 .use img{width:100%;height:100%;object-fit:cover}
 .use .tag{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(255,255,255,.94);border-radius:12px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13.5px;font-weight:800}
@@ -37,10 +34,31 @@
 .kitband .t{padding:44px}
 .kitband h2{color:#fff}
 @media(max-width:820px){.kitband{grid-template-columns:1fr}.kitband .t{padding:26px}}
-.spfacts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}@media(max-width:600px){.spfacts{grid-template-columns:1fr 1fr}}
+.spfacts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}@media(max-width:1020px){.spfacts{grid-template-columns:1fr 1fr}}
 .spfacts div{border:1.5px solid var(--line-strong);border-radius:12px;padding:12px;text-align:center}
 .spfacts b{display:block;font-family:var(--head);font-size:22px;color:var(--navy)}
 .spfacts span{font-size:12px;font-weight:700;color:var(--muted)}
+.ccard{display:flex;flex-direction:column;gap:12px;text-align:center}
+.ccard img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;background:var(--sand);transition:transform .3s,box-shadow .3s}
+.ccard:hover img{transform:translateY(-3px);box-shadow:0 14px 30px rgba(20,30,40,.14)}
+.ccard span{font-family:var(--head);font-weight:600;font-size:17px;color:var(--ink);line-height:1.25}
+.vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.vcard{display:flex;flex-direction:column;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--card-line)}
+.vcard video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#1e2433}
+.vbar{display:flex;gap:10px;align-items:center;padding:10px 12px;flex:1}
+.vbar img{width:42px;height:42px;border-radius:8px;object-fit:cover;background:var(--pk-bg);flex:none}
+.vbar div{flex:1;min-width:0;font-size:13.5px;line-height:1.3;color:var(--muted)}.vbar b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--ink);font-size:14px}
+.vbar .add{flex:none;min-height:36px;padding:0 14px;font-size:13px}
+@media(max-width:1020px){.vgrid{grid-template-columns:repeat(2,1fr);gap:14px}.vcard video{aspect-ratio:3/4}}
+@media(max-width:720px){.vgrid{display:flex;overflow-x:auto;gap:12px;margin:0 -16px;padding:0 16px 6px;scroll-padding:0 16px;scroll-snap-type:x mandatory;scrollbar-width:none}.vgrid::-webkit-scrollbar{display:none}.vcard{flex:0 0 66%;scroll-snap-align:start}.vcard video{aspect-ratio:9/16}.vbar{flex-wrap:wrap}.vbar .add{width:100%}}
+.story .band-media img{aspect-ratio:1/1;object-fit:cover}
+.bcard .ph{aspect-ratio:1/1}
+.bcard h3{font-family:var(--head);font-size:18px;font-weight:600;line-height:1.3}
+.bcard .bd .small{margin-top:auto}
+.bcard .ex{font-size:14px;color:var(--ink-2);margin:2px 0 4px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.probanner{display:block;border-radius:var(--r-lg);overflow:hidden;box-shadow:0 10px 30px rgba(20,30,40,.08)}
+.probanner img{width:100%;height:auto;display:block}
+.probanner picture{display:block}
 </style>
 <link rel="icon" href="../img/brand-wordmark.webp"></head>
 <body class="art-page has-bnav" data-root="../">
@@ -49,7 +67,7 @@
 <header class="hdr"><div class="wrap hdr-in">
   <button class="ibtn menu-btn" data-open="menu" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   <a class="logo" href="../index.html" aria-label="Skinolin home"><img src="../img/brand-wordmark.webp" alt="Skinolin" width="186" height="37"><small>Skin loves Skinolin.</small></a>
-  <ul class="nav"><li><a href="../shop.html">Shop by concern</a><div class="mega"><div class="wrap mega-in"><div><h4>By skin concern</h4><a href="../shop.html?concern=oily">Oily and acne-prone</a><a href="../shop.html?concern=spots">Dark spots and dull skin</a><a href="../shop.html?concern=dry">Dry and dehydrated</a><a href="../shop.html?concern=sensitive">Sensitive and redness</a><a href="../shop.html?concern=barrier">Skin barrier repair</a><a href="../shop.html?concern=lines">Early fine lines</a><a href="../shop.html?concern=sun">Sun protection</a></div><div><h4>By product</h4><a href="../shop.html?cat=sunscreens">Sunscreens</a><a href="../shop.html?cat=serums">Serums</a><a href="../shop.html?cat=cleansers">Cleansers</a><a href="../shop.html?cat=toners">Toners</a><a href="../shop.html?cat=moisturizers">Moisturizers</a><a href="../shop.html?cat=combos">Combos</a><a href="../shop.html">All products</a></div><div><h4>Learn</h4><a href="../learn/what-is-anhydrous-sunscreen.html">What is anhydrous sunscreen?</a><a href="../learn/how-to-use-niacinamide-serum.html">How to use niacinamide</a><a href="../learn/daily-skincare-routine-for-a-glowing-skin.html">A daily routine for glowing skin</a><a href="../learn.html">All articles</a></div><a class="mega-card" href="../p/anhydrous-sunscreen-spf-50-pa.html"><img src="../img/card-anhydrous-sunscreen-spf-50-pa.webp" alt=""><div><span class="eyebrow">Waterless SPF 50</span><p style="margin:6px 0 10px;font-weight:700">0% water. 100% sunscreen.</p><span class="link">Shop SPF 50 ₹1,350</span></div></a></div></div></li><li><a href="../shop.html?cat=sunscreens">Sunscreens</a></li><li><a href="../shop.html?cat=serums">Serums</a></li><li><a href="../shop.html?cat=cleansers">Cleansers and toners</a></li><li><a href="../shop.html?cat=combos">Combos</a></li><li><a href="../learn.html" class="on">Learn</a></li></ul>
+  <ul class="nav"><li><a href="../shop.html">Shop by concern</a><div class="mega"><div class="wrap mega-in"><div><h4>By skin concern</h4><a href="../shop.html?concern=spots">Dark spots and pigmentation</a><a href="../shop.html?concern=dull">Dull and uneven skin</a><a href="../shop.html?concern=dry">Dry and dehydrated</a><a href="../shop.html?concern=sensitive">Sensitive skin</a><a href="../shop.html?concern=lines">Aging and fine lines</a><a href="../shop.html?concern=oily">Oily and acne-prone</a><a href="../shop.html?concern=barrier">Skin barrier repair</a><a href="../shop.html?concern=sun">Sun protection</a></div><div><h4>By product</h4><a href="../shop.html?cat=sunscreens">Sunscreens</a><a href="../shop.html?cat=serums">Serums</a><a href="../shop.html?cat=cleansers">Cleansers</a><a href="../shop.html?cat=toners">Toners</a><a href="../shop.html?cat=moisturizers">Moisturizers</a><a href="../shop.html?cat=combos">Combos</a><a href="../shop.html">All products</a></div><div><h4>Learn</h4><a href="../learn/what-is-anhydrous-sunscreen.html">What is anhydrous sunscreen?</a><a href="../learn/how-to-use-niacinamide-serum.html">How to use niacinamide</a><a href="../learn/daily-skincare-routine-for-a-glowing-skin.html">A daily routine for glowing skin</a><a href="../learn.html">All articles</a></div><a class="mega-card" href="../p/anhydrous-sunscreen-spf-50-pa.html"><img src="../img/card-anhydrous-sunscreen-spf-50-pa.webp" alt=""><div><span class="eyebrow">Waterless SPF 50</span><p style="margin:6px 0 10px;font-weight:700">0% water. 100% sunscreen.</p><span class="link">Shop SPF 50 ₹1,350</span></div></a></div></div></li><li><a href="../shop.html?cat=sunscreens">Sunscreens</a></li><li><a href="../shop.html?cat=serums">Serums</a></li><li><a href="../shop.html?cat=cleansers">Cleansers and toners</a></li><li><a href="../shop.html?cat=combos">Combos</a></li><li><a href="../learn.html" class="on">Learn</a></li></ul>
   <div class="hdr-icons">
     <button class="ibtn" data-open="search" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
     <a class="ibtn t-hide-sm" href="../account.html" aria-label="Account" style="display:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></a>
@@ -57,8 +75,8 @@
   </div>
 </div></header>
 <main><article class="wrap"><div class="art"><div class="crumbs" style="padding-top:0"><a href="../index.html">Home</a> / <a href="../learn.html">Learn</a></div>
-<h1>Daily Skin Care Routine for Glowing Skin: The 6 Steps That Work</h1><div class="by"><span>By <b>Chetna Chaddha</b></span><span>·</span><span>Reviewed by <b>Skinolin's formulation team</b> (name and role to confirm)</span></div>
-<img src="../img/art-daily-skincare-routine-for-a-glowing-skin.webp" alt="" style="border-radius:var(--r-lg);margin-bottom:24px"><div class="art-body"><p>If you want the short version: a daily skin care routine for glowing skin is six steps done in the right order, every day, for at least eight weeks. Cleanse, tone, treat with a serum, moisturize, protect with sunscreen, and then repeat until it becomes boring. There is no seventh secret step.</p>
+<h1>Daily Skin Care Routine for Glowing Skin: The 6 Steps That Work</h1><div class="by"><span>By <b>Chetna Chaddha</b></span><span>Reviewed by <b>Skinolin's formulation team</b></span></div>
+<img class="art-hero" src="../img/arthero-daily-skincare-routine-for-a-glowing-skin.webp" alt=""><div class="art-body"><p>If you want the short version: a daily skin care routine for glowing skin is six steps done in the right order, every day, for at least eight weeks. Cleanse, tone, treat with a serum, moisturize, protect with sunscreen, and then repeat until it becomes boring. There is no seventh secret step.</p>
 
 <p>The long version matters too, because most people already own the right products and still see no glow. They apply them in the wrong order, use too much or too little, switch brands every three weeks, or undo the whole routine by skipping sunscreen. This guide walks through each step, what it is actually doing, how much to use, and the mistake that quietly cancels it out.</p>
 
@@ -77,39 +95,39 @@
 </thead>
 <tbody>
 <tr>
-<td>1. Cleanser</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>A pea-sized amount, 30 to 40 seconds</td>
+<td data-label="Step">1. Cleanser</td>
+<td data-label="Morning">Yes</td>
+<td data-label="Night">Yes</td>
+<td data-label="How much">A pea-sized amount, 30 to 40 seconds</td>
 </tr>
 <tr>
-<td>2. Toner</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>3 to 4 presses, onto damp skin</td>
+<td data-label="Step">2. Toner</td>
+<td data-label="Morning">Yes</td>
+<td data-label="Night">Yes</td>
+<td data-label="How much">3 to 4 presses, onto damp skin</td>
 </tr>
 <tr>
-<td>3. Serum</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>3 to 4 drops</td>
+<td data-label="Step">3. Serum</td>
+<td data-label="Morning">Yes</td>
+<td data-label="Night">Yes</td>
+<td data-label="How much">3 to 4 drops</td>
 </tr>
 <tr>
-<td>4. Moisturizer</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>A coin-sized amount</td>
+<td data-label="Step">4. Moisturizer</td>
+<td data-label="Morning">Yes</td>
+<td data-label="Night">Yes</td>
+<td data-label="How much">A coin-sized amount</td>
 </tr>
 <tr>
-<td>5. Sunscreen</td>
-<td>Yes</td>
-<td>No</td>
-<td>Two finger lengths for face and neck</td>
+<td data-label="Step">5. Sunscreen</td>
+<td data-label="Morning">Yes</td>
+<td data-label="Night">No</td>
+<td data-label="How much">Two finger lengths for face and neck</td>
 </tr>
 <tr>
-<td>6. Consistency</td>
+<td data-label="Step">6. Consistency</td>
 <td colspan="2">Every day, for 8 to 12 weeks before you judge it</td>
-<td>Non-negotiable</td>
+<td data-label="Morning">Non-negotiable</td>
 </tr>
 </tbody>
 </table>
@@ -183,29 +201,29 @@
 </thead>
 <tbody>
 <tr>
-<td>Dullness and uneven tone</td>
-<td>Niacinamide</td>
-<td><a href="https://www.skinolin.com/products/niacinamide-glow-serum-for-skin-brightening">Niacinamide Glow Serum</a></td>
+<td data-label="If your main concern is">Dullness and uneven tone</td>
+<td data-label="Look for">Niacinamide</td>
+<td data-label="Skinolin option"><a href="https://www.skinolin.com/products/niacinamide-glow-serum-for-skin-brightening">Niacinamide Glow Serum</a></td>
 </tr>
 <tr>
-<td>Dehydration, tightness</td>
-<td>Humectants, hyaluronic acid</td>
-<td><a href="https://www.skinolin.com/products/aquaglow-hydrating-serum-for-dry-skin">Aquaglow Hydrating Serum</a></td>
+<td data-label="If your main concern is">Dehydration, tightness</td>
+<td data-label="Look for">Humectants, hyaluronic acid</td>
+<td data-label="Skinolin option"><a href="https://www.skinolin.com/products/aquaglow-hydrating-serum-for-dry-skin">Aquaglow Hydrating Serum</a></td>
 </tr>
 <tr>
-<td>Redness, sensitivity</td>
-<td>Chamomile, soothing botanicals</td>
-<td><a href="https://www.skinolin.com/products/chamomile-face-serum-for-sensitive-skin">Chamomile Face Serum</a></td>
+<td data-label="If your main concern is">Redness, sensitivity</td>
+<td data-label="Look for">Chamomile, soothing botanicals</td>
+<td data-label="Skinolin option"><a href="https://www.skinolin.com/products/chamomile-face-serum-for-sensitive-skin">Chamomile Face Serum</a></td>
 </tr>
 <tr>
-<td>Barrier repair, post-irritation</td>
-<td><a href="https://www.skinolin.com/blogs/news/cica-benefits-for-skin-why-centella-asiatica-is-the-best-ingredient-for-sensitive-skin">Centella asiatica (cica)</a></td>
-<td><a href="https://www.skinolin.com/products/cica-exosomes-face-serum">CICA Exosomes Face Serum</a></td>
+<td data-label="If your main concern is">Barrier repair, post-irritation</td>
+<td data-label="Look for"><a href="https://www.skinolin.com/blogs/news/cica-benefits-for-skin-why-centella-asiatica-is-the-best-ingredient-for-sensitive-skin">Centella asiatica (cica)</a></td>
+<td data-label="Skinolin option"><a href="https://www.skinolin.com/products/cica-exosomes-face-serum">CICA Exosomes Face Serum</a></td>
 </tr>
 <tr>
-<td>Early lines, loss of firmness</td>
-<td>Niacinamide with peptides</td>
-<td><a href="https://www.skinolin.com/products/b3-lemongrass-anti-aging-serum">B3 Lemongrass Anti-Aging Serum</a></td>
+<td data-label="If your main concern is">Early lines, loss of firmness</td>
+<td data-label="Look for">Niacinamide with peptides</td>
+<td data-label="Skinolin option"><a href="https://www.skinolin.com/products/b3-lemongrass-anti-aging-serum">B3 Lemongrass Anti-Aging Serum</a></td>
 </tr>
 </tbody>
 </table>
@@ -223,7 +241,7 @@
 
 <p><strong>The mistake that cancels this step:</strong> layering a new active every week. Give any serum a full eight weeks before deciding it does not work. Skin turnover takes about 28 days, so you need two to three complete cycles to judge anything.</p>
 
-<div class="inart"><h4>In this guide</h4><div class="items"><div class="it"><img src="../img/card-niacinamide-daily-cleanser.webp" alt=""><div><b><a href="../p/niacinamide-daily-cleanser.html">Niacinamide Daily Cleanser</a></b><br><span class="stars" aria-label="5.0 out of 5"><i style="--pct:100%"></i>5.0 <small>(1)</small></span><br><b>₹600</b></div><button class="add" data-add="niacinamide-daily-cleanser">Add</button></div><div class="it"><img src="../img/card-hydrating-toner-mist.webp" alt=""><div><b><a href="../p/hydrating-toner-mist.html">Hydrating Toner Mist</a></b><br><span class="stars new">New</span><br><b>₹600</b></div><button class="add" data-add="hydrating-toner-mist">Add</button></div></div></div><h2>Step 4. Moisturizer</h2>
+<div class="inart"><h4>Products in this guide</h4><div class="items"><div class="it"><img src="../img/card-niacinamide-daily-cleanser.webp" alt=""><div><b><a href="../p/niacinamide-daily-cleanser.html">Niacinamide Daily Cleanser</a></b><br><span class="stars" aria-label="5.0 out of 5"><i style="--pct:100%"></i>5.0 <small>(1)</small></span><br><b>₹600</b></div><button class="add" data-add="niacinamide-daily-cleanser">Add</button></div><div class="it"><img src="../img/card-hydrating-toner-mist.webp" alt=""><div><b><a href="../p/hydrating-toner-mist.html">Hydrating Toner Mist</a></b><br><span class="stars none" aria-hidden="true"></span><br><b>₹600</b></div><button class="add" data-add="hydrating-toner-mist">Add</button></div></div></div><h2>Step 4. Moisturizer</h2>
 
 <p>Every skin type needs <a href="https://www.skinolin.com/blogs/news/how-to-choose-a-moisturizer">a moisturizer</a>, oily skin included. The serum delivers water and actives; the moisturizer is what stops them leaving. Without it, a hydrating serum on bare skin can actually accelerate water loss, because you have wetted the surface and given it nothing to seal under.</p>
 
@@ -274,20 +292,20 @@
 </thead>
 <tbody>
 <tr>
-<td>Days 1 to 7</td>
-<td>Hydration and comfort. Skin stops feeling tight. Makeup sits better. This is surface water, not repair.</td>
+<td data-label="Timeframe">Days 1 to 7</td>
+<td data-label="What actually changes">Hydration and comfort. Skin stops feeling tight. Makeup sits better. This is surface water, not repair.</td>
 </tr>
 <tr>
-<td>Weeks 2 to 4</td>
-<td>Texture smooths. Redness settles faster. The first genuine change in how light reflects.</td>
+<td data-label="Timeframe">Weeks 2 to 4</td>
+<td data-label="What actually changes">Texture smooths. Redness settles faster. The first genuine change in how light reflects.</td>
 </tr>
 <tr>
-<td>Weeks 4 to 8</td>
-<td>Tone starts to even out. Pigmentation begins to fade. This is where a brightening serum earns its keep.</td>
+<td data-label="Timeframe">Weeks 4 to 8</td>
+<td data-label="What actually changes">Tone starts to even out. Pigmentation begins to fade. This is where a brightening serum earns its keep.</td>
 </tr>
 <tr>
-<td>Weeks 8 to 12</td>
-<td>Fine lines soften, oil production steadies, breakouts reduce in frequency. The result people mean by "glowing skin."</td>
+<td data-label="Timeframe">Weeks 8 to 12</td>
+<td data-label="What actually changes">Fine lines soften, oil production steadies, breakouts reduce in frequency. The result people mean by "glowing skin."</td>
 </tr>
 </tbody>
 </table>
@@ -520,10 +538,10 @@
   ]
 }
 </script>
-<div class="inart"><h4>Shop this routine</h4><div class="items"><div class="it"><img src="../img/card-niacinamide-daily-cleanser.webp" alt=""><div><b><a href="../p/niacinamide-daily-cleanser.html">Niacinamide Daily Cleanser</a></b><br><span class="stars" aria-label="5.0 out of 5"><i style="--pct:100%"></i>5.0 <small>(1)</small></span><br><b>₹600</b></div><button class="add" data-add="niacinamide-daily-cleanser">Add</button></div><div class="it"><img src="../img/card-hydrating-toner-mist.webp" alt=""><div><b><a href="../p/hydrating-toner-mist.html">Hydrating Toner Mist</a></b><br><span class="stars new">New</span><br><b>₹600</b></div><button class="add" data-add="hydrating-toner-mist">Add</button></div><div class="it"><img src="../img/card-niacinamide-glow-serum-for-skin-brightening.webp" alt=""><div><b><a href="../p/niacinamide-glow-serum-for-skin-brightening.html">Niacinamide Glow Serum</a></b><br><span class="stars new">New</span><br><b>₹750</b></div><button class="add" data-add="niacinamide-glow-serum-for-skin-brightening">Add</button></div><div class="it"><img src="../img/card-anhydrous-sunscreen-spf-50-pa.webp" alt=""><div><b><a href="../p/anhydrous-sunscreen-spf-50-pa.html">Anhydrous Sunscreen SPF 50 PA++++</a></b><br><span class="stars" aria-label="4.89 out of 5"><i style="--pct:98%"></i>4.9 <small>(9)</small></span><br><b>₹1,350</b></div><button class="add" data-add="anhydrous-sunscreen-spf-50-pa">Add</button></div></div></div></div></div></article>
+<div class="inart"><h4>Shop this routine</h4><div class="items"><div class="it"><img src="../img/card-niacinamide-daily-cleanser.webp" alt=""><div><b><a href="../p/niacinamide-daily-cleanser.html">Niacinamide Daily Cleanser</a></b><br><span class="stars" aria-label="5.0 out of 5"><i style="--pct:100%"></i>5.0 <small>(1)</small></span><br><b>₹600</b></div><button class="add" data-add="niacinamide-daily-cleanser">Add</button></div><div class="it"><img src="../img/card-hydrating-toner-mist.webp" alt=""><div><b><a href="../p/hydrating-toner-mist.html">Hydrating Toner Mist</a></b><br><span class="stars none" aria-hidden="true"></span><br><b>₹600</b></div><button class="add" data-add="hydrating-toner-mist">Add</button></div><div class="it"><img src="../img/card-niacinamide-glow-serum-for-skin-brightening.webp" alt=""><div><b><a href="../p/niacinamide-glow-serum-for-skin-brightening.html">Niacinamide Glow Serum</a></b><br><span class="stars none" aria-hidden="true"></span><br><b>₹750</b></div><button class="add" data-add="niacinamide-glow-serum-for-skin-brightening">Add</button></div><div class="it"><img src="../img/card-anhydrous-sunscreen-spf-50-pa.webp" alt=""><div><b><a href="../p/anhydrous-sunscreen-spf-50-pa.html">Anhydrous Sunscreen SPF 50 PA++++</a></b><br><span class="stars" aria-label="4.89 out of 5"><i style="--pct:98%"></i>4.9 <small>(9)</small></span><br><b>₹1,350</b></div><button class="add" data-add="anhydrous-sunscreen-spf-50-pa">Add</button></div></div></div></div></div></article>
 <div class="rbar"><div class="t">Shop this routine: 4 products</div><a class="btn light sm" href="#shop-routine" onclick="document.querySelectorAll('.inart')[1].scrollIntoView({behavior:'smooth'});return false">See products</a></div></main>
 <footer class="ftr"><div class="wrap"><div class="ftr-g">
-<div class="col1"><img class="logo-f" src="../img/brand-wordmark-white.webp" alt="Skinolin"><p class="about"><b>Skin loves Skinolin.</b> India's botanical balance: plant-powered skincare made in India, and a waterless SPF 50 that is all sunscreen.</p>
+<div class="col1"><img class="logo-f" src="../img/brand-wordmark-white.webp" alt="Skinolin"><p class="about"><b>Skin loves Skinolin.</b> India's botanical balance: plant‑powered skincare made in India, and a waterless SPF 50 that is all sunscreen.</p>
 <p class="small">Skinolin is a brand of Sinatra Enterprises, Block A2, No. 97, Rajouri Garden, New Delhi.</p></div>
 <div><h4>Shop</h4><ul><li><a href="../shop.html?cat=sunscreens">Sunscreens</a></li><li><a href="../shop.html?cat=serums">Serums</a></li><li><a href="../shop.html?cat=cleansers">Cleansers</a></li><li><a href="../shop.html?cat=toners">Toners</a></li><li><a href="../shop.html?cat=moisturizers">Moisturizers</a></li><li><a href="../shop.html?cat=combos">Combos</a></li><li><a href="../shop.html">All products</a></li></ul></div>
 <div><h4>Help</h4><ul><li><a href="../policies.html">Shipping and delivery</a></li><li><a href="../policies.html#returns">Returns and replacements</a></li><li><a href="../policies.html#cancel">Cancellations</a></li><li><a href="https://wa.me/?text=Hi%20Skinolin%2C%20I%20have%20a%20question">WhatsApp us</a></li></ul></div>
@@ -532,9 +550,9 @@
 
 <div class="scrim"></div>
 <aside class="sheet left" id="menu" aria-label="Menu"><div class="sheet-h"><b>Menu</b><button class="ibtn" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
-<div class="sheet-b"><div class="m-sec"><h4>Shop by skin concern</h4><div class="m-chips"><a href="../shop.html?concern=oily">Oily and acne-prone</a><a href="../shop.html?concern=spots">Dark spots and dull skin</a><a href="../shop.html?concern=dry">Dry and dehydrated</a><a href="../shop.html?concern=sensitive">Sensitive and redness</a><a href="../shop.html?concern=barrier">Skin barrier repair</a><a href="../shop.html?concern=lines">Early fine lines</a><a href="../shop.html?concern=sun">Sun protection</a></div></div><div class="m-sec"><h4>Shop by product</h4><a href="../shop.html?cat=sunscreens">Sunscreens</a><a href="../shop.html?cat=serums">Serums</a><a href="../shop.html?cat=cleansers">Cleansers</a><a href="../shop.html?cat=toners">Toners</a><a href="../shop.html?cat=moisturizers">Moisturizers</a><a href="../shop.html?cat=combos">Combos</a><a href="../shop.html">All products</a></div><div class="m-sec"><a href="../learn.html">Learn: skincare guides</a><a href="../about.html">About Skinolin</a><a href="../salons.html">For salons and clinics</a></div><div class="m-sec"><a href="https://wa.me/?text=Hi%20Skinolin%2C%20I%20have%20a%20question">Chat on WhatsApp</a><a href="../policies.html">Shipping and returns</a></div></div></aside>
+<div class="sheet-b"><div class="m-sec"><h4>Shop by skin concern</h4><div class="m-chips"><a href="../shop.html?concern=spots">Dark spots and pigmentation</a><a href="../shop.html?concern=dull">Dull and uneven skin</a><a href="../shop.html?concern=dry">Dry and dehydrated</a><a href="../shop.html?concern=sensitive">Sensitive skin</a><a href="../shop.html?concern=lines">Aging and fine lines</a><a href="../shop.html?concern=oily">Oily and acne-prone</a><a href="../shop.html?concern=barrier">Skin barrier repair</a><a href="../shop.html?concern=sun">Sun protection</a></div></div><div class="m-sec"><h4>Shop by product</h4><a href="../shop.html?cat=sunscreens">Sunscreens</a><a href="../shop.html?cat=serums">Serums</a><a href="../shop.html?cat=cleansers">Cleansers</a><a href="../shop.html?cat=toners">Toners</a><a href="../shop.html?cat=moisturizers">Moisturizers</a><a href="../shop.html?cat=combos">Combos</a><a href="../shop.html">All products</a></div><div class="m-sec"><a href="../learn.html">Learn: skincare guides</a><a href="../about.html">About Skinolin</a><a href="../salons.html">For salons and clinics</a></div><div class="m-sec"><a href="https://wa.me/?text=Hi%20Skinolin%2C%20I%20have%20a%20question">Chat on WhatsApp</a><a href="../policies.html">Shipping and returns</a></div></div></aside>
 <aside class="sheet right" id="cart" aria-label="Cart"><div class="sheet-h"><b>Your cart</b><button class="ibtn" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
-<div class="sheet-b"><div class="banner-note" style="margin-top:12px"><svg style="width:22px;height:22px;flex:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Free shipping on every order. Delivered in 3 to 5 days.</div><div id="cartItems"></div></div>
+<div class="sheet-b"><div class="banner-note" style="margin-top:12px"><svg style="width:22px;height:22px;flex:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Free shipping. Delivered in 3 to 5 days.</div><div id="cartItems"></div></div>
 <div class="cart-foot" id="cartFoot">
   <div class="sumrow"><span>Subtotal</span><b data-sub>₹0</b></div>
   <div class="sumrow"><span>Shipping</span><span class="free">Free</span></div>
@@ -543,12 +561,12 @@
   <p class="small muted" style="margin:0;text-align:center">UPI, cards and net banking accepted</p>
 </div></aside>
 <div class="search" id="search" role="dialog" aria-label="Search"><div class="search-h"><svg style="width:22px;height:22px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-<input id="searchInput" type="search" placeholder="Search sunscreen, niacinamide, dark spots..." aria-label="Search products"><button class="ibtn" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
-<div class="search-b"><div class="chips" style="margin-bottom:16px"><a class="chip" href="../shop.html?concern=oily">Oily and acne-prone</a><a class="chip" href="../shop.html?concern=spots">Dark spots and dull skin</a><a class="chip" href="../shop.html?concern=dry">Dry and dehydrated</a><a class="chip" href="../shop.html?concern=sensitive">Sensitive and redness</a><a class="chip" href="../shop.html?concern=barrier">Skin barrier repair</a></div><div class="s-res" id="searchRes"></div></div></div>
+<input id="searchInput" type="search" placeholder="Search products and concerns" aria-label="Search products"><button class="ibtn" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+<div class="search-b"><div class="chips" style="margin-bottom:16px"><a class="chip" href="../shop.html?concern=spots">Dark spots and pigmentation</a><a class="chip" href="../shop.html?concern=dull">Dull and uneven skin</a><a class="chip" href="../shop.html?concern=dry">Dry and dehydrated</a><a class="chip" href="../shop.html?concern=sensitive">Sensitive skin</a><a class="chip" href="../shop.html?concern=lines">Aging and fine lines</a></div><div class="s-res" id="searchRes"></div></div></div>
 <a class="wa" href="https://wa.me/?text=Hi%20Skinolin%2C%20I%20have%20a%20question" aria-label="Chat on WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3a13 13 0 00-11.2 19.6L3 29l6.6-1.7A13 13 0 1016 3zm0 23.6a10.6 10.6 0 01-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1116 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 01-4.3-3.8c-.3-.6.3-.5 1-1.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 00-.9.4 3.6 3.6 0 00-1.1 2.7 6.3 6.3 0 001.3 3.3 14.4 14.4 0 005.5 4.8c2 .9 2.8 1 3.8.8a3.2 3.2 0 002.1-1.5 2.6 2.6 0 00.2-1.5c-.1-.2-.3-.3-.6-.4z"/></svg></a>
 <div class="pv">Design preview by LockNCode · <a href="../preview-notes.html">what changed</a></div>
 <div class="modal" id="ckModal"><div><h3>This is a design preview</h3><p>No order was placed and no payment was taken. On the live store this button goes to Razorpay.</p><button class="btn" data-close>Back to the preview</button></div></div>
-<nav class="bnav" aria-label="Shortcuts"><a href="../index.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l8-7 8 7v9H4z"/></svg>Home</a><a href="../shop.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>Shop</a><a href="../shop.html#concerns" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3s6 7 6 11a6 6 0 01-12 0c0-4 6-11 6-11z"/></svg>Concerns</a><button data-open="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Search</button><button data-open="cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>Cart<span class="count" data-count style="display:none">0</span></button></nav>
+<nav class="bnav" aria-label="Shortcuts"><a href="../index.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l8-7 8 7v9H4z"/></svg>Home</a><a href="../shop.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>Shop</a><a href="../shop.html#concerns" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3s6 7 6 11a6 6 0 01-12 0c0-4 6-11 6-11z"/></svg>Concerns</a><a href="https://wa.me/?text=Hi%20Skinolin%2C%20I%20have%20a%20question" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3a13 13 0 00-11.2 19.6L3 29l6.6-1.7A13 13 0 1016 3zm0 23.6a10.6 10.6 0 01-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1116 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 01-4.3-3.8c-.3-.6.3-.5 1-1.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 00-.9.4 3.6 3.6 0 00-1.1 2.7 6.3 6.3 0 001.3 3.3 14.4 14.4 0 005.5 4.8c2 .9 2.8 1 3.8.8a3.2 3.2 0 002.1-1.5 2.6 2.6 0 00.2-1.5c-.1-.2-.3-.3-.6-.4z"/></svg>Chat</a><button data-open="cart" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>Cart<span class="count" data-count style="display:none">0</span></button></nav>
 <script>window.BRAND={"key": "skinolin", "gift": {"at": 1499, "label": "a free Diwali gift", "unlocked": "Your free Diwali gift is in the cart"}, "suggest": [["cica-exosomes-face-serum", "anhydrous-sunscreen-spf-50-pa"], ["niacinamide-glow-serum-for-skin-brightening", "anhydrous-sunscreen-spf-50-pa"], ["anhydrous-sunscreen-spf-50-pa", "hydrating-toner-mist"], ["niacinamide-daily-cleanser", "cica-exosomes-face-serum"], ["kojic-acid-foaming-cleanser-for-oily-skin", "hydrating-toner-mist"], ["hydrating-toner-mist", "anhydrous-sunscreen-spf-50-pa"]], "fallbackSuggest": ["anhydrous-sunscreen-spf-50-pa", "hydrating-toner-mist", "cica-exosomes-face-serum"], "suggestLabel": "Complete the routine"};</script>
 <script src="../data.js"></script><script src="../site.js"></script>
 </body></html>

@@ -81,7 +81,7 @@
     }
     var pg = $("#cartPage");
     if (pg) {
-      pg.innerHTML = c.length ? c.map(itemHTML).join('<hr style="border:0;border-top:1px solid var(--line);margin:0">') + giftHTML(t.s) + upsellHTML(c)
+      pg.innerHTML = c.length ? c.map(itemHTML).join('<hr style="border:0;border-top:1px solid var(--line);margin:18px 0">') + giftHTML(t.s) + upsellHTML(c)
         : '<div class="empty"><p><b>Your cart is empty.</b></p><a class="btn" href="' + root + 'shop.html">Shop best sellers</a></div>';
       $$("[data-sub]").forEach(function (e) { e.textContent = inr(t.s); });
     }
@@ -98,9 +98,9 @@
     if (a) {
       e.preventDefault(); var id = a.getAttribute("data-add"), q = 1, qi = a.closest("[data-qty-scope]");
       if (qi) { var inp = $("input", qi); q = Math.max(1, parseInt(inp && inp.value, 10) || 1); }
-      add(id, q); toast("Added to cart: " + (P[id] ? P[id].n : ""));
+      add(id, q);
       if (a.hasAttribute("data-buynow")) { location.href = root + "checkout.html"; return; }
-      if (!a.closest(".sheet")) open("cart"); return;
+      if (!a.closest(".sheet")) open("cart"); else toast("Added to cart: " + (P[id] ? P[id].n : "")); return;
     }
     var q = e.target.closest("[data-q]");
     if (q) {
@@ -165,6 +165,31 @@
     apply();
   }
 
+  /* carousels */
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest(".cbtn"); if (!b) return;
+    var tr = b.parentNode.querySelector(".ctrack"); if (!tr) return;
+    tr.scrollBy({ left: (b.classList.contains("prev") ? -1 : 1) * tr.clientWidth * 0.92, behavior: "smooth" });
+  });
+
+  /* banner slider */
+  $$("[data-slider]").forEach(function (sl) {
+    var tr = $(".slides", sl), n = $$(".slide", sl).length, i = 0, paused = false, dots = $$(".sdots button", sl);
+    var go = function (k) { i = (k + n) % n; tr.style.transform = "translateX(" + (-100 * i) + "%)"; dots.forEach(function (d, j) { d.classList.toggle("on", j === i); d.setAttribute("aria-current", j === i ? "true" : "false"); }); };
+    sl.addEventListener("click", function (e) {
+      var b = e.target.closest(".sarr,.sdots button"); if (!b) return;
+      if (b.classList.contains("prev")) go(i - 1); else if (b.classList.contains("next")) go(i + 1); else go(dots.indexOf(b));
+      paused = true;
+    });
+    ["mouseenter", "focusin", "touchstart"].forEach(function (ev) { sl.addEventListener(ev, function () { paused = true; }, { passive: true }); });
+    sl.addEventListener("mouseleave", function () { paused = false; });
+    var x0 = null;
+    sl.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    sl.addEventListener("touchend", function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) go(i + (dx < 0 ? 1 : -1)); x0 = null; });
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(function () { if (!paused && !document.hidden) go(i + 1); }, 6500);
+    go(0);
+  });
+
   /* gallery (PDP-025) */
   var gm = $(".gal-main img");
   $$(".gal-strip button").forEach(function (b) {
@@ -190,8 +215,9 @@
 
   /* sticky phone buy bar: appears once the main Add to Cart scrolls away */
   var mainAdd = $("#mainAdd"), bar = $(".stickybar");
-  if (mainAdd && bar && "IntersectionObserver" in window) {
-    new IntersectionObserver(function (en) { bar.classList.toggle("on", !en[0].isIntersecting); }).observe(mainAdd);
+  if (mainAdd && bar) {
+    var sb = function () { bar.classList.toggle("on", mainAdd.getBoundingClientRect().bottom < 0); };
+    window.addEventListener("scroll", sb, { passive: true }); window.addEventListener("resize", sb); sb();
   }
 
   /* reading bar on articles (BLOG-010) */
