@@ -318,7 +318,7 @@ body.pdp-page .bnav{display:none}
 .search-b{overflow:auto;padding:18px}
 .search-h,.search-b{width:100%;max-width:1120px;margin-left:auto;margin-right:auto}
 @media(min-width:1021px){.search-h{border-bottom:0}}
-.search-b .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+@media(max-width:1020px){.search-b .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}}
 .search-h input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
 @media(min-width:721px) and (max-width:1020px){.search-b .s-res{grid-template-columns:1fr 1fr}}
 .s-res{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
@@ -382,7 +382,7 @@ body.art-page .bnav{display:none}
 .variants button img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;background:var(--pk-bg)}
 .variants button.on{border-color:var(--head-color);box-shadow:0 0 0 1px var(--head-color)}
 .variants .vni{width:100%;aspect-ratio:1/1;border-radius:8px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:10.5px;color:var(--muted);font-weight:700;text-align:center;padding:4px}
-@media(max-width:720px){.variants{display:flex;overflow-x:auto;margin:6px -16px 18px;padding:0 16px 6px;scroll-padding:0 16px;scrollbar-width:none}.variants::-webkit-scrollbar{display:none}.variants button{flex:0 0 86px}}
+@media(max-width:1020px){.variants{display:flex;overflow-x:auto;margin:6px -16px 18px;padding:0 16px 6px;scroll-padding:0 16px;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}.variants::-webkit-scrollbar{display:none}.variants button{flex:0 0 76px}}
 .vlabel{font-size:14px;margin:14px 0 4px}
 .noimg{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:var(--muted);font-weight:700;font-size:13px;text-align:center;padding:16px}
 .share{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--muted);font-weight:700;margin-top:14px}
@@ -432,8 +432,9 @@ body.art-page .bnav{display:none}
 /* guides list */
 .lgrid .card .ph{aspect-ratio:1/1;background:#fff}.lgrid .card .ph img{object-fit:cover;transform:none!important}
 @media(max-width:720px){.lgrid .card .ph{background:#fff;aspect-ratio:4/3!important;flex:0 0 132px!important}.lgrid .card .ph img{object-fit:cover}.lgrid{grid-template-columns:1fr!important;gap:12px}.lgrid .card{flex-direction:row}.lgrid .card .ph{flex:0 0 112px}.lgrid .card .bd{justify-content:center}.lgrid .card h3{min-height:0;font-size:15.5px}}
-.grid.g5{grid-template-columns:repeat(5,1fr)}.ctatile{display:none}
-@media(max-width:1020px){.grid.g5{grid-template-columns:repeat(2,1fr)}.ctatile{display:flex}}
+.grid.g5{grid-template-columns:repeat(5,minmax(0,1fr))}.ctatile{display:none}
+@media(max-width:1020px){.grid.g5{grid-template-columns:repeat(2,minmax(0,1fr))}.ctatile{display:flex}}
+@media(max-width:720px){.ctatile{padding:16px}.ctatile .btn{white-space:normal;padding:0 10px}}
 .ctatile{flex-direction:column;justify-content:center;gap:12px;background:var(--head-color);color:#fff;border-radius:var(--r);padding:22px}.ctatile h3{color:#fff;font-size:20px;margin:0}.ctatile p{margin:0;font-size:14.5px;opacity:.9}
 .mult{background:var(--sand);border-radius:var(--r-lg)}.mult img{mix-blend-mode:multiply}
 .facts3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}.facts3 div{background:var(--sand);border-radius:var(--r);padding:18px}.facts3 b{display:block;font-family:var(--head);font-size:19px;color:var(--head-color);margin-bottom:4px}.facts3 span{font-size:14.5px;color:var(--ink-2)}
@@ -454,3 +455,7 @@ body.art-page .bnav{display:none}
 @media(min-width:721px) and (max-width:1020px){.revs{margin-right:-32px;padding-right:32px}}
 @media(max-width:900px){.slider{background:var(--bg)}}
 .ctatile .btn{align-self:stretch!important;justify-content:center;white-space:nowrap}
+
+/* final pass: phone buy button on one line, article tables and inline photos sized for wide screens */
+@media(max-width:420px){.buyrow .btn{white-space:nowrap;padding:0 10px;font-size:15px}.qty button{width:36px}.qty input{width:30px}}
+@media(min-width:601px){.art-body td:first-child{white-space:nowrap}.art-body img{max-height:420px;width:auto;max-width:100%}}

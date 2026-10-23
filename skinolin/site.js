@@ -214,6 +214,8 @@
   });
 
   /* sticky phone buy bar: appears once the main Add to Cart scrolls away */
+  var vOn = $(".variants button.on");
+  if (vOn && vOn.parentNode.scrollWidth > vOn.parentNode.clientWidth) vOn.parentNode.scrollLeft = vOn.offsetLeft - vOn.parentNode.offsetLeft - 16;
   var mainAdd = $("#mainAdd"), bar = $(".stickybar");
   if (mainAdd && bar) {
     var sb = function () { bar.classList.toggle("on", mainAdd.getBoundingClientRect().bottom < 0); };
