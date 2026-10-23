@@ -62,16 +62,19 @@
 .tested-h h2{margin-bottom:10px}.tested-g{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
 .tested-g div{padding:2px 18px;border-left:1px solid var(--line-strong)}.tested-g b{display:block;font-family:var(--head);font-size:24px;color:var(--navy);line-height:1.15}
 .tested-g span{font-size:14px;color:var(--ink-2)}
-.wasign{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
-.wasign .t{padding:32px 44px 32px 0;display:flex;flex-direction:column;justify-content:center}.wasign .t p{color:var(--ink-2);margin:0}
-.wasign form{padding:28px 0 28px 44px;border-left:1px solid var(--line);display:grid;gap:12px;align-content:center}.wasign input,.wasign select{width:100%;height:48px;border-radius:var(--btn-r);border:1.5px solid var(--line-strong);padding:0 12px;background:#fff}
+.wasign{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;background:var(--soft);border-radius:var(--r-lg);padding:40px 44px}
+.wasign .t p{color:var(--ink-2);margin:0}.wasign form{display:grid;gap:12px;align-content:center}
+.wasign input,.wasign select{width:100%;height:48px;border-radius:var(--btn-r);border:1.5px solid var(--line-strong);padding:0 12px;background:#fff}
 .wasign .field{display:grid;gap:4px}
-@media(max-width:900px){.tested,.wasign{grid-template-columns:1fr}.tested{padding:22px 0;gap:18px}.tested-g{grid-template-columns:1fr 1fr;row-gap:16px}.wasign .t{padding:24px 0 8px}.wasign form{padding:12px 0 24px;border-left:0}}
+@media(max-width:900px){.tested,.wasign{grid-template-columns:1fr}.tested{padding:22px 0;gap:18px}.tested-g{grid-template-columns:1fr 1fr;row-gap:16px}.wasign{gap:18px;padding:24px 20px}}
 @media(max-width:420px){.tested-g b{font-size:20px}}
-.feature{position:relative;padding-top:0}.feature-img img{width:100%;height:min(70vh,640px);object-fit:cover;display:block}
-.feature .wrap{position:relative}.feature-card{position:relative;margin-top:-180px;max-width:560px;background:var(--bg);padding:34px 36px;border-top:3px solid var(--accent)}
-@media(max-width:900px){.feature-img img{height:auto;aspect-ratio:4/3}.feature-card{margin-top:-60px;padding:24px 20px;max-width:none}}
-.sec.soft{background:var(--soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160' fill='none' stroke='%23183E6C' stroke-width='1.4' opacity='.14'%3E%3Cpath d='M20 150 C60 120 100 80 140 20'/%3E%3Cpath d='M58 118 C40 96 44 70 66 56 C80 78 76 102 58 118Z'/%3E%3Cpath d='M92 84 C86 60 98 40 124 36 C126 60 114 78 92 84Z'/%3E%3C/svg%3E") no-repeat right 4% bottom 18px / 150px}
+.revs .rev{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;gap:12px}
+.revs .rev p{font-family:var(--body);font-size:16px;line-height:1.6;color:var(--ink)}
+@media(max-width:720px){.revs .rev{border-top:1px solid var(--line);padding:20px}}
+.routine .band-media img{aspect-ratio:4/3}
+.ampm{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 24px}.ampm div{background:var(--soft);border-radius:var(--r);padding:14px 16px}
+.ampm b{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-text);margin-bottom:4px}.ampm span{font-size:15px}
+@media(max-width:420px){.ampm{grid-template-columns:1fr}}
 .probanner{display:block;border-radius:var(--r-lg);overflow:hidden;box-shadow:0 10px 30px rgba(20,30,40,.08)}
 .probanner img{width:100%;height:auto;display:block}
 .prophone{display:none}
@@ -165,10 +168,10 @@
 <a class="prod" href="p/kojic-acid-foaming-cleanser-for-oily-skin.html"><img src="img/card-kojic-acid-foaming-cleanser-for-oily-skin.webp" alt="">Kojic Acid Foaming Cleanser</a></div><div class="rev"><span class="stars"><i style="--pct:100%"></i></span><p>“The foam is soft and gentle on my skin. Doesn’t give that tight feeling.”</p><div class="who">Shubhamkakkar · January 2026</div>
 <a class="prod" href="p/kojic-acid-foaming-cleanser-for-oily-skin.html"><img src="img/card-kojic-acid-foaming-cleanser-for-oily-skin.webp" alt="">Kojic Acid Foaming Cleanser</a></div></div></div></section>
 <section class="sec tight"><div class="wrap"><div class="sec-h"><div><h2>Shop by category</h2></div><a class="link" href="shop.html">All products</a></div><div class="tiles"><a class="tile" href="shop.html?cat=sunscreens"><img src="img/card-anhydrous-sunscreen-spf-50-pa.webp" alt="" loading="lazy">Sunscreens</a><a class="tile" href="shop.html?cat=serums"><img src="img/card-cica-exosomes-face-serum.webp" alt="" loading="lazy">Serums</a><a class="tile" href="shop.html?cat=cleansers"><img src="img/card-niacinamide-daily-cleanser.webp" alt="" loading="lazy">Cleansers</a><a class="tile" href="shop.html?cat=toners"><img src="img/card-hydrating-toner-mist.webp" alt="" loading="lazy">Toners</a><a class="tile" href="shop.html?cat=moisturizers"><img src="img/card-all-in-1-moisturiser-with-spf-30.webp" alt="" loading="lazy">Moisturizers</a><a class="tile" href="shop.html?cat=combos"><img src="img/card-cica-niacinamide-skin-repair-combo.webp" alt="" loading="lazy">Combos</a></div></div></section>
-<section class="sec feature"><div class="feature-img"><img src="img/routine.webp" alt="Skinolin cleanser, toner, serum and sunscreen on a sandstone shelf" loading="lazy"></div>
-<div class="wrap"><div class="feature-card"><h2>Cleanse, tone, treat, protect.</h2>
+<section class="sec"><div class="wrap band rev-order routine"><div class="band-media"><img src="img/routine.webp" alt="Skinolin cleanser, toner, serum and sunscreen on a sandstone shelf" loading="lazy"></div>
+<div><h2>Cleanse, tone, treat, protect.</h2>
 <p>A simple daily routine that works for most skin types. Start with the steps you need, or take all five products as a set and save 10%.</p>
-<ul class="ticks"><li>Morning: cleanser, toner mist, serum, SPF 50</li><li>Night: cleanser, toner mist, serum, moisturizer</li></ul>
+<div class="ampm"><div><b>Morning</b><span>Cleanser, toner mist, serum, SPF&nbsp;50</span></div><div><b>Night</b><span>Cleanser, toner mist, serum, moisturizer</span></div></div>
 <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="p/complete-skincare-kit-for-all-skin-types-glow-and-go.html">Shop the complete kit, save ₹450</a><a class="btn ghost" href="shop.html?cat=combos">See all combos</a></div></div></div></section>
 <section class="sec"><div class="wrap band story"><div class="band-media"><img src="img/our-story.webp" alt="Skinolin sunscreen and serums on a stone tray with chamomile and aloe" loading="lazy"></div>
 <div><h2>Botanical skincare, backed by science</h2>

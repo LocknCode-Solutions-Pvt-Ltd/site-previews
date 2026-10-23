@@ -77,6 +77,10 @@ h1{font-size:clamp(34px,4.4vw,60px)}h2{font-size:clamp(26px,2.9vw,40px)}.slide .
 .steps4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .st{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px}.st span{width:34px;height:34px;border-radius:50%;background:#8E7CC3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:10px}
 .st b{font-family:var(--head);font-size:21px;color:var(--head-color)}.st p{margin:6px 0 0;color:var(--ink-2);font-size:14.5px}
+.vstory{display:grid;grid-template-columns:1fr 1.25fr;gap:64px;align-items:start}.vstory .pull{font-family:var(--head);font-size:clamp(26px,2.6vw,36px);line-height:1.25;color:#6b5aa6;margin:18px 0 0;padding-left:20px;border-left:3px solid #8E7CC3}
+.vstory p{color:var(--ink-2)}.voindia{display:grid;grid-template-columns:1.6fr 1fr;gap:40px;align-items:center;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);padding:32px 0}
+.voindia p{color:var(--ink-2);margin:0}.voindia-a{display:flex;gap:22px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+@media(max-width:900px){.vstory,.voindia{grid-template-columns:1fr;gap:20px}.voindia-a{justify-content:flex-start}}
 .whyvo{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.whyvo div{border-top:3px solid #8E7CC3;padding-top:14px}.whyvo b{display:block;font-size:17px;margin-bottom:4px}.whyvo span{color:var(--ink-2);font-size:14.5px}
 @media(max-width:1020px){.timeline{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -32px;padding:0 32px 8px;scroll-padding:0 32px;scrollbar-width:none}.timeline::-webkit-scrollbar{display:none}.tl{flex:0 0 42%;scroll-snap-align:start}
 .steps4{grid-template-columns:1fr 1fr}.storycard{grid-template-columns:1fr}.storycard>div{padding:22px}}
@@ -144,8 +148,13 @@ h1{font-size:clamp(34px,4.4vw,60px)}h2{font-size:clamp(26px,2.9vw,40px)}.slide .
   </div>
 </div></header>
 <main><section class="sec tight"><div class="wrap band brandhero vo"><div><span class="eyebrow">VOESH New York</span><h1 style="font-size:clamp(32px,3.8vw,52px)">Spa care for hands and feet, at home</h1>
-<p>VOESH is a manicure and pedicure brand made with vegan and cruelty-free ingredients, known for single-use, pre-portioned mani and pedi kits that keep every treatment fresh and hygienic. JB Skincare is its exclusive authorized importer and distributor for India.</p>
-<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="#voesh-all">Shop VOESH</a><a class="btn ghost" href="learn/is-repechage-available-in-india.html">Our story</a></div></div><div class="band-media"><img src="img/hero-voesh.webp" alt="VOESH Pedi in a Box and peeling socks on a spa towel"></div></div></section>
+<p>VOESH is a New York body-care brand inspired by Korean beauty. In India, JB Skincare brings in its single-use, pre-portioned mani and pedi kits, made with vegan and cruelty-free ingredients. JB Skincare is its exclusive authorized importer and distributor for India.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="#voesh-all">Shop VOESH</a><a class="btn ghost" href="#voesh-story">The VOESH story</a></div></div><div class="band-media"><img src="img/hero-voesh.webp" alt="VOESH Pedi in a Box and peeling socks on a spa towel"></div></div></section>
+<section class="sec" id="voesh-story"><div class="wrap vstory"><div class="vq"><h2>Who is VOESH?</h2><p class="pull">Body care that gets the same attention as your face.</p></div>
+<div><p>VOESH was founded in New York by Vera and Joseph. Before VOESH, they spent more than ten years working with beauty professionals and, as VOESH puts it, delivered over 100 million treatments in spas and salons around the world.</p>
+<p>Along the way they saw a gap: people used advanced skincare on their faces, but only basic lotions and washes on their bodies. They started VOESH to bring Korean skincare ideas and spa-level care to the rest of the body.</p>
+<ul class="ticks"><li>From Seoul to New York: inspired by Korean beauty traditions</li><li>Baechu Biome: VOESH's probiotic complex, made by fermenting napa cabbage the way kimchi is made</li><li>Single-use mani and pedi kits, the VOESH line JB Skincare brings to India</li></ul>
+<p class="small muted">Source: VOESH, Our Story (voesh.com).</p></div></div></section>
 <section class="sec soft"><div class="wrap"><div class="sec-h"><div><h2>How Pedi in a Box works</h2><p>Every step comes in its own single-use pack: open, use, done. One box is one treatment.</p></div></div>
 <div class="steps4"><div class="st"><span>1</span><b>Soak</b><p>Sea salt soak softens skin and relaxes tired feet.</p></div><div class="st"><span>2</span><b>Scrub</b><p>A sugar scrub lifts away dry, rough skin.</p></div><div class="st"><span>3</span><b>Masque</b><p>A mud masque draws out impurities and refreshes.</p></div><div class="st"><span>4</span><b>Massage</b><p>Massage butter seals in moisture for soft, smooth feet.</p></div></div></div></section>
 <section class="sec tight"><div class="wrap"><div class="whyvo"><div><b>Single-use packs</b><span>Each step is pre-portioned and opened fresh, so nothing is shared or reused.</span></div>
@@ -199,8 +208,8 @@ h1{font-size:clamp(34px,4.4vw,60px)}h2{font-size:clamp(26px,2.9vw,40px)}.slide .
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Hands and feet</span><h3><a href="p/callus-remover-gel.html">Callus Remover Gel</a></h3>
 <p class="sub">VOESH</p>
 <div class="row"><span class="price">₹200</span><button class="add" data-add="callus-remover-gel">Add to cart</button></div></div></article></div></div></section>
-<section class="sec tight"><div class="wrap"><a class="storycard" href="learn/is-repechage-available-in-india.html"><img src="img/artimg-91bb5df75337.webp" alt="" loading="lazy"><div><h3>Repêchage in India: The JB Skincare Story</h3>
-<p>VOESH is the second brand JB Skincare brings to India. Read how JB started with Repêchage in 2012 and what it stands for.</p><span class="link">Read the story</span></div></a></div></section></main>
+<section class="sec tight"><div class="wrap"><div class="voindia"><div><h2>VOESH in India</h2><p>JB Skincare has imported Repêchage into India since 2012, and now brings VOESH here too. Every VOESH kit on this site is imported directly by JB Skincare.</p></div>
+<div class="voindia-a"><a class="btn" href="#voesh-all">Shop VOESH</a><a class="link" href="about.html">About JB Skincare</a></div></div></div></section></main>
 <footer class="ftr"><div class="wrap"><div class="ftr-g">
 <div class="col1"><div style="display:flex;align-items:center;gap:10px;margin-bottom:14px"><img src="img/brand-mono-white.webp" alt="" style="height:44px"><b style="font-family:var(--head);font-size:24px;color:#fff">JB Skincare</b></div>
 <p class="about"><b>India's home of Repêchage and VOESH.</b> The exclusive importer of Repêchage since 2012, and the importer of VOESH New York. Genuine products, direct from the brands, with free advice from Repêchage‑trained experts.</p>
