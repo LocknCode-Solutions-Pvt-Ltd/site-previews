@@ -463,3 +463,13 @@ body.art-page .bnav{display:none}
 @media(min-width:601px){.art-body td:first-child{white-space:nowrap}.art-body img{max-height:420px;width:auto;max-width:100%}}
 @media(max-width:720px){.card .sub.keep{display:block}}
 @media(min-width:901px){.ck>.summary{margin-top:9px}}
+
+/* editorial pass (23 Oct 2026): fewer boxes, thin rules, sharper corners, plain bullets */
+.card{border:0;background:transparent;overflow:visible}.card .ph{border-radius:var(--r)}.card .bd{padding:14px 2px 2px}
+.card:hover{box-shadow:none;transform:none}
+.chip{border-radius:3px}
+.sec-h{border-top:1px solid var(--line-strong);padding-top:20px}
+.ticks li::before{width:16px;height:2px;border-radius:0;background:var(--accent);margin-top:12px}
+.rev{border:0;border-left:1px solid var(--line-strong);border-radius:0;background:transparent;padding:4px 22px}
+.rev p{font-family:var(--head);font-size:19px;line-height:1.45;color:var(--ink)}
+@media(max-width:720px){.rev{border-left:0;border-top:1px solid var(--line-strong);padding:16px 2px 4px}}
