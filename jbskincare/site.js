@@ -175,7 +175,11 @@
   /* banner slider */
   $$("[data-slider]").forEach(function (sl) {
     var tr = $(".slides", sl), n = $$(".slide", sl).length, i = 0, paused = false, dots = $$(".sdots button", sl);
-    var go = function (k) { i = (k + n) % n; tr.style.transform = "translateX(" + (-100 * i) + "%)"; dots.forEach(function (d, j) { d.classList.toggle("on", j === i); d.setAttribute("aria-current", j === i ? "true" : "false"); }); };
+    var go = function (k) {
+      i = (k + n) % n; tr.style.transform = "translateX(" + (-100 * i) + "%)";
+      dots.forEach(function (d, j) { d.classList.toggle("on", j === i); d.setAttribute("aria-current", j === i ? "true" : "false"); });
+      $$(".slide", sl).forEach(function (s, j) { var v = $("video", s); if (!v) return; if (j === i) { var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); } else v.pause(); });
+    };
     sl.addEventListener("click", function (e) {
       var b = e.target.closest(".sarr,.sdots button"); if (!b) return;
       if (b.classList.contains("prev")) go(i - 1); else if (b.classList.contains("next")) go(i + 1); else go(dots.indexOf(b));

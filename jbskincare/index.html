@@ -62,6 +62,22 @@ article.card .ph img{transform:scale(.9) translateY(4%)}article.card:hover .ph i
 .consult .t{padding:40px;background:var(--head-color);display:flex;flex-direction:column;justify-content:center}
 .consult form>b{font-family:var(--head);color:var(--head-color);font-size:20px!important}
 .consult select{color:#757575;padding:0 8px}
+.brandhero figure{margin:0}.brandhero figure.band-media{overflow:visible}.brandhero figcaption{font-size:13px;color:var(--muted);margin-top:8px;text-align:left;padding:0 4px}
+.brandhero .band-media img{border-radius:var(--r-lg);aspect-ratio:4/3;object-fit:cover}.brandhero .portrait img{aspect-ratio:1/1;object-position:50% 30%}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.tl{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.tl img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--soft)}.tl>div{padding:14px 16px 18px}
+.tl b{font-family:var(--head);font-size:26px;color:var(--accent-text);line-height:1}.tl h3{font-size:17px;margin:6px 0 6px;font-family:var(--body);font-weight:800}
+.tl p{font-size:14px;color:var(--ink-2);margin:0}
+.storycard{display:grid;grid-template-columns:1fr 1.3fr;align-items:center;gap:0;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:var(--soft)}
+.storycard img{width:100%;height:100%;aspect-ratio:16/10;object-fit:cover}.storycard>div{padding:28px 32px}.storycard p{color:var(--ink-2)}
+.steps4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.st{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px}.st span{width:34px;height:34px;border-radius:50%;background:#8E7CC3;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:10px}
+.st b{font-family:var(--head);font-size:21px;color:var(--head-color)}.st p{margin:6px 0 0;color:var(--ink-2);font-size:14.5px}
+.whyvo{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.whyvo div{border-top:3px solid #8E7CC3;padding-top:14px}.whyvo b{display:block;font-size:17px;margin-bottom:4px}.whyvo span{color:var(--ink-2);font-size:14.5px}
+@media(max-width:1020px){.timeline{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -32px;padding:0 32px 8px;scroll-padding:0 32px;scrollbar-width:none}.timeline::-webkit-scrollbar{display:none}.tl{flex:0 0 42%;scroll-snap-align:start}
+.steps4{grid-template-columns:1fr 1fr}.storycard{grid-template-columns:1fr}.storycard>div{padding:22px}}
+@media(max-width:720px){.timeline{margin:0 -16px;padding:0 16px 8px;scroll-padding:0 16px}.tl{flex:0 0 78%}.whyvo{grid-template-columns:1fr}}
 .revmock{display:grid;grid-template-columns:1fr 1.5fr;gap:28px;align-items:center}
 .revsum p{color:var(--ink-2)}.revsteps{display:grid;gap:8px;font-size:14px;font-weight:700;color:var(--ink-2)}.revsteps div{display:flex;align-items:center;gap:10px}
 .revsteps span{width:24px;height:24px;border-radius:50%;background:var(--head-color);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:12px;flex:none}
@@ -129,11 +145,11 @@ article.card .ph img{transform:scale(.9) translateY(4%)}article.card:hover .ph i
 <h1>Genuine Repêchage and VOESH, direct from the brands</h1>
 <p>Professional seaweed skincare used in spas worldwide, and VOESH spa care for hands and feet. Choose by skin concern, with free advice before you buy.</p>
 <div class="cta"><a class="btn" href="#concerns">Shop by skin type</a><a class="btn ghost" href="consultation.html">Free skin consultation</a></div></div>
-<div class="slider" data-slider aria-roledescription="carousel" aria-label="Featured"><div class="slides"><div class="slide" role="group" aria-label="Slide 1 of 4"><img src="img/slide-repechage.webp" alt="" fetchpriority=high width="1600" height="600">
-<div class="cap"><span class="eyebrow">Repêchage Biolight</span><h2>Brighter, more even-looking skin</h2><p>The Biolight range with Laminaria seaweed, for dull skin and uneven tone.</p><a class="btn" href="shop.html?concern=pigmentation">Shop Biolight</a></div></div><div class="slide" role="group" aria-label="Slide 2 of 4"><img src="img/slide-voesh.webp" alt="" loading=lazy width="1600" height="600">
-<div class="cap"><span class="eyebrow">VOESH New York</span><h2>All-in-one deluxe mani and pedi kits</h2><p>Treatments that cleanse, nourish and condition the skin, one fresh single-use step at a time.</p><a class="btn" href="voesh.html">Shop VOESH</a></div></div><div class="slide" role="group" aria-label="Slide 3 of 4"><img src="img/slide-drying.webp" alt="" loading=lazy width="1600" height="600">
-<div class="cap"><span class="eyebrow">Repêchage Hydra Medic</span><h2>Clear Complexion Drying Lotion</h2><p>A targeted treatment for breakouts, from the Hydra Medic range for oily and acne-prone skin.</p><a class="btn" href="p/hydra-medic-clear-complexion-drying-lotion.html">Shop now · ₹2,880</a></div></div><div class="slide" role="group" aria-label="Slide 4 of 4"><img src="img/slide-facial.webp" alt="" loading=lazy width="1600" height="600">
-<div class="cap"><span class="eyebrow">For clinics, salons and spas</span><h2>Professional-grade facials, with training</h2><p>Repêchage protocols, back bar sizes and hands-on training from JB Skincare.</p><a class="btn" href="professionals.html">For professionals</a></div></div></div><button class="sarr prev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 5l-7 7 7 7"/></svg></button><button class="sarr next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 5l7 7-7 7"/></svg></button><div class="sdots"><button aria-label="Go to slide 1"><i></i></button><button aria-label="Go to slide 2"><i></i></button><button aria-label="Go to slide 3"><i></i></button><button aria-label="Go to slide 4"><i></i></button></div></div></div></section>
+<div class="slider" data-slider aria-roledescription="carousel" aria-label="Featured"><div class="slides"><div class="slide vidslide" role="group" aria-label="Slide 1 of 4"><video src="img/slide-biolight.mp4" poster="img/slide-biolight-poster.webp" muted loop playsinline preload="auto" autoplay aria-hidden="true"></video>
+<div class="cap"><span class="eyebrow">Repêchage Biolight</span><h2>Brighter, more even-looking skin</h2><p>The Biolight range with Laminaria seaweed, for dull skin and uneven tone, in the treatment room and at home.</p><a class="btn" href="shop.html?concern=pigmentation">Shop Biolight</a></div></div><div class="slide" role="group" aria-label="Slide 2 of 4"><img src="img/slide-voesh.webp" alt="" loading=lazy width="1600" height="600">
+<div class="cap"><span class="eyebrow">VOESH New York</span><h2>All-in-one deluxe mani and pedi kits</h2><p>Treatments that cleanse, nourish and condition the skin, one fresh single-use step at a time.</p><a class="btn" href="voesh.html">Shop VOESH</a></div></div><div class="slide vidslide" role="group" aria-label="Slide 3 of 4"><video src="img/slide-vitacura.mp4" poster="img/slide-vitacura-poster.webp" muted loop playsinline preload="none"  aria-hidden="true"></video>
+<div class="cap"><span class="eyebrow">Repêchage Vita Cura</span><h2>Firmer, smoother-looking skin</h2><p>Peptides and seaweed for mature skin: the range behind the Vita Cura firming facial.</p><a class="btn" href="shop.html?concern=aging">Shop Vita Cura</a></div></div><div class="slide vidslide" role="group" aria-label="Slide 4 of 4"><video src="img/slide-fourlayer.mp4" poster="img/slide-fourlayer-poster.webp" muted loop playsinline preload="none"  aria-hidden="true"></video>
+<div class="cap"><span class="eyebrow">The Four Layer Facial</span><h2>The facial that started it all, since&nbsp;1980</h2><p>Seaweed serum, cream, a fresh seaweed mask and a mineral mask that sets over it. Find a JB-trained salon near you.</p><a class="btn" href="index.html#salons">Find a salon</a></div></div></div><button class="sarr prev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 5l-7 7 7 7"/></svg></button><button class="sarr next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 5l7 7-7 7"/></svg></button><div class="sdots"><button aria-label="Go to slide 1"><i></i></button><button aria-label="Go to slide 2"><i></i></button><button aria-label="Go to slide 3"><i></i></button><button aria-label="Go to slide 4"><i></i></button></div></div></div></section>
 <section class="sec tight"><div class="wrap"><div class="sec-h" style="justify-content:center;text-align:center"><div><h2>Our brands</h2><p>Most shoppers in India meet these two brands for the first time here. This is who they are.</p></div></div>
 <div class="brands2">
 <div class="bcol"><a class="blogo" href="repechage.html"><img src="img/logo-repechage.webp" alt="Repêchage, beauty from the sea"></a>
@@ -151,35 +167,35 @@ article.card .ph img{transform:scale(.9) translateY(4%)}article.card:hover .ph i
 <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><span>Free shipping<small>ships within 3 days, UPI or card</small></span></div></div></div>
 <section class="sec tight"><div class="wrap"><div class="sec-h"><div><h2>Bestsellers</h2><p>What our customers and clinics order most.</p></div><a class="link" href="shop.html">View all</a></div>
 <div class="grid"><article class="card" data-cat="moisturizers repechage" data-concern="pigmentation" data-price="13500" data-rank="0">
-<a class="ph" href="p/biolight-brightening-overnight-cream.html"><img src="img/card-biolight-brightening-overnight-cream.webp" alt="Biolight Brightening Overnight Cream" loading="lazy" width="600" height="600"></a>
+<a class="ph" href="p/biolight-brightening-overnight-cream.html"><img class="full" src="img/card-biolight-brightening-overnight-cream.webp" alt="Biolight Brightening Overnight Cream" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation</span><h3><a href="p/biolight-brightening-overnight-cream.html">Biolight Brightening Overnight Cream</a></h3>
 <p class="sub">Repêchage · 50 ml</p>
 <div class="row"><span class="price">₹13,500</span><button class="add" data-add="biolight-brightening-overnight-cream">Add to cart</button></div></div></article><article class="card" data-cat="serums repechage" data-concern="aging dry" data-price="7640" data-rank="1">
-<a class="ph" href="p/c-serum-seaweed-filtrate.html"><img src="img/card-c-serum-seaweed-filtrate.webp" alt="C-Serum Seaweed Filtrate" loading="lazy" width="600" height="600"></a>
+<a class="ph" href="p/c-serum-seaweed-filtrate.html"><img class="full" src="img/card-c-serum-seaweed-filtrate.webp" alt="C-Serum Seaweed Filtrate" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging, firming</span><h3><a href="p/c-serum-seaweed-filtrate.html">C&#8209;Serum Seaweed Filtrate</a></h3>
 <p class="sub">Repêchage · 50 ml</p>
 <div class="row"><span class="price">₹7,640</span><button class="add" data-add="c-serum-seaweed-filtrate">Add to cart</button></div></div></article><article class="card" data-cat="toners repechage" data-concern="dry sensitive" data-price="4500" data-rank="2">
-<a class="ph" href="p/algo-mist-hydrating-seaweed-and-mineral-water-spray.html"><img src="img/card-algo-mist-hydrating-seaweed-and-mineral-water-spray.webp" alt="Algo Mist Hydrating Seaweed and Mineral Water Spray" loading="lazy" width="600" height="600"></a>
+<a class="ph" href="p/algo-mist-hydrating-seaweed-and-mineral-water-spray.html"><img class="full" src="img/card-algo-mist-hydrating-seaweed-and-mineral-water-spray.webp" alt="Algo Mist Hydrating Seaweed and Mineral Water Spray" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Sensitive skin, redness</span><h3><a href="p/algo-mist-hydrating-seaweed-and-mineral-water-spray.html">Algo Mist Hydrating Seaweed and Mineral Water Spray</a></h3>
 <p class="sub">Repêchage · 180 ml</p>
 <div class="row"><span class="price">₹4,500</span><button class="add" data-add="algo-mist-hydrating-seaweed-and-mineral-water-spray">Add to cart</button></div></div></article><article class="card" data-cat="masks repechage" data-concern="pigmentation oily" data-price="4320" data-rank="3">
-<a class="ph" href="p/one-minute-exfoliating-mask.html"><img src="img/card-one-minute-exfoliating-mask.webp" alt="One-Minute Exfoliating Mask" loading="lazy" width="600" height="600"></a>
+<a class="ph" href="p/one-minute-exfoliating-mask.html"><img class="full" src="img/card-one-minute-exfoliating-mask.webp" alt="One-Minute Exfoliating Mask" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation</span><h3><a href="p/one-minute-exfoliating-mask.html">One&#8209;Minute Exfoliating Mask</a></h3>
 <p class="sub">Repêchage · 70 ml</p>
 <div class="row"><span class="price">₹4,320</span><button class="add" data-add="one-minute-exfoliating-mask">Add to cart</button></div></div></article><article class="card" data-cat="moisturizers repechage" data-concern="dry aging" data-price="6750" data-rank="4">
-<a class="ph" href="p/hydro-complex-pfs-cream-for-dry-skin.html"><img src="img/card-hydro-complex-pfs-cream-for-dry-skin.webp" alt="Hydro-Complex PFS Cream for Dry Skin" loading="lazy" width="600" height="600"></a>
+<a class="ph" href="p/hydro-complex-pfs-cream-for-dry-skin.html"><img class="full" src="img/card-hydro-complex-pfs-cream-for-dry-skin.webp" alt="Hydro-Complex PFS Cream for Dry Skin" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging, firming</span><h3><a href="p/hydro-complex-pfs-cream-for-dry-skin.html">Hydro&#8209;Complex PFS Cream for Dry Skin</a></h3>
 <p class="sub">Repêchage · 43 ml</p>
 <div class="row"><span class="price">₹6,750</span><button class="add" data-add="hydro-complex-pfs-cream-for-dry-skin">Add to cart</button></div></div></article><article class="card" data-cat="serums repechage" data-concern="pigmentation" data-price="8100" data-rank="5">
-<a class="ph" href="p/biolight-brightening-skin-correct-serum.html"><img src="img/card-biolight-brightening-skin-correct-serum.webp" alt="Biolight Brightening Skin Correct Serum" loading="lazy" width="600" height="600"></a>
+<a class="ph" href="p/biolight-brightening-skin-correct-serum.html"><img class="full" src="img/card-biolight-brightening-skin-correct-serum.webp" alt="Biolight Brightening Skin Correct Serum" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation</span><h3><a href="p/biolight-brightening-skin-correct-serum.html">Biolight Brightening Skin Correct Serum</a></h3>
 <p class="sub">Repêchage · 30 ml</p>
 <div class="row"><span class="price">₹8,100</span><button class="add" data-add="biolight-brightening-skin-correct-serum">Add to cart</button></div></div></article><article class="card" data-cat="cleansers repechage" data-concern="dry oily" data-price="4100" data-rank="6">
-<a class="ph" href="p/sea-cleanse-foaming-seaweed-cleanser.html"><img src="img/card-sea-cleanse-foaming-seaweed-cleanser.webp" alt="Sea Cleanse Foaming Seaweed Cleanser" loading="lazy" width="600" height="600"></a>
+<a class="ph" href="p/sea-cleanse-foaming-seaweed-cleanser.html"><img class="full" src="img/card-sea-cleanse-foaming-seaweed-cleanser.webp" alt="Sea Cleanse Foaming Seaweed Cleanser" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/sea-cleanse-foaming-seaweed-cleanser.html">Sea Cleanse Foaming Seaweed Cleanser</a></h3>
 <p class="sub">Repêchage · 150 ml</p>
 <div class="row"><span class="price">₹4,100</span><button class="add" data-add="sea-cleanse-foaming-seaweed-cleanser">Add to cart</button></div></div></article><article class="card" data-cat="masks repechage" data-concern="oily" data-price="2880" data-rank="7">
-<a class="ph" href="p/hydra-medic-clear-complexion-drying-lotion.html"><img src="img/card-hydra-medic-clear-complexion-drying-lotion.webp" alt="Hydra Medic Clear Complexion Drying Lotion" loading="lazy" width="600" height="600"></a>
+<a class="ph" href="p/hydra-medic-clear-complexion-drying-lotion.html"><img class="full" src="img/card-hydra-medic-clear-complexion-drying-lotion.webp" alt="Hydra Medic Clear Complexion Drying Lotion" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/hydra-medic-clear-complexion-drying-lotion.html">Hydra Medic Clear Complexion Drying Lotion</a></h3>
 <p class="sub">Repêchage · 7.5 ml</p>
 <div class="row"><span class="price">₹2,880</span><button class="add" data-add="hydra-medic-clear-complexion-drying-lotion">Add to cart</button></div></div></article></div></div></section>
@@ -195,43 +211,43 @@ article.card .ph img{transform:scale(.9) translateY(4%)}article.card:hover .ph i
 <p>Repêchage's signature facial layers a seaweed serum, a hydrating cream with a long massage, a fresh seaweed mask and a mineral mask that sets over it. Cosmopolitan UK called it the facial of the century.</p>
 <ul class="ticks"><li>Performed in spas and clinics trained by JB Skincare</li><li>Keep the results at home with the same seaweed range</li></ul>
 <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="learn/biolight-home-regimen-for-pigmentation.html">Your home routine</a><a class="btn ghost" href="professionals.html#four-layer">For professionals</a></div></div></div></section>
-<section class="sec tight"><div class="wrap"><div class="salonfind"><div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><div class="t"><span class="eyebrow">Book a facial</span><h2>Find a Repêchage facial near you</h2>
+<section class="sec tight" id="salons"><div class="wrap"><div class="salonfind"><div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><div class="t"><span class="eyebrow">Book a facial</span><h2>Find a Repêchage facial near you</h2>
 <p>JB has trained salons, spas and clinics across India in Repêchage facials. Tell us your city and we will share the nearest one.</p></div>
 <form onsubmit="event.preventDefault();window.open('https://wa.me/?text=Hi%20JB%20Skincare%2C%20I%20would%20like%20some%20advice','_blank')"><input placeholder="Your city or PIN code" aria-label="City or PIN code"><button class="btn">Find a salon</button></form></div></div></section>
 <section class="sec tight"><div class="wrap"><div class="sec-h"><div><h2>New to Repêchage? Start with a kit</h2><p>Each starter kit holds a full routine in travel sizes: the easiest way to try a range.</p></div><a class="link" href="shop.html?cat=kits">All starter kits</a></div>
 <div class="grid"><article class="card" data-cat="kits repechage" data-concern="pigmentation" data-price="8100" data-rank="0">
-<a class="ph" href="p/biolight-starter-kit.html"><img src="img/card-biolight-starter-kit.webp" alt="Biolight Starter Kit" loading="lazy" width="600" height="600"></a>
+<a class="ph" href="p/biolight-starter-kit.html"><img class="full" src="img/card-biolight-starter-kit.webp" alt="Biolight Starter Kit" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Pigmentation</span><h3><a href="p/biolight-starter-kit.html">Biolight Starter Kit</a></h3>
 <p class="sub">Repêchage</p>
 <div class="row"><span class="price">₹8,100</span><button class="add" data-add="biolight-starter-kit">Add to cart</button></div></div></article><article class="card" data-cat="kits repechage" data-concern="aging" data-price="7200" data-rank="1">
-<a class="ph" href="p/vita-cura-starter-kit.html"><img src="img/card-vita-cura-starter-kit.webp" alt="Vita Cura Starter Kit" loading="lazy" width="600" height="600"></a>
+<a class="ph" href="p/vita-cura-starter-kit.html"><img class="full" src="img/card-vita-cura-starter-kit.webp" alt="Vita Cura Starter Kit" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Anti&#8209;aging, firming</span><h3><a href="p/vita-cura-starter-kit.html">Vita Cura Starter Kit</a></h3>
 <p class="sub">Repêchage</p>
 <div class="row"><span class="price">₹7,200</span><button class="add" data-add="vita-cura-starter-kit">Add to cart</button></div></div></article><article class="card" data-cat="kits repechage" data-concern="oily" data-price="6300" data-rank="2">
-<a class="ph" href="p/hydra-medic-starter-kit.html"><img src="img/card-hydra-medic-starter-kit.webp" alt="Hydra Medic Starter Kit" loading="lazy" width="600" height="600"></a>
+<a class="ph" href="p/hydra-medic-starter-kit.html"><img class="full" src="img/card-hydra-medic-starter-kit.webp" alt="Hydra Medic Starter Kit" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Oily, acne&#8209;prone skin</span><h3><a href="p/hydra-medic-starter-kit.html">Hydra Medic Starter Kit</a></h3>
 <p class="sub">Repêchage</p>
 <div class="row"><span class="price">₹6,300</span><button class="add" data-add="hydra-medic-starter-kit">Add to cart</button></div></div></article><article class="card" data-cat="kits repechage" data-concern="dry" data-price="7200" data-rank="3">
-<a class="ph" href="p/hydra-blue-starter-kit.html"><img src="img/card-hydra-blue-starter-kit.webp" alt="Hydra Blue Starter Kit" loading="lazy" width="600" height="600"></a>
+<a class="ph" href="p/hydra-blue-starter-kit.html"><img class="full" src="img/card-hydra-blue-starter-kit.webp" alt="Hydra Blue Starter Kit" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Dry skin</span><h3><a href="p/hydra-blue-starter-kit.html">Hydra Blue Starter Kit</a></h3>
 <p class="sub">Repêchage</p>
 <div class="row"><span class="price">₹7,200</span><button class="add" data-add="hydra-blue-starter-kit">Add to cart</button></div></div></article></div></div></section>
 <section class="sec tight"><div class="wrap"><div class="band rev-order" style="margin-bottom:26px"><div class="band-media"><img src="img/hero-voesh.webp" alt="VOESH Pedi in a Box and peeling socks on a spa towel" loading="lazy"></div>
 <div><span class="eyebrow">VOESH New York</span><h2>A salon pedicure, at home</h2><p>VOESH started with Pedi in a Box: every step of a spa pedicure in single-use packs, so each one is fresh and hygienic. Heel socks and peeling socks take care of the rest.</p>
 <a class="btn" href="voesh.html">Shop VOESH</a></div></div><div class="grid" style="margin-top:44px"><article class="card" data-cat="pedicure voesh" data-concern="feet" data-price="950" data-rank="0">
-<a class="ph" href="p/pedi-in-a-box-deluxe-4-step.html"><img src="img/card-pedi-in-a-box-deluxe-4-step-lavender-relieve.webp" alt="Pedi in a Box Deluxe, 4 Step" loading="lazy" width="600" height="600"></a>
+<a class="ph" href="p/pedi-in-a-box-deluxe-4-step.html"><img class="full" src="img/card-pedi-in-a-box-deluxe-4-step-lavender-relieve.webp" alt="Pedi in a Box Deluxe, 4 Step" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure</span><h3><a href="p/pedi-in-a-box-deluxe-4-step.html">Pedi in a Box Deluxe, 4&nbsp;Step</a></h3>
 <p class="sub">VOESH · 18 scents</p>
 <div class="row"><span class="price">₹950</span><a class="add" href="p/pedi-in-a-box-deluxe-4-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="socks voesh" data-concern="feet" data-price="750" data-rank="1">
-<a class="ph" href="p/heel-socks.html"><img src="img/card-heel-socks.webp" alt="VOESH Moisturizing Heel Socks" loading="lazy" width="600" height="600"></a>
+<a class="ph" href="p/heel-socks.html"><img class="full" src="img/card-heel-socks.webp" alt="VOESH Moisturizing Heel Socks" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Hands and feet</span><h3><a href="p/heel-socks.html">VOESH Moisturizing Heel Socks</a></h3>
 <p class="sub">VOESH</p>
 <div class="row"><span class="price">₹750</span><button class="add" data-add="heel-socks">Add to cart</button></div></div></article><article class="card" data-cat="socks voesh" data-concern="feet" data-price="1250" data-rank="2">
-<a class="ph" href="p/peeling-socks.html"><img src="img/card-peeling-socks.webp" alt="VOESH Peeling Socks" loading="lazy" width="600" height="600"></a>
+<a class="ph" href="p/peeling-socks.html"><img class="full" src="img/card-peeling-socks.webp" alt="VOESH Peeling Socks" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Hands and feet</span><h3><a href="p/peeling-socks.html">VOESH Peeling Socks</a></h3>
 <p class="sub">VOESH</p>
 <div class="row"><span class="price">₹1,250</span><button class="add" data-add="peeling-socks">Add to cart</button></div></div></article><article class="card" data-cat="pedicure voesh" data-concern="feet" data-price="200" data-rank="3">
-<a class="ph" href="p/callus-remover-gel.html"><img src="img/card-callus-remover-gel.webp" alt="Callus Remover Gel" loading="lazy" width="600" height="600"></a>
+<a class="ph" href="p/callus-remover-gel.html"><img class="full" src="img/card-callus-remover-gel.webp" alt="Callus Remover Gel" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Hands and feet</span><h3><a href="p/callus-remover-gel.html">Callus Remover Gel</a></h3>
 <p class="sub">VOESH</p>
 <div class="row"><span class="price">₹200</span><button class="add" data-add="callus-remover-gel">Add to cart</button></div></div></article></div></div></section>
