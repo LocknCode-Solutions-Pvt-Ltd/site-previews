@@ -133,7 +133,7 @@ p{margin:0 0 1em}
 .chips{display:flex;gap:10px;flex-wrap:wrap}
 .chip{padding:9px 16px;border-radius:99px;border:1.5px solid var(--line-strong);background:var(--bg);font-weight:700;font-size:14px;white-space:nowrap}
 .chip.on,.chip:hover{border-color:var(--head-color);background:var(--head-color);color:#fff}
-@media(max-width:720px){.chips.scroll{flex-wrap:nowrap;overflow-x:auto;margin:0 -16px;padding:0 32px 4px 16px;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 86%,transparent);mask-image:linear-gradient(90deg,#000 86%,transparent)}.chips.scroll::-webkit-scrollbar{display:none}}
+@media(max-width:720px){.chips.scroll{justify-content:flex-start!important;flex-wrap:nowrap;overflow-x:auto;margin:0 -16px;padding:0 32px 4px 16px;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 86%,transparent);mask-image:linear-gradient(90deg,#000 86%,transparent)}.chips.scroll::-webkit-scrollbar{display:none}}
 
 /* concern circles / category tiles */
 .circles{display:grid;grid-template-columns:repeat(7,1fr);gap:18px;text-align:center}
