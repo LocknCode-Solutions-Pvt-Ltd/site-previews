@@ -81,6 +81,60 @@ h1{font-size:clamp(34px,4.4vw,60px)}h2{font-size:clamp(26px,2.9vw,40px)}.slide .
 .vstory p{color:var(--ink-2)}.voindia{display:grid;grid-template-columns:1.6fr 1fr;gap:40px;align-items:center;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);padding:32px 0}
 .voindia p{color:var(--ink-2);margin:0}.voindia-a{display:flex;gap:22px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
 @media(max-width:900px){.vstory,.voindia{grid-template-columns:1fr;gap:20px}.voindia-a{justify-content:flex-start}}
+/* round 3 (23 Oct): the skin match */
+.match{background:linear-gradient(180deg,#fff 0%,var(--soft) 100%)}.match-in{display:grid;grid-template-columns:1.05fr .8fr 1fr;gap:28px;align-items:center}
+.m-title{display:flex;flex-direction:column;font-family:var(--head);line-height:.95;margin:0 0 18px;color:var(--head-color)}
+.m-title i{font-size:clamp(40px,4.4vw,64px);font-weight:500;font-style:italic}.m-title span{font-family:var(--body);font-weight:300;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(46px,5.4vw,84px);color:var(--ink)}
+.m-title span:last-child{padding-left:.9em}.m-copy p{color:var(--ink-2);font-size:17px;max-width:420px}
+.m-img{position:relative;height:420px}.m-img img{position:absolute;left:50%;top:50%;max-height:380px;transform:translate(-50%,-50%) rotate(-14deg);filter:drop-shadow(0 26px 22px rgba(0,0,0,.18))}
+.m-img .m-feet{transform:translate(-50%,-50%) rotate(-8deg)}.m-img img[hidden]{display:none}
+.m-form{display:grid;gap:18px}.m-tabs{display:inline-flex;border:1px solid var(--head-color);border-radius:var(--btn-r);overflow:hidden;justify-self:start}
+.m-tabs button{background:#fff;border:0;padding:10px 20px;font:inherit;font-weight:700;color:var(--head-color);cursor:pointer}.m-tabs button[aria-selected="true"]{background:var(--head-color);color:#fff}
+.m-l{display:grid;gap:8px;font-size:17px;color:var(--ink)}.m-l select{height:50px;border:1px solid var(--line-strong);border-radius:var(--btn-r);padding:0 12px;font:inherit;font-size:15px;background:#fff;color:var(--ink)}
+.m-form [data-pane]{display:grid;gap:16px}.m-form [data-pane][hidden]{display:none}
+.m-res{margin-top:34px;border-top:1px solid var(--line-strong);padding-top:22px}.m-res .sec-h h3{font-size:26px;margin:0}
+@media(max-width:1020px){.match-in{grid-template-columns:1fr 1fr}.m-img{display:none}}
+@media(max-width:720px){.match-in{grid-template-columns:1fr}}
+/* why seaweed */
+.sw-in{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}.sw-media{margin:0;position:sticky;top:90px}.sw-media img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.sw-media figcaption,.sw-lab figcaption{margin-top:6px;font-size:12.5px;color:var(--muted)}.sw-lede{font-size:18px;color:var(--ink-2)}
+.sw-stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);margin:22px 0 10px}
+.sw-stats div{padding:18px 0 16px;text-align:center}.sw-stats div+div{border-left:1px solid var(--line)}.sw-stats b{display:block;font-family:var(--head);font-size:clamp(44px,5vw,68px);line-height:1;color:var(--head-color)}
+.sw-stats span{font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.sw-vs{width:100%;border-collapse:collapse;margin:0 0 26px;font-size:15px}.sw-vs th,.sw-vs td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.sw-vs thead th{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line-strong)}.sw-vs thead th:last-child{color:var(--accent-text)}
+.sw-vs tbody th{font-weight:700;color:var(--ink);width:24%}.sw-vs td:last-child{background:var(--soft);color:var(--ink)}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.seaweed .cta{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:900px){.sw-in{grid-template-columns:1fr;gap:26px}.sw-media{position:static}.sw-media img{aspect-ratio:16/10}}
+@media(max-width:620px){.sw-vs thead{display:none}.sw-vs tr{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line-strong);padding:10px 0}.sw-vs tbody th{grid-column:1/-1;width:auto;padding:4px 0;border:0}
+.sw-vs td{border:0;padding:8px 10px}.sw-vs td::before{display:block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}.sw-vs td:nth-of-type(1)::before{content:"Typical routine"}.sw-vs td:nth-of-type(2)::before{content:"Seaweed routine"}}
+/* seaweed page */
+.swq{margin:22px 0 0;padding:4px 0 4px 20px;border-left:3px solid var(--accent);font-family:var(--head);font-size:clamp(22px,2.2vw,30px);line-height:1.3;color:var(--head-color)}.swq cite{display:block;font-family:var(--body);font-style:normal;font-size:14px;color:var(--muted);margin-top:8px}
+.sw-more{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:22px}.sw-more b{font-family:var(--head);font-size:34px;color:var(--head-color);display:block}.sw-more span{color:var(--ink-2)}
+.sw-why{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start}.sw-why p{color:var(--ink-2)}
+.sw-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}.sw-steps div{border-top:2px solid var(--head-color);padding-top:14px}.sw-steps span{font-family:var(--head);font-size:30px;color:var(--accent-text)}
+.sw-steps b{display:block;font-size:17px;margin:4px 0}.sw-steps p{font-size:14.5px;color:var(--ink-2);margin:0}.sw-lab{margin:30px 0 0;max-width:520px}.sw-lab img{width:100%;border-radius:var(--r)}
+.sweeds{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.sweeds img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}.sweeds h3{font-size:22px;margin:12px 0 4px;font-style:italic}.sweeds p{color:var(--ink-2);margin:0}
+@media(max-width:900px){.sw-why{grid-template-columns:1fr}.sw-steps{grid-template-columns:1fr 1fr}.sweeds{grid-template-columns:1fr}.sw-more{grid-template-columns:1fr}}
+/* latest stories */
+.st-h h2{position:relative;display:inline-block}.squig{position:absolute;left:-4px;bottom:-12px;width:120px;height:14px;color:#E4B98B}
+.stories{display:grid;grid-template-columns:1.15fr 1fr;gap:32px}.st-big{position:relative;display:block;border-radius:var(--r-lg);overflow:hidden;min-height:520px;color:#fff;text-decoration:none}
+.st-big img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}.st-big:hover img{transform:scale(1.03)}
+.st-big .ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;padding:36px;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(10,30,32,.82) 100%)}
+.st-big b{font-family:var(--head);font-size:clamp(28px,3vw,42px);line-height:1.1;font-weight:600}.st-big .ex{font-size:15.5px;opacity:.92;max-width:560px}.st-big .tp{color:#bfe3dd}
+.tp{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text)}.rm{font-weight:700;font-size:14px;text-decoration:underline;text-underline-offset:4px}
+.st-side{display:grid;gap:0}.st-i{display:grid;grid-template-columns:42% 1fr;gap:22px;align-items:center;padding:0 0 26px;text-decoration:none;color:var(--ink)}
+.st-i+.st-i{border-top:1px solid var(--line);padding-top:26px}.st-i img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r-lg)}
+.st-i>span{display:flex;flex-direction:column;gap:8px}.st-i b{font-family:var(--head);font-size:23px;line-height:1.2;color:var(--head-color)}.st-i .ex{font-size:14.5px;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:900px){.stories{grid-template-columns:1fr}.st-big{min-height:420px}}
+@media(max-width:560px){.st-i{grid-template-columns:110px 1fr;gap:14px}.st-i .ex{display:none}.st-big .ov{padding:22px}}
+/* VOESH founders */
+.vs-head{display:grid;grid-template-columns:1fr 1.25fr;gap:64px;align-items:end;margin-bottom:34px}.vs-head .pull{font-family:var(--head);font-size:clamp(26px,2.6vw,36px);line-height:1.25;color:#6b5aa6;margin:0;padding-left:20px;border-left:3px solid #8E7CC3}
+.fband{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;margin:0 0 56px}.fband.flip .fd{order:2}.fd{margin:0}.fd img{width:100%;aspect-ratio:4/3.2;object-fit:cover;border-radius:var(--r)}
+.fd figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}.fd figcaption b{display:block;font-size:15px;color:var(--ink)}.fd-t h3{font-size:clamp(24px,2.4vw,32px);margin:0 0 10px}.fd-t p{color:var(--ink-2)}
+.kband{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center;background:#F3F0FA;border-radius:var(--r-lg);overflow:hidden;margin-bottom:18px}.kband img{width:100%;height:100%;min-height:260px;object-fit:cover}
+.kband>div{padding:28px 36px 28px 0}.kband h3{font-size:26px;margin:0 0 8px}.kband p{color:var(--ink-2);margin:0}
+@media(max-width:900px){.vs-head,.fband,.kband{grid-template-columns:1fr;gap:20px}.fband.flip .fd{order:0}.kband>div{padding:0 22px 24px}}
 .whyvo{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.whyvo div{border-top:3px solid #8E7CC3;padding-top:14px}.whyvo b{display:block;font-size:17px;margin-bottom:4px}.whyvo span{color:var(--ink-2);font-size:14.5px}
 @media(max-width:1020px){.timeline{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -32px;padding:0 32px 8px;scroll-padding:0 32px;scrollbar-width:none}.timeline::-webkit-scrollbar{display:none}.tl{flex:0 0 42%;scroll-snap-align:start}
 .steps4{grid-template-columns:1fr 1fr}.storycard{grid-template-columns:1fr}.storycard>div{padding:22px}}
@@ -160,7 +214,7 @@ h1{font-size:clamp(34px,4.4vw,60px)}h2{font-size:clamp(26px,2.9vw,40px)}.slide .
 <div><h2>Who is Repêchage?</h2>
 <p>Repêchage describes itself as a pioneer of seaweed treatments and cosmetics in the United States. Its best-known treatment, the Four Layer Facial, is used in spas and salons around the world, and its products are made in the United States.</p>
 <ul class="ticks"><li>Founded in 1980 by Lydia Sarfati</li><li>Used by skin care professionals in more than 50 countries</li><li>Imported into India by JB Skincare, under a CDSCO import license</li></ul>
-<a class="link" href="learn/biolight-home-regimen-for-pigmentation.html">Read a Repêchage routine</a></div></div></section>
+<div style="display:flex;gap:22px;flex-wrap:wrap"><a class="link" href="seaweed.html">The science of seaweed</a><a class="link" href="learn/biolight-home-regimen-for-pigmentation.html">Read a Repêchage routine</a></div></div></div></section>
 <section class="sec soft"><div class="wrap"><div class="sec-h"><div><h2>Repêchage in India since 2012</h2></div><a class="link" href="learn/is-repechage-available-in-india.html">The full story</a></div>
 <div class="timeline"><div class="tl"><img src="img/artimg-d684c5bc1b44.webp" alt="" loading="lazy"><div><b>2012</b><h3>The partnership</h3><p>Repêchage appoints J B Skin Care its exclusive distributor for India. Co-founder Jyoti Sapra had used Repêchage in her own New Jersey salons for more than ten years.</p></div></div><div class="tl"><img src="img/artimg-6266f400274c.webp" alt="" loading="lazy"><div><b>2013</b><h3>Professional Beauty, New Delhi</h3><p>JB shows Repêchage to spa and salon professionals, with the Biolight Miracle Facial demonstrated live.</p></div></div><div class="tl"><img src="img/artimg-a6b2f1277b11.webp" alt="" loading="lazy"><div><b>2016</b><h3>Distributor of the Year</h3><p>At the Repêchage International Conference in New York, Lydia Sarfati presents Bikram Sapra with the President's Award.</p></div></div><div class="tl"><img src="img/artimg-016085517f11.webp" alt="" loading="lazy"><div><b>2017</b><h3>100 professionals in Mumbai</h3><p>JB and Lydia Sarfati host more than 100 beauty professionals at the St. Regis Mumbai to launch new professional treatments.</p></div></div><div class="tl"><img src="img/story-today.webp" alt="" loading="lazy"><div><b>Today</b><h3>Trained salons across India</h3><p>JB trains the salons, spas and clinics that offer Repêchage facials, and imports every product directly.</p></div></div></div></div></section>
 <section class="sec tight"><div class="wrap"><div class="sec-h"><div><h2>Ranges</h2><p>Each Repêchage range is made for one skin concern.</p></div></div><div class="ranges"><a class="range" href="shop.html?concern=pigmentation"><b>Biolight</b><span>Brightening, for dull and uneven skin</span></a><a class="range" href="shop.html?concern=aging"><b>Vita Cura</b><span>Firming, for mature skin</span></a><a class="range" href="shop.html?concern=oily"><b>Hydra Medic</b><span>Clarifying, for oily and acne-prone skin</span></a><a class="range" href="shop.html?concern=sensitive"><b>Hydra 4 and Red-Out</b><span>Calming, for sensitive skin</span></a><a class="range" href="shop.html?concern=dry"><b>Hydra Dew Pure</b><span>Hydrating, for dry and dehydrated skin</span></a><a class="range" href="shop.html?concern=dry"><b>Hydra Blue</b><span>Balancing, for normal skin</span></a><a class="range" href="shop.html?concern=oily"><b>T-Zone Balance</b><span>For combination skin</span></a><a class="range" href="shop.html?concern=aging"><b>Opti-Firm</b><span>For the eye area and firmness</span></a></div></div></section>

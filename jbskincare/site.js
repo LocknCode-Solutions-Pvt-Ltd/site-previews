@@ -6,6 +6,82 @@
   var inr = function (n) { return "₹" + Math.round(n).toLocaleString("en-IN"); };
   var root = document.body.getAttribute("data-root") || "";
 
+  /* skin check (Skinolin home): four questions -> a routine built from the brand's own map */
+  $$("[data-skincheck]").forEach(function (box) {
+    var M = JSON.parse($("[data-sc-map]", box).textContent), qs = $$(".q", box), ans = {}, step = 0;
+    var intro = $(".sc-intro", box), quiz = $(".sc-quiz", box), res = $(".sc-result", box), back = $("[data-sc-back]", box);
+    var show = function () { qs.forEach(function (q, i) { q.hidden = i !== step; }); back.hidden = step === 0; var b = $("button", qs[step]); if (b) b.focus({ preventScroll: true }); };
+    $("[data-sc-start]", box).addEventListener("click", function () { intro.hidden = true; quiz.hidden = false; res.hidden = true; step = 0; ans = {}; show(); });
+    back.addEventListener("click", function () { if (step > 0) { step--; show(); } });
+    qs.forEach(function (q) {
+      q.addEventListener("click", function (e) {
+        var b = e.target.closest("button[data-v]"); if (!b) return;
+        ans[q.getAttribute("data-q")] = b.getAttribute("data-v");
+        if (step < qs.length - 1) { step++; show(); } else finish();
+      });
+    });
+    var row = function (label, id, note) {
+      var p = P[id]; if (!p) return "";
+      return '<div class="sc-step"><img src="' + root + p.i + '" alt=""><div><small>' + label + '</small><a href="' + root + p.u + '">' + p.n + "</a>" +
+        (note ? '<br><span class="small muted">' + note + "</span>" : "") + '</div><button class="add" data-add="' + id + '">Add</button></div>';
+    };
+    function finish() {
+      var dry = ans.feel === "dry" || ans.goal === "dehyd";
+      var cl = ans.feel === "oily" || ans.goal === "acne" ? M.cleanser.oily : M.cleanser["default"];
+      var se = ans.goal === "red" && ans.react === "often" ? M.serum.red_often : M.serum[ans.goal];
+      var ids = [cl, M.toner, se].concat(dry ? [M.moist] : []).concat([M.spf]);
+      var steps = row("Cleanse, morning and night", cl) + row("Tone, morning and night", M.toner) + row("Treat, morning and night", se) +
+        (dry ? row("Moisturize, in the morning", M.moist, "Let it absorb before your sunscreen.") : "") +
+        row("Protect, every morning", M.spf, ans.spf === "yes" ? "" : "The step that protects everything else: two finger lengths for face and neck.");
+      var msg = encodeURIComponent("Hi Skinolin, my skin check says " + M.types[ans.feel] + " skin, focus on " + M.goals[ans.goal] + ". Please send me this routine.");
+      res.innerHTML = "<h3>Your routine</h3><p>For " + M.types[ans.feel] + " skin, with a focus on " + M.goals[ans.goal] + "." +
+        (ans.react === "often" ? " Your skin reacts easily, so patch test each new product on your inner arm for a day first." : "") + "</p>" +
+        '<div class="sc-steps">' + steps + '</div><div class="sc-acts"><button class="btn" type="button" data-sc-all>Add all to cart</button>' +
+        '<a class="link" target="_blank" rel="noopener" href="https://wa.me/?text=' + msg + '">Get it on WhatsApp</a><button class="link sc-back" type="button" data-sc-redo>Start again</button></div>';
+      quiz.hidden = true; res.hidden = false;
+      $("[data-sc-all]", res).addEventListener("click", function () { ids.forEach(function (id) { add(id, 1); }); open("cart"); });
+      $("[data-sc-redo]", res).addEventListener("click", function () { res.hidden = true; intro.hidden = false; });
+    }
+  });
+
+  /* skin match (JB home): concern + product type -> up to four products, from lists the build worked out */
+  $$("[data-match]").forEach(function (form) {
+    var sec = form.closest(".match"), M = JSON.parse($("[data-m-map]", sec).textContent), tab = "face";
+    var res = $(".m-res", sec), grid = $("[data-m-grid]", sec), sum = $("[data-m-sum]", sec), all = $("[data-m-all]", sec);
+    $$(".m-tabs button", form).forEach(function (b) {
+      b.addEventListener("click", function () {
+        tab = b.getAttribute("data-tab");
+        $$(".m-tabs button", form).forEach(function (x) { x.setAttribute("aria-selected", x === b ? "true" : "false"); });
+        $$("[data-pane]", form).forEach(function (p) { p.hidden = p.getAttribute("data-pane") !== tab; });
+        $(".m-face", sec).hidden = tab !== "face"; $(".m-feet", sec).hidden = tab !== "feet";
+      });
+    });
+    var card = function (id) {
+      var p = P[id]; if (!p) return "";
+      var grp = M.group.indexOf(id) > -1, best = M.best[id] || "";
+      var btn = grp ? '<a class="add" href="' + root + p.u + '" style="display:inline-flex;align-items:center;justify-content:center">' + (id.indexOf("gloves") > -1 ? "Choose type" : "Choose scent") + "</a>"
+        : '<button class="add" data-add="' + id + '">Add to cart</button>';
+      return '<article class="card"><a class="ph" href="' + root + p.u + '"><img class="full" src="' + root + p.i + '" alt="" loading="lazy" width="600" height="600"></a><div class="bd">' +
+        '<span class="bestfor">' + (best ? '<span class="bf">Best for: </span>' + best : "") + '</span><h3><a href="' + root + p.u + '">' + p.n + "</a></h3>" +
+        '<p class="sub">' + p.s + '</p><div class="row"><span class="price">' + (grp ? "From " : "") + inr(p.p) + "</span>" + btn + "</div></div></article>";
+    };
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var key, label, href;
+      if (tab === "face") {
+        var c = form.elements.c.value, t = form.elements.t.value; key = c + "|" + t;
+        label = "For " + M.face[c] + ", " + (t === "any" ? "across the range" : M.type[t]) + ".";
+        href = "shop.html?concern=" + c + (t === "any" ? "" : "&cat=" + t);
+        if (!(M.lists[key] || []).length) { key = c + "|any"; label = "There is no " + M.type[t].replace(/^an? /, "") + " for " + M.face[c] + " in the range, so here is what is made for it."; href = "shop.html?concern=" + c; }
+      } else {
+        var f = form.elements.f.value; key = "feet|" + f; label = "VOESH, for " + M.feet[f] + "."; href = "voesh.html#voesh-all";
+      }
+      grid.innerHTML = (M.lists[key] || []).map(card).join("");
+      sum.textContent = label; all.setAttribute("href", root + href); res.hidden = false;
+      res.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "nearest" });
+    });
+  });
+
   /* header shadow */
   var hdr = $(".hdr");
   if (hdr) window.addEventListener("scroll", function () { hdr.classList.toggle("scrolled", window.scrollY > 8); }, { passive: true });
