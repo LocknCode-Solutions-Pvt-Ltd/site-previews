@@ -459,3 +459,5 @@ body.art-page .bnav{display:none}
 /* final pass: phone buy button on one line, article tables and inline photos sized for wide screens */
 @media(max-width:420px){.buyrow .btn{white-space:nowrap;padding:0 10px;font-size:15px}.qty button{width:36px}.qty input{width:30px}}
 @media(min-width:601px){.art-body td:first-child{white-space:nowrap}.art-body img{max-height:420px;width:auto;max-width:100%}}
+@media(max-width:720px){.card .sub.keep{display:block}}
+@media(min-width:901px){.ck>.summary{margin-top:9px}}
