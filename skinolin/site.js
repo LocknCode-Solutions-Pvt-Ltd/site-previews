@@ -74,12 +74,29 @@
         href = "shop.html?concern=" + c + (t === "any" ? "" : "&cat=" + t);
         if (!(M.lists[key] || []).length) { key = c + "|any"; label = "There is no " + M.type[t].replace(/^an? /, "") + " for " + M.face[c] + " in the range, so here is what is made for it."; href = "shop.html?concern=" + c; }
       } else {
-        var f = form.elements.f.value; key = "feet|" + f; label = "VOESH, for " + M.feet[f] + "."; href = "voesh.html#voesh-all";
+        var f = form.elements.f.value; key = "feet|" + f; label = "For " + M.feet[f] + ": the best fit, whichever the brand."; href = f === "body" || f === "hands" ? "shop.html?cat=body" : "voesh.html#voesh-all";
       }
       grid.innerHTML = (M.lists[key] || []).map(card).join("");
       sum.textContent = label; all.setAttribute("href", root + href); res.hidden = false;
       res.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "nearest" });
     });
+    /* round 4: check with a photo (preview flow; the photo never leaves the browser) */
+    var ph = $("[data-m-photo]", form), scan = $(".m-scan", sec);
+    if (ph && scan) {
+      ph.addEventListener("change", function () {
+        var f = ph.files && ph.files[0]; if (!f) return;
+        $("[data-m-shot]", scan).src = URL.createObjectURL(f); scan.hidden = false; scan.classList.remove("done");
+        $("[data-m-scan-h]", scan).textContent = "Reading your photo...";
+        setTimeout(function () { scan.classList.add("done"); $("[data-m-scan-h]", scan).textContent = "What do you see most on your skin?"; }, 2400);
+        scan.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+      scan.addEventListener("click", function (e) {
+        var b = e.target.closest("[data-scan]"); if (!b) return;
+        var ft = $('.m-tabs [data-tab="face"]', form); if (ft) ft.click();
+        form.elements.c.value = b.getAttribute("data-scan"); form.elements.t.value = "any";
+        form.requestSubmit ? form.requestSubmit() : form.dispatchEvent(new Event("submit", { cancelable: true }));
+      });
+    }
   });
 
   /* header shadow */
@@ -174,7 +191,7 @@
     if (a) {
       e.preventDefault(); var id = a.getAttribute("data-add"), q = 1, qi = a.closest("[data-qty-scope]");
       if (qi) { var inp = $("input", qi); q = Math.max(1, parseInt(inp && inp.value, 10) || 1); }
-      add(id, q);
+      id.split(",").forEach(function (x) { add(x, q); }); id = id.split(",")[0];  /* round 4: one button can add a whole routine */
       if (a.hasAttribute("data-buynow")) { location.href = root + "checkout.html"; return; }
       if (!a.closest(".sheet")) open("cart"); else toast("Added to cart: " + (P[id] ? P[id].n : "")); return;
     }
@@ -205,28 +222,34 @@
   /* shop filters (NAV-010) */
   var shop = $("#shopGrid");
   if (shop) {
-    var cards = $$(".card", shop), st2 = { concern: "", cat: "" }, sortSel = $("#sort");
-    var qs = new URLSearchParams(location.search); st2.concern = qs.get("concern") || ""; st2.cat = qs.get("cat") || "";
+    var cards = $$(".card", shop), st2 = { brand: "", concern: "", cat: "", price: "" }, KS = ["brand", "concern", "cat", "price"], sortSel = $("#sort");
+    var qs = new URLSearchParams(location.search); st2.concern = qs.get("concern") || ""; st2.cat = qs.get("cat") || ""; st2.price = qs.get("price") || ""; st2.brand = qs.get("brand") || "";
+    if (st2.cat && $("[data-f-brand='" + st2.cat + "']")) { st2.brand = st2.cat; st2.cat = ""; }  /* old ?cat=repechage links */
+    var has = function (c, k, v) { return !v || (" " + c.getAttribute("data-" + k) + " ").indexOf(" " + v + " ") > -1; };
+    var inPrice = function (c, v) { if (!v) return true; var p = +c.dataset.price, r = v.split("-"); return p >= +r[0] && (r[1] === "" || p < +r[1]); };
+    var match = function (c, s) { return has(c, "brand", s.brand) && has(c, "concern", s.concern) && has(c, "cat", s.cat) && inPrice(c, s.price); };
     var apply = function () {
       var shown = 0;
-      cards.forEach(function (c) {
-        var ok = (!st2.concern || (" " + c.getAttribute("data-concern") + " ").indexOf(" " + st2.concern + " ") > -1) &&
-                 (!st2.cat || (" " + c.getAttribute("data-cat") + " ").indexOf(" " + st2.cat + " ") > -1);
-        c.style.display = ok ? "" : "none"; if (ok) shown++;
+      cards.forEach(function (c) { var ok = match(c, st2); c.style.display = ok ? "" : "none"; if (ok) shown++; });
+      KS.forEach(function (k) {
+        $$("[data-f-" + k + "]").forEach(function (b) {
+          var v = b.getAttribute("data-f-" + k); b.classList.toggle("on", v === st2[k]); b.setAttribute("aria-pressed", v === st2[k] ? "true" : "false");
+          var cnt = $(".cnt", b); if (cnt) { var t = {}; for (var q in st2) t[q] = st2[q]; t[k] = v; var nn = cards.filter(function (c) { return match(c, t); }).length; cnt.textContent = nn; b.classList.toggle("zero", !nn && v !== st2[k]); }
+        });
       });
-      $$("[data-f-concern]").forEach(function (b) { b.classList.toggle("on", b.getAttribute("data-f-concern") === st2.concern); });
-      $$("[data-f-cat]").forEach(function (b) { b.classList.toggle("on", b.getAttribute("data-f-cat") === st2.cat); });
       var n = $("#shopCount"); if (n) n.textContent = shown + (shown === 1 ? " product" : " products");
-      var h = $("#shopTitle"), d = $("#shopDesc"), meta = (window.SHOP_META || {})[st2.concern || st2.cat || ""];
-      if (meta && h) { h.textContent = meta[0]; if (d) d.textContent = meta[1]; }
-      var u = new URL(location.href); u.searchParams.delete("concern"); u.searchParams.delete("cat");
-      if (st2.concern) u.searchParams.set("concern", st2.concern); if (st2.cat) u.searchParams.set("cat", st2.cat);
+      var em = $("#shopEmpty"); if (!em) { em = document.createElement("div"); em.id = "shopEmpty"; em.className = "empty"; em.innerHTML = '<p><b>No products match all of these filters.</b></p><button type="button" class="btn ghost" data-f-clear>Clear filters</button>'; shop.parentNode.insertBefore(em, shop.nextSibling); }
+      em.hidden = shown > 0;
+      var h = $("#shopTitle"), d = $("#shopDesc"), im = $("#shopImg"), meta = (window.SHOP_META || {})[st2.concern || st2.cat || st2.brand || ""];
+      if (meta && h) { h.textContent = meta[0]; if (d) d.textContent = meta[1]; if (im && meta[2]) im.src = document.body.getAttribute("data-root") + meta[2]; }
+      var clr = $("[data-f-clear]"); if (clr) clr.hidden = !(st2.brand || st2.concern || st2.cat || st2.price);
+      var u = new URL(location.href); KS.forEach(function (k) { u.searchParams.delete(k); if (st2[k]) u.searchParams.set(k, st2[k]); });
       history.replaceState(null, "", u);
     };
     document.addEventListener("click", function (e) {
-      var f = e.target.closest("[data-f-concern],[data-f-cat]"); if (!f) return; e.preventDefault();
-      if (f.hasAttribute("data-f-concern")) { var v = f.getAttribute("data-f-concern"); st2.concern = st2.concern === v ? "" : v; }
-      else { var v2 = f.getAttribute("data-f-cat"); st2.cat = st2.cat === v2 ? "" : v2; }
+      if (e.target.closest("[data-f-clear]")) { e.preventDefault(); st2.brand = st2.concern = st2.cat = st2.price = ""; apply(); return; }
+      var f = e.target.closest("[data-f-brand],[data-f-concern],[data-f-cat],[data-f-price]"); if (!f) return; e.preventDefault();
+      KS.forEach(function (k) { if (f.hasAttribute("data-f-" + k)) { var v = f.getAttribute("data-f-" + k); st2[k] = st2[k] === v ? "" : v; } });
       apply();
     });
     if (sortSel) sortSel.addEventListener("change", function () {

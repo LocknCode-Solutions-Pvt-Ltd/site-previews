@@ -123,24 +123,55 @@
 .diwali .card .bd{padding:12px 6px 6px}.diwali .badge{background:#2B0F0A;color:#FFD27A}
 @media(max-width:720px){.diwali{padding:92px 0 40px;background:#F7ECD9 var(--diwt) center top/auto 84px repeat-x}}
 /* refer and earn */
-.refer{background:linear-gradient(180deg,#F3F1EC 0%,#ECE8E0 100%);overflow:hidden;margin-top:40px}.refer-in{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:20px;min-height:340px}
+.refer{background:linear-gradient(180deg,#F3F1EC 0%,#ECE8E0 100%);overflow:hidden;margin-top:40px}.refer-in{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:20px;min-height:340px;padding-top:52px;padding-bottom:40px}
 .rbig{font-family:var(--body);font-weight:900;font-size:clamp(46px,6.4vw,96px);line-height:.95;letter-spacing:-.03em;text-transform:uppercase;margin:0;color:#D9A21B}
 .rbig i{font-style:normal;color:var(--head-color)}.rline{font-size:clamp(17px,1.6vw,21px);color:var(--ink);max-width:520px;margin:16px 0 22px;border-top:1px solid var(--ink);padding-top:14px}
 .rcta{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.rimg{position:relative;height:340px}.rimg img{position:absolute;bottom:34px;height:250px;width:auto;filter:drop-shadow(0 14px 14px rgba(0,0,0,.14))}
+.rimg{position:relative;height:340px}.rimg img{position:absolute;bottom:26px;height:250px;width:auto;filter:drop-shadow(0 16px 12px rgba(0,0,0,.16))}
+.rimg::after{content:"";position:absolute;left:2%;right:2%;bottom:14px;height:22px;border-radius:50%;background:radial-gradient(closest-side,rgba(60,45,25,.18),transparent)}
 .rimg .r0{left:6%;height:220px}.rimg .r1{left:30%;height:290px;z-index:2}.rimg .r2{left:53%;height:240px}.rimg .r3{left:74%;height:215px}
-.rimg .shelf{position:absolute;left:-10%;right:-30%;bottom:0;height:46px;background:#fff;transform:skewY(-3deg);transform-origin:left;box-shadow:0 -6px 18px rgba(0,0,0,.05)}
 @media(max-width:900px){.refer-in{grid-template-columns:1fr;padding-top:40px}.rimg{height:260px}.rimg img{height:180px!important}}
 .tchips.home{margin:-6px 0 22px}
 .probanner{display:block;border-radius:var(--r-lg);overflow:hidden;box-shadow:0 10px 30px rgba(20,30,40,.08)}
 .probanner img{width:100%;height:auto;display:block}
 .prophone{display:none}
+/* round 4 (11 Nov 2026): pollution hero + routine, clearer spotlight callouts, holiday store */
+.hero.smog{background:#cfc9c0}.hero.smog::after{background:linear-gradient(90deg,rgba(244,240,234,.92) 0%,rgba(244,240,234,.78) 36%,rgba(244,240,234,0) 60%)}
+.hero.smog picture img{object-position:100% 50%}
+.zero.city b{background:#3b4250}
+@media(max-width:900px){.hero.smog{background:linear-gradient(#f4f0ea,#e2ddd5)}.hero.smog picture img{aspect-ratio:4/3;object-position:70% 50%}}
+.smogsec{background:linear-gradient(180deg,#2f343c 0%,#3c414a 100%);color:#e9ecf1;padding:64px 0 60px;position:relative;overflow:hidden}
+.smogsec::before{content:"";position:absolute;inset:-20% -10% auto -10%;height:70%;background:radial-gradient(60% 60% at 30% 40%,rgba(255,255,255,.07),transparent 70%),radial-gradient(50% 50% at 80% 20%,rgba(214,170,120,.10),transparent 70%);pointer-events:none}
+.smogsec .wrap{position:relative}.smogsec h2{color:#fff;font-size:clamp(28px,3.4vw,46px);max-width:760px;margin:6px 0 10px}
+.smogsec .eyebrow{color:#e7bf73}.smogsec .lede{color:#c9ced8;max-width:640px;margin:0 0 30px;font-size:17px}
+.psteps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:ps}
+.pstep{background:#fff;color:var(--ink);border-radius:var(--r-lg);padding:18px 18px 16px;display:flex;flex-direction:column;gap:8px}
+.pstep .n{font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-text)}
+.pstep .pic{display:flex;align-items:flex-end;justify-content:center;height:190px;border-radius:var(--r);background:var(--tint,#F3EADF);padding-top:12px}
+.pstep .pic img{height:170px;width:auto;filter:drop-shadow(0 10px 10px rgba(0,0,0,.14))}
+.pstep h3{font-size:17px;margin:4px 0 0;line-height:1.3}.pstep h3 a{color:inherit;text-decoration:none}
+.pstep q{font-size:14.5px;color:var(--ink-2);quotes:"\201C" "\201D";line-height:1.45}
+.pstep .row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:6px}.pstep .price{font-weight:800}
+.ptotal{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:22px;border-top:1px solid rgba(255,255,255,.18);padding-top:18px}
+.ptotal span{color:#c9ced8}.ptotal b{color:#fff;font-size:20px}.ptotal .btn{background:#e7bf73;color:#1e2433}.ptotal .btn:hover{background:#f1cf8d}
+@media(max-width:1020px){.psteps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.smogsec{padding:44px 0}.psteps{grid-template-columns:1fr}.pstep{display:grid;grid-template-columns:96px 1fr;column-gap:14px;align-items:start}.pstep .pic{grid-row:1/5;height:120px;padding-top:6px}.pstep .pic img{height:108px}.pstep .row{grid-column:2}}
+.calls li{width:176px}.calls b{font-family:var(--head);font-size:19px;font-weight:700;color:var(--head-color);margin-bottom:3px;letter-spacing:-.005em}
+.calls li span{display:block;font-size:13.5px;line-height:1.4}
+.calls li::after{background:var(--line-strong)}.calls .c0::before,.calls .c1::before,.calls .c2::before,.calls .c3::before{background:#fff;border:2px solid var(--head-color);width:9px;height:9px;top:5px}
+.calls b::after{content:"";display:block;width:26px;height:2px;background:var(--accent);margin:5px 0 0}
+.calls .c0 b::after,.calls .c2 b::after{margin-left:auto}
+@media(max-width:620px){.calls b::after,.calls .c0 b::after,.calls .c2 b::after{margin-left:0}}
+.diwali.holiday h2{color:#7A1F12}.diwali.holiday .eyebrow{color:#2f5d3a}
+.diwali.holiday{background:#F7ECD9 var(--diw) center top/100% auto no-repeat;padding-top:calc(13vw + 10px)}
+@media(max-width:720px){.diwali.holiday{padding-top:96px;background:#F7ECD9 var(--diwt) center top/auto 84px repeat-x}}
+
 @media(max-width:640px){.probanner{display:none}.prophone{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;border-radius:var(--r-lg);padding:28px 18px;background:linear-gradient(135deg,#eef2f6,#c5d1dd)}.prophone img{height:26px;width:auto}.prophone b{font-family:var(--head);font-size:28px;color:var(--navy);letter-spacing:.02em;text-transform:uppercase;line-height:1.1}.prophone i{font-family:var(--head);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.25);font-size:16px}}
 </style>
-<link rel="icon" href="img/brand-wordmark.webp"></head>
+<link rel="icon" href="img/favicon.png"></head>
 <body class=" has-bnav" data-root="">
 
-<div class="topbar"><span>Free shipping on every order</span><span class="t-hide">Pay by UPI or card</span><span>Diwali gift above ₹1,499</span></div>
+<div class="topbar tick" aria-label="Offers"><div class="tk"><span>Your complete ecosystem for the skin!</span><span>Free shipping on every order</span><span>Pay by UPI or card</span><span>Combos save 10%<a href="shop.html?cat=combos">Grab the deal</a></span><span aria-hidden="true">Your complete ecosystem for the skin!</span><span aria-hidden="true">Free shipping on every order</span><span aria-hidden="true">Pay by UPI or card</span><span aria-hidden="true">Combos save 10%<a href="shop.html?cat=combos">Grab the deal</a></span></div></div>
 <header class="hdr"><div class="wrap hdr-in">
   <button class="ibtn menu-btn" data-open="menu" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   <a class="logo" href="index.html" aria-label="Skinolin home"><img src="img/brand-wordmark.webp" alt="Skinolin" width="186" height="37"><small>Skin loves Skinolin.</small></a>
@@ -153,14 +184,23 @@
   </div>
 </div></header>
 <main>
-<section class="hero"><picture><source media="(max-width:900px)" srcset="img/hero-tall.webp"><img src="img/hero-wide.webp" alt="Skinolin Anhydrous Sunscreen SPF 50 on warm sandstone" width="2400" height="1006" fetchpriority="high"></picture>
+<section class="hero smog"><picture><source media="(max-width:900px)" srcset="img/hero-pollution-tall.webp"><img src="img/hero-pollution.webp" alt="Skinolin cleanser, toner mist, CICA serum and SPF 50 against a hazy city skyline" width="2400" height="1006" fetchpriority="high"></picture>
 <div class="hc"><div class="wrap"><div class="box">
-<span class="zero"><b>0%</b> WATER · SPF 50 PA++++</span>
-<h1><span>0% water.</span><br><span>100% sunscreen.</span></h1>
-<p class="l">Our waterless SPF 50: a light, matte finish with broad spectrum UVA and UVB protection, for oily and dry skin.</p>
-<div class="meta"><span class="stars" aria-label="4.89 out of 5"><i style="--pct:98%"></i>4.9 <small>(9)</small></span><span>₹1,350 · 50 ml</span></div>
-<div class="cta"><a class="btn" href="p/anhydrous-sunscreen-spf-50-pa.html">Shop SPF 50</a><a class="btn ghost" href="#concerns" style="background:rgba(255,255,255,.7)">Find your routine</a></div>
+<span class="zero city"><b>4</b> STEPS · CITY SKIN</span>
+<h1><span>Fight pollution,</span><br><span>every day.</span></h1>
+<p class="l">Wash off the day's pollutants, protect with antioxidants and finish with our waterless SPF 50. A four-step routine made in India, for Indian cities.</p>
+<div class="meta"><span>All four from ₹3,800</span><span>· Free shipping</span></div>
+<div class="cta"><a class="btn" href="#pollution">Shop the routine</a><a class="btn ghost" href="#skin-check" style="background:rgba(255,255,255,.7)">Take the skin check</a></div>
 </div></div></div></section>
+<section class="smogsec" id="pollution"><div class="wrap"><span class="eyebrow">City skin</span><h2>Don't let pollution settle on your skin.</h2>
+<p class="lede">Dust, smoke and smog sit on your skin all day. Four steps, morning and night, to wash it off, calm your skin and protect it before you step out.</p>
+<div class="psteps"><div class="pstep" style="--tint:#E8F0EA"><span class="n">Step 1 · Cleanse</span><a class="pic" href="p/niacinamide-daily-cleanser.html"><img src="img/pstep-pk_clean_v2.webp" alt="Niacinamide Daily Cleanser" loading="lazy"></a>
+<h3><a href="p/niacinamide-daily-cleanser.html">Niacinamide Daily Cleanser</a></h3><q>Removes dirt, oil and environmental impurities.</q><div class="row"><span class="price">₹600</span><button class="add" data-add="niacinamide-daily-cleanser">Add</button></div></div><div class="pstep" style="--tint:#EAF1F4"><span class="n">Step 2 · Tone</span><a class="pic" href="p/hydrating-toner-mist.html"><img src="img/pstep-pk_toner.webp" alt="Hydrating Toner Mist" loading="lazy"></a>
+<h3><a href="p/hydrating-toner-mist.html">Hydrating Toner Mist</a></h3><q>Holy Basil (Tulsi): protects against environmental stressors and supports clear skin.</q><div class="row"><span class="price">₹600</span><button class="add" data-add="hydrating-toner-mist">Add</button></div></div><div class="pstep" style="--tint:#EEF4E6"><span class="n">Step 3 · Treat</span><a class="pic" href="p/cica-exosomes-face-serum.html"><img src="img/pstep-pk_cica_v2.webp" alt="CICA Exosomes Face Serum" loading="lazy"></a>
+<h3><a href="p/cica-exosomes-face-serum.html">CICA Exosomes Face Serum</a></h3><q>White Haldi, Daisy Flower, Pomegranate and White Tea extracts: antioxidants that protect sensitive skin from pollution.</q><div class="row"><span class="price">₹1,250</span><button class="add" data-add="cica-exosomes-face-serum">Add</button></div></div><div class="pstep" style="--tint:#F6ECDD"><span class="n">Step 4 · Protect</span><a class="pic" href="p/anhydrous-sunscreen-spf-50-pa.html"><img src="img/pstep-pk_spf.webp" alt="Anhydrous Sunscreen SPF 50 PA++++" loading="lazy"></a>
+<h3><a href="p/anhydrous-sunscreen-spf-50-pa.html">Anhydrous Sunscreen SPF 50 PA++++</a></h3><q>Broad spectrum UVA and UVB protection, with carrot seed oil, rich in antioxidants against environmental stressors.</q><div class="row"><span class="price">₹1,350</span><button class="add" data-add="anhydrous-sunscreen-spf-50-pa">Add</button></div></div></div>
+<div class="ptotal"><span>The full routine, four products: <b>₹3,800</b></span><button class="btn" data-add="niacinamide-daily-cleanser,hydrating-toner-mist,cica-exosomes-face-serum,anhydrous-sunscreen-spf-50-pa">Add all four to cart</button></div>
+<p class="small" style="color:#9aa3b1;margin:14px 0 0">Each line is quoted from the product's own page.</p></div></section>
 <section class="sec tight" id="concerns"><div class="wrap"><div class="sec-h"><div><h2>Shop by concern</h2><p>Tell us what your skin needs. We will show you what works for it.</p></div><a class="link" href="shop.html">All concerns</a></div>
 <div class="carousel"><button class="cbtn prev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 5l-7 7 7 7"/></svg></button><div class="ctrack c5"><a class="ccard" href="shop.html?concern=spots"><img src="img/concern2-spots.webp" alt="Dark spots and pigmentation" loading="lazy" width="640" height="853"><span>Dark spots and pigmentation</span></a><a class="ccard" href="shop.html?concern=dull"><img src="img/concern2-dull.webp" alt="Dull and uneven skin" loading="lazy" width="640" height="853"><span>Dull and uneven skin</span></a><a class="ccard" href="shop.html?concern=dry"><img src="img/concern2-dry.webp" alt="Dry and dehydrated" loading="lazy" width="640" height="853"><span>Dry and dehydrated</span></a><a class="ccard" href="shop.html?concern=sensitive"><img src="img/concern2-sensitive.webp" alt="Sensitive skin" loading="lazy" width="640" height="853"><span>Sensitive skin</span></a><a class="ccard" href="shop.html?concern=lines"><img src="img/concern2-lines.webp" alt="Aging and fine lines" loading="lazy" width="640" height="853"><span>Aging and fine lines</span></a><a class="ccard" href="shop.html?concern=oily"><img src="img/concern2-oily.webp" alt="Oily and acne-prone" loading="lazy" width="640" height="853"><span>Oily and acne-prone</span></a></div><button class="cbtn next" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 5l7 7-7 7"/></svg></button></div></div></section>
 <section class="sec tight" id="skin-check"><div class="wrap skincheck">
@@ -193,7 +233,7 @@
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>All skin types</span><h3><a href="p/niacinamide-daily-cleanser.html">Niacinamide Daily Cleanser</a></h3>
 <p class="sub">100 ml</p><span class="stars" aria-label="5.0 out of 5"><i style="--pct:100%"></i>5.0 <small>(1)</small></span>
 <div class="row"><span class="price">₹600</span><button class="add" data-add="niacinamide-daily-cleanser">Add to cart</button></div></div></article></div></div></section>
-<section class="diwali" style="--diw:url('img/diwali-band.webp');--diwt:url('img/diwali-top.webp')"><div class="wrap"><div class="sec-h"><div><h2>The Diwali gift store</h2><p>Gift sets for everyone on your list, each priced below its products bought separately. Free Diwali gift on orders above ₹1,499.</p></div><a class="link" href="shop.html?cat=combos">All gift sets</a></div>
+<section class="diwali holiday" style="--diw:url('img/holiday-band.webp');--diwt:url('img/holiday-top.webp')"><div class="wrap"><div class="sec-h"><div><span class="eyebrow">Christmas to New Year</span><h2>The holiday gift store</h2><p>Gift sets for Christmas, New Year and everyone on your list, each priced below its products bought separately. Free gift on orders above ₹1,499.</p></div><a class="link" href="shop.html?cat=combos">All gift sets</a></div>
 <div class="carousel"><button class="cbtn prev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 5l-7 7 7 7"/></svg></button><div class="ctrack c4"><article class="card" data-cat="combos" data-concern="sun dry" data-price="2250" data-rank="0" data-rating="0">
 <a class="ph" href="p/hydra-locking-duo-with-spf-50.html"><span class="badge">Save ₹250</span><img src="img/card-hydra-locking-duo-with-spf-50.webp" alt="Hydrate and Protect Duo" loading=lazy width="640" height="640"></a>
 <div class="bd"><span class="bestfor">Set of 2 · save 10%</span><h3><a href="p/hydra-locking-duo-with-spf-50.html">Hydrate and Protect Duo</a></h3>
@@ -296,16 +336,16 @@
 <a class="probanner" href="salons.html"><img src="img/pro-banner.webp" alt="Skinolin Professional Range" loading="lazy" width="2000" height="686"></a>
 <a class="prophone" href="salons.html"><img src="img/brand-wordmark.webp" alt="Skinolin"><b>Professional range</b><i>Beacon of purity, safety, and efficacy</i></a>
 <div style="text-align:center;margin-top:18px"><a class="btn" href="salons.html">See the professional range</a></div></div></section>
-<section class="refer"><div class="wrap refer-in"><div class="rt"><p class="rbig">Refer <i>&amp;</i> earn</p>
-<p class="rline">Share Skinolin with a friend. They get <b>₹200 off</b> their first order, and you get <b>₹200</b> for your next one.</p>
-<div class="rcta"><a class="btn" href="https://wa.me/?text=Hi%20Skinolin%2C%20I%20have%20a%20question" target="_blank" rel="noopener">Get my referral link</a><span class="small muted">*Offer shown for the preview. T&amp;C apply.</span></div></div>
-<div class="rimg"><img src="img/refer-pk_cica_v2.webp" alt="" loading="lazy" class="r0"><img src="img/refer-pk_spf.webp" alt="" loading="lazy" class="r1"><img src="img/refer-pk_kojic.webp" alt="" loading="lazy" class="r2"><img src="img/refer-pk_glow.webp" alt="" loading="lazy" class="r3"><span class="shelf"></span></div></div></section></main>
+<section class="refer" id="affiliate"><div class="wrap refer-in"><div class="rt"><p class="rbig">Share <i>&amp;</i> earn</p>
+<p class="rline">Join the Skinolin affiliate program. Share Skinolin with your audience and earn <b>10% commission</b> on every order your link brings in.</p>
+<div class="rcta"><a class="btn" href="https://skinolin.bixgrow.com" target="_blank" rel="noopener">Join the affiliate program</a><span class="small muted">Free to join. Sign up on Skinolin's affiliate page.</span></div></div>
+<div class="rimg"><img src="img/refer-pk_cica_v2.webp" alt="" loading="lazy" class="r0"><img src="img/refer-pk_spf.webp" alt="" loading="lazy" class="r1"><img src="img/refer-pk_kojic.webp" alt="" loading="lazy" class="r2"><img src="img/refer-pk_glow.webp" alt="" loading="lazy" class="r3"></div></div></section></main>
 <footer class="ftr"><div class="wrap"><div class="ftr-g">
 <div class="col1"><img class="logo-f" src="img/brand-wordmark-white.webp" alt="Skinolin"><p class="about"><b>Skin loves Skinolin.</b> India's botanical balance: plant‑powered skincare made in India, and a waterless SPF 50 that is all sunscreen.</p>
 <p class="small">Skinolin is a brand of Sinatra Enterprises, Block A2, No. 97, Rajouri Garden, New Delhi.</p></div>
 <div><h4>Shop</h4><ul><li><a href="shop.html?cat=sunscreens">Sunscreens</a></li><li><a href="shop.html?cat=serums">Serums</a></li><li><a href="shop.html?cat=cleansers">Cleansers</a></li><li><a href="shop.html?cat=toners">Toners</a></li><li><a href="shop.html?cat=moisturizers">Moisturizers</a></li><li><a href="shop.html?cat=combos">Combos</a></li><li><a href="shop.html">All products</a></li></ul></div>
 <div><h4>Help</h4><ul><li><a href="policies.html">Shipping and delivery</a></li><li><a href="policies.html#returns">Returns</a></li><li><a href="policies.html#cancel">Cancellations</a></li><li><a href="https://wa.me/?text=Hi%20Skinolin%2C%20I%20have%20a%20question">WhatsApp us</a></li></ul></div>
-<div><h4>Skinolin</h4><ul><li><a href="about.html">About us</a></li><li><a href="learn.html">Skincare guides</a></li><li><a href="salons.html">For salons and clinics</a></li><li><a href="https://skinolin.bixgrow.com" rel="noopener">Affiliate program</a></li></ul></div>
+<div><h4>Skinolin</h4><ul><li><a href="about.html">About us</a></li><li><a href="learn.html">Skincare guides</a></li><li><a href="salons.html">For salons and clinics</a></li><li><a href="https://skinolin.bixgrow.com" target="_blank" rel="noopener">Affiliate program</a></li></ul></div>
 </div><div class="legal"><span>© 2026 Skinolin. All rights reserved.</span><span>Design preview by LockNCode · <a href="preview-notes.html" style="text-decoration:underline">what changed and why</a></span></div></div></footer>
 
 <div class="scrim"></div>
@@ -327,6 +367,6 @@
 <div class="pv">Design preview by LockNCode · <a href="preview-notes.html">what changed</a></div>
 <div class="modal" id="ckModal"><div><h3>This is a design preview</h3><p>No order was placed and no payment was taken. On the live store this button goes to Razorpay.</p><button class="btn" data-close>Back to the preview</button></div></div>
 <nav class="bnav" aria-label="Shortcuts"><a href="index.html" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l8-7 8 7v9H4z"/></svg>Home</a><a href="shop.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>Shop</a><a href="shop.html#concerns" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3s6 7 6 11a6 6 0 01-12 0c0-4 6-11 6-11z"/></svg>Concerns</a><a href="https://wa.me/?text=Hi%20Skinolin%2C%20I%20have%20a%20question" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3a13 13 0 00-11.2 19.6L3 29l6.6-1.7A13 13 0 1016 3zm0 23.6a10.6 10.6 0 01-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1116 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 01-4.3-3.8c-.3-.6.3-.5 1-1.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 00-.9.4 3.6 3.6 0 00-1.1 2.7 6.3 6.3 0 001.3 3.3 14.4 14.4 0 005.5 4.8c2 .9 2.8 1 3.8.8a3.2 3.2 0 002.1-1.5 2.6 2.6 0 00.2-1.5c-.1-.2-.3-.3-.6-.4z"/></svg>Chat</a><button data-open="cart" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>Cart<span class="count" data-count style="display:none">0</span></button></nav>
-<script>window.BRAND={"key": "skinolin", "gift": {"at": 1499, "label": "a free Diwali gift", "unlocked": "Your free Diwali gift is in the cart"}, "suggest": [["cica-exosomes-face-serum", "anhydrous-sunscreen-spf-50-pa"], ["niacinamide-glow-serum-for-skin-brightening", "anhydrous-sunscreen-spf-50-pa"], ["anhydrous-sunscreen-spf-50-pa", "hydrating-toner-mist"], ["niacinamide-daily-cleanser", "cica-exosomes-face-serum"], ["kojic-acid-foaming-cleanser-for-oily-skin", "hydrating-toner-mist"], ["hydrating-toner-mist", "anhydrous-sunscreen-spf-50-pa"]], "fallbackSuggest": ["anhydrous-sunscreen-spf-50-pa", "hydrating-toner-mist", "cica-exosomes-face-serum"], "suggestLabel": "Complete the routine"};</script>
+<script>window.BRAND={"key": "skinolin", "gift": {"at": 1499, "label": "a free gift", "unlocked": "Your free gift is in the cart"}, "suggest": [["cica-exosomes-face-serum", "anhydrous-sunscreen-spf-50-pa"], ["niacinamide-glow-serum-for-skin-brightening", "anhydrous-sunscreen-spf-50-pa"], ["anhydrous-sunscreen-spf-50-pa", "hydrating-toner-mist"], ["niacinamide-daily-cleanser", "cica-exosomes-face-serum"], ["kojic-acid-foaming-cleanser-for-oily-skin", "hydrating-toner-mist"], ["hydrating-toner-mist", "anhydrous-sunscreen-spf-50-pa"]], "fallbackSuggest": ["anhydrous-sunscreen-spf-50-pa", "hydrating-toner-mist", "cica-exosomes-face-serum"], "suggestLabel": "Complete the routine"};</script>
 <script src="data.js"></script><script src="site.js"></script>
 </body></html>

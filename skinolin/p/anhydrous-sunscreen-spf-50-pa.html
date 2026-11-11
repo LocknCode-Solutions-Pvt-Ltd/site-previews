@@ -123,24 +123,55 @@
 .diwali .card .bd{padding:12px 6px 6px}.diwali .badge{background:#2B0F0A;color:#FFD27A}
 @media(max-width:720px){.diwali{padding:92px 0 40px;background:#F7ECD9 var(--diwt) center top/auto 84px repeat-x}}
 /* refer and earn */
-.refer{background:linear-gradient(180deg,#F3F1EC 0%,#ECE8E0 100%);overflow:hidden;margin-top:40px}.refer-in{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:20px;min-height:340px}
+.refer{background:linear-gradient(180deg,#F3F1EC 0%,#ECE8E0 100%);overflow:hidden;margin-top:40px}.refer-in{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:20px;min-height:340px;padding-top:52px;padding-bottom:40px}
 .rbig{font-family:var(--body);font-weight:900;font-size:clamp(46px,6.4vw,96px);line-height:.95;letter-spacing:-.03em;text-transform:uppercase;margin:0;color:#D9A21B}
 .rbig i{font-style:normal;color:var(--head-color)}.rline{font-size:clamp(17px,1.6vw,21px);color:var(--ink);max-width:520px;margin:16px 0 22px;border-top:1px solid var(--ink);padding-top:14px}
 .rcta{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.rimg{position:relative;height:340px}.rimg img{position:absolute;bottom:34px;height:250px;width:auto;filter:drop-shadow(0 14px 14px rgba(0,0,0,.14))}
+.rimg{position:relative;height:340px}.rimg img{position:absolute;bottom:26px;height:250px;width:auto;filter:drop-shadow(0 16px 12px rgba(0,0,0,.16))}
+.rimg::after{content:"";position:absolute;left:2%;right:2%;bottom:14px;height:22px;border-radius:50%;background:radial-gradient(closest-side,rgba(60,45,25,.18),transparent)}
 .rimg .r0{left:6%;height:220px}.rimg .r1{left:30%;height:290px;z-index:2}.rimg .r2{left:53%;height:240px}.rimg .r3{left:74%;height:215px}
-.rimg .shelf{position:absolute;left:-10%;right:-30%;bottom:0;height:46px;background:#fff;transform:skewY(-3deg);transform-origin:left;box-shadow:0 -6px 18px rgba(0,0,0,.05)}
 @media(max-width:900px){.refer-in{grid-template-columns:1fr;padding-top:40px}.rimg{height:260px}.rimg img{height:180px!important}}
 .tchips.home{margin:-6px 0 22px}
 .probanner{display:block;border-radius:var(--r-lg);overflow:hidden;box-shadow:0 10px 30px rgba(20,30,40,.08)}
 .probanner img{width:100%;height:auto;display:block}
 .prophone{display:none}
+/* round 4 (11 Nov 2026): pollution hero + routine, clearer spotlight callouts, holiday store */
+.hero.smog{background:#cfc9c0}.hero.smog::after{background:linear-gradient(90deg,rgba(244,240,234,.92) 0%,rgba(244,240,234,.78) 36%,rgba(244,240,234,0) 60%)}
+.hero.smog picture img{object-position:100% 50%}
+.zero.city b{background:#3b4250}
+@media(max-width:900px){.hero.smog{background:linear-gradient(#f4f0ea,#e2ddd5)}.hero.smog picture img{aspect-ratio:4/3;object-position:70% 50%}}
+.smogsec{background:linear-gradient(180deg,#2f343c 0%,#3c414a 100%);color:#e9ecf1;padding:64px 0 60px;position:relative;overflow:hidden}
+.smogsec::before{content:"";position:absolute;inset:-20% -10% auto -10%;height:70%;background:radial-gradient(60% 60% at 30% 40%,rgba(255,255,255,.07),transparent 70%),radial-gradient(50% 50% at 80% 20%,rgba(214,170,120,.10),transparent 70%);pointer-events:none}
+.smogsec .wrap{position:relative}.smogsec h2{color:#fff;font-size:clamp(28px,3.4vw,46px);max-width:760px;margin:6px 0 10px}
+.smogsec .eyebrow{color:#e7bf73}.smogsec .lede{color:#c9ced8;max-width:640px;margin:0 0 30px;font-size:17px}
+.psteps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:ps}
+.pstep{background:#fff;color:var(--ink);border-radius:var(--r-lg);padding:18px 18px 16px;display:flex;flex-direction:column;gap:8px}
+.pstep .n{font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-text)}
+.pstep .pic{display:flex;align-items:flex-end;justify-content:center;height:190px;border-radius:var(--r);background:var(--tint,#F3EADF);padding-top:12px}
+.pstep .pic img{height:170px;width:auto;filter:drop-shadow(0 10px 10px rgba(0,0,0,.14))}
+.pstep h3{font-size:17px;margin:4px 0 0;line-height:1.3}.pstep h3 a{color:inherit;text-decoration:none}
+.pstep q{font-size:14.5px;color:var(--ink-2);quotes:"\201C" "\201D";line-height:1.45}
+.pstep .row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:6px}.pstep .price{font-weight:800}
+.ptotal{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:22px;border-top:1px solid rgba(255,255,255,.18);padding-top:18px}
+.ptotal span{color:#c9ced8}.ptotal b{color:#fff;font-size:20px}.ptotal .btn{background:#e7bf73;color:#1e2433}.ptotal .btn:hover{background:#f1cf8d}
+@media(max-width:1020px){.psteps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.smogsec{padding:44px 0}.psteps{grid-template-columns:1fr}.pstep{display:grid;grid-template-columns:96px 1fr;column-gap:14px;align-items:start}.pstep .pic{grid-row:1/5;height:120px;padding-top:6px}.pstep .pic img{height:108px}.pstep .row{grid-column:2}}
+.calls li{width:176px}.calls b{font-family:var(--head);font-size:19px;font-weight:700;color:var(--head-color);margin-bottom:3px;letter-spacing:-.005em}
+.calls li span{display:block;font-size:13.5px;line-height:1.4}
+.calls li::after{background:var(--line-strong)}.calls .c0::before,.calls .c1::before,.calls .c2::before,.calls .c3::before{background:#fff;border:2px solid var(--head-color);width:9px;height:9px;top:5px}
+.calls b::after{content:"";display:block;width:26px;height:2px;background:var(--accent);margin:5px 0 0}
+.calls .c0 b::after,.calls .c2 b::after{margin-left:auto}
+@media(max-width:620px){.calls b::after,.calls .c0 b::after,.calls .c2 b::after{margin-left:0}}
+.diwali.holiday h2{color:#7A1F12}.diwali.holiday .eyebrow{color:#2f5d3a}
+.diwali.holiday{background:#F7ECD9 var(--diw) center top/100% auto no-repeat;padding-top:calc(13vw + 10px)}
+@media(max-width:720px){.diwali.holiday{padding-top:96px;background:#F7ECD9 var(--diwt) center top/auto 84px repeat-x}}
+
 @media(max-width:640px){.probanner{display:none}.prophone{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;border-radius:var(--r-lg);padding:28px 18px;background:linear-gradient(135deg,#eef2f6,#c5d1dd)}.prophone img{height:26px;width:auto}.prophone b{font-family:var(--head);font-size:28px;color:var(--navy);letter-spacing:.02em;text-transform:uppercase;line-height:1.1}.prophone i{font-family:var(--head);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.25);font-size:16px}}
 </style>
-<link rel="icon" href="../img/brand-wordmark.webp"></head>
+<link rel="icon" href="../img/favicon.png"></head>
 <body class="pdp-page" data-root="../">
 
-<div class="topbar"><span>Free shipping on every order</span><span class="t-hide">Pay by UPI or card</span><span>Diwali gift above ₹1,499</span></div>
+<div class="topbar tick" aria-label="Offers"><div class="tk"><span>Your complete ecosystem for the skin!</span><span>Free shipping on every order</span><span>Pay by UPI or card</span><span>Combos save 10%<a href="../shop.html?cat=combos">Grab the deal</a></span><span aria-hidden="true">Your complete ecosystem for the skin!</span><span aria-hidden="true">Free shipping on every order</span><span aria-hidden="true">Pay by UPI or card</span><span aria-hidden="true">Combos save 10%<a href="../shop.html?cat=combos">Grab the deal</a></span></div></div>
 <header class="hdr"><div class="wrap hdr-in">
   <button class="ibtn menu-btn" data-open="menu" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   <a class="logo" href="../index.html" aria-label="Skinolin home"><img src="../img/brand-wordmark.webp" alt="Skinolin" width="186" height="37"><small>Skin loves Skinolin.</small></a>
@@ -204,7 +235,7 @@ All-in-1 Moisturizer SPF 30 + Anhydrous Sunscreen SPF 50 PA++++<br><span style="
 <p class="small">Skinolin is a brand of Sinatra Enterprises, Block A2, No. 97, Rajouri Garden, New Delhi.</p></div>
 <div><h4>Shop</h4><ul><li><a href="../shop.html?cat=sunscreens">Sunscreens</a></li><li><a href="../shop.html?cat=serums">Serums</a></li><li><a href="../shop.html?cat=cleansers">Cleansers</a></li><li><a href="../shop.html?cat=toners">Toners</a></li><li><a href="../shop.html?cat=moisturizers">Moisturizers</a></li><li><a href="../shop.html?cat=combos">Combos</a></li><li><a href="../shop.html">All products</a></li></ul></div>
 <div><h4>Help</h4><ul><li><a href="../policies.html">Shipping and delivery</a></li><li><a href="../policies.html#returns">Returns</a></li><li><a href="../policies.html#cancel">Cancellations</a></li><li><a href="https://wa.me/?text=Hi%20Skinolin%2C%20I%20have%20a%20question">WhatsApp us</a></li></ul></div>
-<div><h4>Skinolin</h4><ul><li><a href="../about.html">About us</a></li><li><a href="../learn.html">Skincare guides</a></li><li><a href="../salons.html">For salons and clinics</a></li><li><a href="https://skinolin.bixgrow.com" rel="noopener">Affiliate program</a></li></ul></div>
+<div><h4>Skinolin</h4><ul><li><a href="../about.html">About us</a></li><li><a href="../learn.html">Skincare guides</a></li><li><a href="../salons.html">For salons and clinics</a></li><li><a href="https://skinolin.bixgrow.com" target="_blank" rel="noopener">Affiliate program</a></li></ul></div>
 </div><div class="legal"><span>© 2026 Skinolin. All rights reserved.</span><span>Design preview by LockNCode · <a href="../preview-notes.html" style="text-decoration:underline">what changed and why</a></span></div></div></footer>
 
 <div class="scrim"></div>
@@ -226,6 +257,6 @@ All-in-1 Moisturizer SPF 30 + Anhydrous Sunscreen SPF 50 PA++++<br><span style="
 <div class="pv">Design preview by LockNCode · <a href="../preview-notes.html">what changed</a></div>
 <div class="modal" id="ckModal"><div><h3>This is a design preview</h3><p>No order was placed and no payment was taken. On the live store this button goes to Razorpay.</p><button class="btn" data-close>Back to the preview</button></div></div>
 
-<script>window.BRAND={"key": "skinolin", "gift": {"at": 1499, "label": "a free Diwali gift", "unlocked": "Your free Diwali gift is in the cart"}, "suggest": [["cica-exosomes-face-serum", "anhydrous-sunscreen-spf-50-pa"], ["niacinamide-glow-serum-for-skin-brightening", "anhydrous-sunscreen-spf-50-pa"], ["anhydrous-sunscreen-spf-50-pa", "hydrating-toner-mist"], ["niacinamide-daily-cleanser", "cica-exosomes-face-serum"], ["kojic-acid-foaming-cleanser-for-oily-skin", "hydrating-toner-mist"], ["hydrating-toner-mist", "anhydrous-sunscreen-spf-50-pa"]], "fallbackSuggest": ["anhydrous-sunscreen-spf-50-pa", "hydrating-toner-mist", "cica-exosomes-face-serum"], "suggestLabel": "Complete the routine"};</script>
+<script>window.BRAND={"key": "skinolin", "gift": {"at": 1499, "label": "a free gift", "unlocked": "Your free gift is in the cart"}, "suggest": [["cica-exosomes-face-serum", "anhydrous-sunscreen-spf-50-pa"], ["niacinamide-glow-serum-for-skin-brightening", "anhydrous-sunscreen-spf-50-pa"], ["anhydrous-sunscreen-spf-50-pa", "hydrating-toner-mist"], ["niacinamide-daily-cleanser", "cica-exosomes-face-serum"], ["kojic-acid-foaming-cleanser-for-oily-skin", "hydrating-toner-mist"], ["hydrating-toner-mist", "anhydrous-sunscreen-spf-50-pa"]], "fallbackSuggest": ["anhydrous-sunscreen-spf-50-pa", "hydrating-toner-mist", "cica-exosomes-face-serum"], "suggestLabel": "Complete the routine"};</script>
 <script src="../data.js"></script><script src="../site.js"></script>
 </body></html>

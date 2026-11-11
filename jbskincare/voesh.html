@@ -81,6 +81,36 @@ h1{font-size:clamp(34px,4.4vw,60px)}h2{font-size:clamp(26px,2.9vw,40px)}.slide .
 .vstory p{color:var(--ink-2)}.voindia{display:grid;grid-template-columns:1.6fr 1fr;gap:40px;align-items:center;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);padding:32px 0}
 .voindia p{color:var(--ink-2);margin:0}.voindia-a{display:flex;gap:22px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
 @media(max-width:900px){.vstory,.voindia{grid-template-columns:1fr;gap:20px}.voindia-a{justify-content:flex-start}}
+/* round 4 (11 Nov): brand pages. Repêchage = sea (repechage.com aqua #AFE2E3 and blue #1573A9), VOESH = voesh.com greige */
+body.brand-rep{--bg:#F5FBFB;--soft:#E2F3F3;--sand:#D3ECEC;--head-color:#0D4A6B;--accent:#1573A9;--accent-dark:#0F5A85;--accent-text:#0F5A85;--line:#d5e9ea;--line-strong:#b5d8da;--card-line:#d5e9ea;--pk-bg:#E2F3F3;background:var(--bg)}
+body.brand-rep main{background:linear-gradient(180deg,#E6F5F5 0,#F5FBFB 520px)}
+body.brand-rep .brandhero{position:relative;padding-bottom:30px}
+body.brand-rep main>section:first-child{background:radial-gradient(70% 90% at 85% 0%,rgba(175,226,227,.75),transparent 70%),linear-gradient(180deg,#D8F0F0,#EAF7F7);position:relative;padding-bottom:56px}
+body.brand-rep main>section:first-child{-webkit-mask:linear-gradient(#000,#000) top/100% calc(100% - 45px) no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 46' preserveAspectRatio='none'%3E%3Cpath d='M0 0h1440v22c-120 18-240 18-360 0s-240-18-360 0-240 18-360 0-240-18-360 0z'/%3E%3C/svg%3E") bottom/100% 46px no-repeat;mask:linear-gradient(#000,#000) top/100% calc(100% - 45px) no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 46' preserveAspectRatio='none'%3E%3Cpath d='M0 0h1440v22c-120 18-240 18-360 0s-240-18-360 0-240 18-360 0-240-18-360 0z'/%3E%3C/svg%3E") bottom/100% 46px no-repeat}
+body.brand-rep .sec.soft{background:linear-gradient(180deg,#E2F3F3,#D6EEEE)}
+body.brand-rep main>section:first-child+section.soft{box-shadow:0 -46px 0 #E2F3F3}
+body.brand-rep .btn:not(.ghost):not(.light){background:#1573A9}body.brand-rep .btn:not(.ghost):not(.light):hover{background:#0F5A85}
+body.brand-rep .btn.ghost{border-color:#1573A9;color:#0F5A85}
+body.brand-rep h1,body.brand-rep h2{color:#0D4A6B}
+body.brand-vo{--bg:#EFEBE5;--soft:#E1DCD5;--sand:#E6E1DA;--head-color:#22140C;--ink:#22140C;--ink-2:#4a3f37;--accent:#22140C;--accent-dark:#000;--accent-text:#22140C;--line:#d9d3cb;--line-strong:#c6beb3;--card-line:#d9d3cb;--pk-bg:#E6E1DA;background:var(--bg)}
+body.brand-vo main{background:#EFEBE5}body.brand-vo .sec.soft{background:#E1DCD5}
+body.brand-vo h1,body.brand-vo h2,body.brand-vo h3{font-family:var(--body);font-weight:500;letter-spacing:.01em;text-transform:none}
+body.brand-vo h1{font-family:var(--head);font-weight:500}body.brand-vo .eyebrow{color:#606B4A;letter-spacing:.16em}
+body.brand-vo .btn:not(.light){background:#22140C;color:#fff;border-color:#22140C;border-radius:0;text-transform:uppercase;letter-spacing:.08em;font-size:13.5px}
+body.brand-vo .btn.ghost{background:transparent;color:#22140C}body.brand-vo .btn:hover{background:#000;color:#fff}
+body.brand-vo .card .ph{background:#E6E1DA}body.brand-vo .add{background:#22140C;color:#fff;border-radius:0}
+/* round 4: skin match photo check */
+.m-note{font-size:13.5px;color:var(--muted);margin:-4px 0 0}
+.m-photo{display:flex;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px dashed var(--line-strong);padding-top:16px}
+.m-photo label{display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-weight:700;color:var(--head-color);border:1.5px solid var(--head-color);border-radius:var(--btn-r);padding:10px 16px;background:#fff}
+.m-photo input{position:absolute;width:1px;height:1px;opacity:0}.m-photo small{color:var(--muted);flex-basis:100%}
+.m-scan{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:center;margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:18px}
+.m-scan[hidden]{display:none}.m-shot{position:relative;width:150px;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;background:var(--soft)}.m-shot img{width:100%;height:100%;object-fit:cover}
+.m-shot::after{content:"";position:absolute;left:0;right:0;top:-30%;height:30%;background:linear-gradient(180deg,transparent,rgba(21,150,140,.45),transparent);animation:mscan 1.2s ease-in-out 2}
+.m-scan.done .m-shot::after{display:none}@keyframes mscan{to{top:100%}}
+.m-scan h3{font-size:20px;margin:0 0 6px}.m-scan p{margin:0 0 12px;color:var(--ink-2);font-size:14.5px}.m-chips{display:flex;flex-wrap:wrap;gap:8px}
+.m-chips button{border:1.5px solid var(--line-strong);background:#fff;border-radius:var(--btn-r);padding:9px 14px;font:inherit;font-weight:600;cursor:pointer}.m-chips button:hover{border-color:var(--head-color)}
+@media(max-width:560px){.m-scan{grid-template-columns:96px 1fr}.m-shot{width:96px}}
 /* round 3 (23 Oct): the skin match */
 .match{background:linear-gradient(180deg,#fff 0%,var(--soft) 100%)}.match-in{display:grid;grid-template-columns:1.05fr .8fr 1fr;gap:28px;align-items:center}
 .m-title{display:flex;flex-direction:column;font-family:var(--head);line-height:.95;margin:0 0 18px;color:var(--head-color)}
@@ -186,8 +216,8 @@ h1{font-size:clamp(34px,4.4vw,60px)}h2{font-size:clamp(26px,2.9vw,40px)}.slide .
 @media(max-width:900px){.ranges{grid-template-columns:1fr 1fr}}
 @media(max-width:420px){.ranges h3{font-size:18px}}
 </style>
-<link rel="icon" href="img/brand-mono.webp"></head>
-<body class=" has-bnav" data-root="">
+<link rel="icon" href="img/favicon.png"></head>
+<body class="brand-vo has-bnav" data-root="">
 
 <div class="topbar"><span>Free shipping across India</span><span class="t-hide">Free Repêchage samples with every order</span></div>
 <header class="hdr"><div class="wrap hdr-in">
@@ -220,51 +250,51 @@ h1{font-size:clamp(34px,4.4vw,60px)}h2{font-size:clamp(26px,2.9vw,40px)}.slide .
 <div class="steps4"><div class="st"><span>1</span><b>Soak</b><p>Sea salt soak softens skin and relaxes tired feet.</p></div><div class="st"><span>2</span><b>Scrub</b><p>A sugar scrub lifts away dry, rough skin.</p></div><div class="st"><span>3</span><b>Masque</b><p>A mud masque draws out impurities and refreshes.</p></div><div class="st"><span>4</span><b>Massage</b><p>Massage butter seals in moisture for soft, smooth feet.</p></div></div></div></section>
 <section class="sec tight"><div class="wrap"><div class="whyvo"><div><b>Single-use packs</b><span>Each step is pre-portioned and opened fresh, so nothing is shared or reused.</span></div>
 <div><b>Vegan and cruelty-free</b><span>Made with vegan, cruelty-free ingredients, as VOESH states for its range.</span></div><div><b>Salon results at home</b><span>The same kits spas use, in scents from Lavender Relieve to Charcoal Power Detox.</span></div></div></div></section>
-<section class="sec tight" id="voesh-all"><div class="wrap"><div class="sec-h"><div><h2>The VOESH range</h2><p>Pick a kit, then choose your scent on the product page.</p></div></div><div class="grid t3"><article class="card" data-cat="pedicure voesh" data-concern="feet" data-price="950" data-rank="0">
+<section class="sec tight" id="voesh-all"><div class="wrap"><div class="sec-h"><div><h2>The VOESH range</h2><p>Pick a kit, then choose your scent on the product page.</p></div></div><div class="grid t3"><article class="card" data-cat="pedicure voesh" data-brand="voesh" data-concern="feet" data-price="950" data-rank="0">
 <a class="ph" href="p/pedi-in-a-box-deluxe-4-step.html"><img class="full" src="img/card-pedi-in-a-box-deluxe-4-step-lavender-relieve.webp" alt="Pedi in a Box Deluxe, 4 Step" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure</span><h3><a href="p/pedi-in-a-box-deluxe-4-step.html">Pedi in a Box Deluxe, 4&nbsp;Step</a></h3>
 <p class="sub">VOESH · 18 scents</p>
-<div class="row"><span class="price">₹950</span><a class="add" href="p/pedi-in-a-box-deluxe-4-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="pedicure voesh" data-concern="feet" data-price="750" data-rank="1">
+<div class="row"><span class="price">₹950</span><a class="add" href="p/pedi-in-a-box-deluxe-4-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="pedicure voesh" data-brand="voesh" data-concern="feet" data-price="750" data-rank="1">
 <a class="ph" href="p/pedi-in-a-box-basic-3-step.html"><img class="full" src="img/card-pedi-in-a-box-basic-3-step-green-tea-detox.webp" alt="Pedi in a Box Basic, 3 Step" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure</span><h3><a href="p/pedi-in-a-box-basic-3-step.html">Pedi in a Box Basic, 3&nbsp;Step</a></h3>
 <p class="sub">VOESH · 4 scents</p>
-<div class="row"><span class="price">₹750</span><a class="add" href="p/pedi-in-a-box-basic-3-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="pedicure voesh" data-concern="feet" data-price="1500" data-rank="2">
+<div class="row"><span class="price">₹750</span><a class="add" href="p/pedi-in-a-box-basic-3-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="pedicure voesh" data-brand="voesh" data-concern="feet" data-price="1500" data-rank="2">
 <a class="ph" href="p/pedi-in-a-box-o2-fizz-5-step.html"><img class="full" src="img/card-pedi-in-a-box-o2-fizz-5-step-lavender-vanilla.webp" alt="Pedi in a Box O2 Fizz, 5 Step" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure</span><h3><a href="p/pedi-in-a-box-o2-fizz-5-step.html">Pedi in a Box O2 Fizz, 5&nbsp;Step</a></h3>
 <p class="sub">VOESH · 5 scents</p>
-<div class="row"><span class="price">₹1,500</span><a class="add" href="p/pedi-in-a-box-o2-fizz-5-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="pedicure voesh" data-concern="feet" data-price="1100" data-rank="3">
+<div class="row"><span class="price">₹1,500</span><a class="add" href="p/pedi-in-a-box-o2-fizz-5-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="pedicure voesh" data-brand="voesh" data-concern="feet" data-price="1100" data-rank="3">
 <a class="ph" href="p/pedi-in-a-box-glimmer-5-step.html"><img class="full" src="img/card-pedi-in-a-box-glimmer-5-step-golden-vanilla.webp" alt="Pedi in a Box Glimmer, 5 Step" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure</span><h3><a href="p/pedi-in-a-box-glimmer-5-step.html">Pedi in a Box Glimmer, 5&nbsp;Step</a></h3>
 <p class="sub">VOESH · 2 scents</p>
-<div class="row"><span class="price">₹1,100</span><a class="add" href="p/pedi-in-a-box-glimmer-5-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="pedicure voesh" data-concern="feet" data-price="1500" data-rank="4">
+<div class="row"><span class="price">₹1,100</span><a class="add" href="p/pedi-in-a-box-glimmer-5-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="pedicure voesh" data-brand="voesh" data-concern="feet" data-price="1500" data-rank="4">
 <a class="ph" href="p/pedi-in-a-box-ultimate-6-step.html"><img class="full" src="img/card-pedi-in-a-box-ultimate-6-step-aloe-aloe.webp" alt="Pedi in a Box Ultimate, 6 Step" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure</span><h3><a href="p/pedi-in-a-box-ultimate-6-step.html">Pedi in a Box Ultimate, 6&nbsp;Step</a></h3>
 <p class="sub">VOESH · 4 scents</p>
-<div class="row"><span class="price">₹1,500</span><a class="add" href="p/pedi-in-a-box-ultimate-6-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="pedicure voesh" data-concern="feet" data-price="750" data-rank="5">
+<div class="row"><span class="price">₹1,500</span><a class="add" href="p/pedi-in-a-box-ultimate-6-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="pedicure voesh" data-brand="voesh" data-concern="feet" data-price="750" data-rank="5">
 <a class="ph" href="p/mani-in-a-box-waterless-3-step.html"><img class="full" src="img/card-mani-in-a-box-waterless-3-step-green-tea.webp" alt="Mani in a Box Waterless, 3 Step" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Spa pedicure</span><h3><a href="p/mani-in-a-box-waterless-3-step.html">Mani in a Box Waterless, 3&nbsp;Step</a></h3>
 <p class="sub">VOESH · 3 scents</p>
-<div class="row"><span class="price">From ₹750</span><a class="add" href="p/mani-in-a-box-waterless-3-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="socks voesh" data-concern="feet" data-price="900" data-rank="6">
+<div class="row"><span class="price">From ₹750</span><a class="add" href="p/mani-in-a-box-waterless-3-step.html" style="display:inline-flex;align-items:center;justify-content:center">Choose scent</a></div></div></article><article class="card" data-cat="socks voesh" data-brand="voesh" data-concern="feet" data-price="900" data-rank="6">
 <a class="ph" href="p/collagen-gloves.html"><img class="full" src="img/card-collagen-gloves-cannabis-sativa-seed-oil.webp" alt="Collagen Gloves" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Hands and feet</span><h3><a href="p/collagen-gloves.html">Collagen Gloves</a></h3>
 <p class="sub">VOESH · 3 kinds</p>
-<div class="row"><span class="price">₹900</span><a class="add" href="p/collagen-gloves.html" style="display:inline-flex;align-items:center;justify-content:center">Choose type</a></div></div></article><article class="card" data-cat="socks voesh" data-concern="feet" data-price="750" data-rank="7">
+<div class="row"><span class="price">₹900</span><a class="add" href="p/collagen-gloves.html" style="display:inline-flex;align-items:center;justify-content:center">Choose type</a></div></div></article><article class="card" data-cat="socks voesh" data-brand="voesh" data-concern="feet" data-price="750" data-rank="7">
 <a class="ph" href="p/heel-socks.html"><img class="full" src="img/card-heel-socks.webp" alt="VOESH Moisturizing Heel Socks" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Hands and feet</span><h3><a href="p/heel-socks.html">VOESH Moisturizing Heel Socks</a></h3>
 <p class="sub">VOESH</p>
-<div class="row"><span class="price">₹750</span><button class="add" data-add="heel-socks">Add to cart</button></div></div></article><article class="card" data-cat="socks voesh" data-concern="feet" data-price="1250" data-rank="8">
+<div class="row"><span class="price">₹750</span><button class="add" data-add="heel-socks">Add to cart</button></div></div></article><article class="card" data-cat="socks voesh" data-brand="voesh" data-concern="feet" data-price="1250" data-rank="8">
 <a class="ph" href="p/peeling-socks.html"><img class="full" src="img/card-peeling-socks.webp" alt="VOESH Peeling Socks" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Hands and feet</span><h3><a href="p/peeling-socks.html">VOESH Peeling Socks</a></h3>
 <p class="sub">VOESH</p>
-<div class="row"><span class="price">₹1,250</span><button class="add" data-add="peeling-socks">Add to cart</button></div></div></article><article class="card" data-cat="socks voesh" data-concern="feet" data-price="2290" data-rank="9">
+<div class="row"><span class="price">₹1,250</span><button class="add" data-add="peeling-socks">Add to cart</button></div></div></article><article class="card" data-cat="socks voesh" data-brand="voesh" data-concern="feet" data-price="2290" data-rank="9">
 <a class="ph" href="p/peeling-socks-duo.html"><img class="full" src="img/card-peeling-socks-duo.webp" alt="VOESH Peeling Socks Duo - 2 Pairs" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Hands and feet</span><h3><a href="p/peeling-socks-duo.html">VOESH Peeling Socks Duo&nbsp;&#8209; 2 Pairs</a></h3>
 <p class="sub">VOESH</p>
-<div class="row"><span class="price">₹2,290</span><button class="add" data-add="peeling-socks-duo">Add to cart</button></div></div></article><article class="card" data-cat="socks voesh" data-concern="feet" data-price="900" data-rank="10">
+<div class="row"><span class="price">₹2,290</span><button class="add" data-add="peeling-socks-duo">Add to cart</button></div></div></article><article class="card" data-cat="socks voesh" data-brand="voesh" data-concern="feet" data-price="900" data-rank="10">
 <a class="ph" href="p/collagen-socks-cannabis-sativa-seed-oil.html"><img class="full" src="img/card-collagen-socks-cannabis-sativa-seed-oil.webp" alt="Collagen Socks - Cannabis Sativa Seed Oil" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Hands and feet</span><h3><a href="p/collagen-socks-cannabis-sativa-seed-oil.html">Collagen Socks&nbsp;&#8209; Cannabis Sativa Seed Oil</a></h3>
 <p class="sub">VOESH</p>
-<div class="row"><span class="price">₹900</span><button class="add" data-add="collagen-socks-cannabis-sativa-seed-oil">Add to cart</button></div></div></article><article class="card" data-cat="pedicure voesh" data-concern="feet" data-price="200" data-rank="11">
+<div class="row"><span class="price">₹900</span><button class="add" data-add="collagen-socks-cannabis-sativa-seed-oil">Add to cart</button></div></div></article><article class="card" data-cat="pedicure voesh" data-brand="voesh" data-concern="feet" data-price="200" data-rank="11">
 <a class="ph" href="p/callus-remover-gel.html"><img class="full" src="img/card-callus-remover-gel.webp" alt="Callus Remover Gel" loading="lazy" width="600" height="600"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>Hands and feet</span><h3><a href="p/callus-remover-gel.html">Callus Remover Gel</a></h3>
 <p class="sub">VOESH</p>

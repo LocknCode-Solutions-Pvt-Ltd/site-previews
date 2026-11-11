@@ -81,6 +81,36 @@ h1{font-size:clamp(34px,4.4vw,60px)}h2{font-size:clamp(26px,2.9vw,40px)}.slide .
 .vstory p{color:var(--ink-2)}.voindia{display:grid;grid-template-columns:1.6fr 1fr;gap:40px;align-items:center;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);padding:32px 0}
 .voindia p{color:var(--ink-2);margin:0}.voindia-a{display:flex;gap:22px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
 @media(max-width:900px){.vstory,.voindia{grid-template-columns:1fr;gap:20px}.voindia-a{justify-content:flex-start}}
+/* round 4 (11 Nov): brand pages. Repêchage = sea (repechage.com aqua #AFE2E3 and blue #1573A9), VOESH = voesh.com greige */
+body.brand-rep{--bg:#F5FBFB;--soft:#E2F3F3;--sand:#D3ECEC;--head-color:#0D4A6B;--accent:#1573A9;--accent-dark:#0F5A85;--accent-text:#0F5A85;--line:#d5e9ea;--line-strong:#b5d8da;--card-line:#d5e9ea;--pk-bg:#E2F3F3;background:var(--bg)}
+body.brand-rep main{background:linear-gradient(180deg,#E6F5F5 0,#F5FBFB 520px)}
+body.brand-rep .brandhero{position:relative;padding-bottom:30px}
+body.brand-rep main>section:first-child{background:radial-gradient(70% 90% at 85% 0%,rgba(175,226,227,.75),transparent 70%),linear-gradient(180deg,#D8F0F0,#EAF7F7);position:relative;padding-bottom:56px}
+body.brand-rep main>section:first-child{-webkit-mask:linear-gradient(#000,#000) top/100% calc(100% - 45px) no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 46' preserveAspectRatio='none'%3E%3Cpath d='M0 0h1440v22c-120 18-240 18-360 0s-240-18-360 0-240 18-360 0-240-18-360 0z'/%3E%3C/svg%3E") bottom/100% 46px no-repeat;mask:linear-gradient(#000,#000) top/100% calc(100% - 45px) no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 46' preserveAspectRatio='none'%3E%3Cpath d='M0 0h1440v22c-120 18-240 18-360 0s-240-18-360 0-240 18-360 0-240-18-360 0z'/%3E%3C/svg%3E") bottom/100% 46px no-repeat}
+body.brand-rep .sec.soft{background:linear-gradient(180deg,#E2F3F3,#D6EEEE)}
+body.brand-rep main>section:first-child+section.soft{box-shadow:0 -46px 0 #E2F3F3}
+body.brand-rep .btn:not(.ghost):not(.light){background:#1573A9}body.brand-rep .btn:not(.ghost):not(.light):hover{background:#0F5A85}
+body.brand-rep .btn.ghost{border-color:#1573A9;color:#0F5A85}
+body.brand-rep h1,body.brand-rep h2{color:#0D4A6B}
+body.brand-vo{--bg:#EFEBE5;--soft:#E1DCD5;--sand:#E6E1DA;--head-color:#22140C;--ink:#22140C;--ink-2:#4a3f37;--accent:#22140C;--accent-dark:#000;--accent-text:#22140C;--line:#d9d3cb;--line-strong:#c6beb3;--card-line:#d9d3cb;--pk-bg:#E6E1DA;background:var(--bg)}
+body.brand-vo main{background:#EFEBE5}body.brand-vo .sec.soft{background:#E1DCD5}
+body.brand-vo h1,body.brand-vo h2,body.brand-vo h3{font-family:var(--body);font-weight:500;letter-spacing:.01em;text-transform:none}
+body.brand-vo h1{font-family:var(--head);font-weight:500}body.brand-vo .eyebrow{color:#606B4A;letter-spacing:.16em}
+body.brand-vo .btn:not(.light){background:#22140C;color:#fff;border-color:#22140C;border-radius:0;text-transform:uppercase;letter-spacing:.08em;font-size:13.5px}
+body.brand-vo .btn.ghost{background:transparent;color:#22140C}body.brand-vo .btn:hover{background:#000;color:#fff}
+body.brand-vo .card .ph{background:#E6E1DA}body.brand-vo .add{background:#22140C;color:#fff;border-radius:0}
+/* round 4: skin match photo check */
+.m-note{font-size:13.5px;color:var(--muted);margin:-4px 0 0}
+.m-photo{display:flex;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px dashed var(--line-strong);padding-top:16px}
+.m-photo label{display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-weight:700;color:var(--head-color);border:1.5px solid var(--head-color);border-radius:var(--btn-r);padding:10px 16px;background:#fff}
+.m-photo input{position:absolute;width:1px;height:1px;opacity:0}.m-photo small{color:var(--muted);flex-basis:100%}
+.m-scan{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:center;margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:18px}
+.m-scan[hidden]{display:none}.m-shot{position:relative;width:150px;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;background:var(--soft)}.m-shot img{width:100%;height:100%;object-fit:cover}
+.m-shot::after{content:"";position:absolute;left:0;right:0;top:-30%;height:30%;background:linear-gradient(180deg,transparent,rgba(21,150,140,.45),transparent);animation:mscan 1.2s ease-in-out 2}
+.m-scan.done .m-shot::after{display:none}@keyframes mscan{to{top:100%}}
+.m-scan h3{font-size:20px;margin:0 0 6px}.m-scan p{margin:0 0 12px;color:var(--ink-2);font-size:14.5px}.m-chips{display:flex;flex-wrap:wrap;gap:8px}
+.m-chips button{border:1.5px solid var(--line-strong);background:#fff;border-radius:var(--btn-r);padding:9px 14px;font:inherit;font-weight:600;cursor:pointer}.m-chips button:hover{border-color:var(--head-color)}
+@media(max-width:560px){.m-scan{grid-template-columns:96px 1fr}.m-shot{width:96px}}
 /* round 3 (23 Oct): the skin match */
 .match{background:linear-gradient(180deg,#fff 0%,var(--soft) 100%)}.match-in{display:grid;grid-template-columns:1.05fr .8fr 1fr;gap:28px;align-items:center}
 .m-title{display:flex;flex-direction:column;font-family:var(--head);line-height:.95;margin:0 0 18px;color:var(--head-color)}
@@ -186,7 +216,7 @@ h1{font-size:clamp(34px,4.4vw,60px)}h2{font-size:clamp(26px,2.9vw,40px)}.slide .
 @media(max-width:900px){.ranges{grid-template-columns:1fr 1fr}}
 @media(max-width:420px){.ranges h3{font-size:18px}}
 </style>
-<link rel="icon" href="img/brand-mono.webp"></head>
+<link rel="icon" href="img/favicon.png"></head>
 <body class=" has-bnav" data-root="">
 
 <div class="topbar"><span>Free shipping across India</span><span class="t-hide">Free Repêchage samples with every order</span></div>
@@ -204,7 +234,7 @@ h1{font-size:clamp(34px,4.4vw,60px)}h2{font-size:clamp(26px,2.9vw,40px)}.slide .
 <main><div class="wrap"><div class="crumbs"><a href="index.html">Home</a> / Learn</div>
 <div class="lhub-h"><h1>Skin care guides</h1><p>Routines for every Repêchage range, professional treatments and foot care, written by our team and grouped by topic.</p><span class="small muted">22 guides in 5 topics</span>
 <nav class="tchips" aria-label="Topics"><a href="learn/topics/seaweed-and-repechage.html">Seaweed and Repêchage</a><a href="learn/topics/facials-and-treatments.html">Facials and treatments</a><a href="learn/topics/routines-by-concern.html">Routines by skin concern</a><a href="learn/topics/everyday-skin-care.html">Everyday skin care</a><a href="learn/topics/hands-and-feet.html">Hands and feet</a></nav></div>
-<div class="topics"><div class="topic"><a class="ph" href="learn/topics/seaweed-and-repechage.html"><img src="img/art-what-does-seaweed-do-for-skin.webp" alt="" loading="lazy"></a>
+<section class="lintro"><h2>What you will learn here</h2><ul><li><b>Which range fits your skin</b><span>Pigmentation, aging, oily, sensitive or dry: the Repêchage range made for each, and why.</span></li><li><b>How to use it, step by step</b><span>Morning and night routines, the order to apply things in, and how much to use.</span></li><li><b>What happens in a facial</b><span>The Four Layer Facial, peels and professional treatments, and how to keep results going at home.</span></li><li><b>Care for hands and feet</b><span>Foot soaks, cracked heels and spa pedicures at home with VOESH.</span></li></ul><a class="lstart" href="learn/biolight-home-regimen-for-pigmentation.html"><span class="eyebrow">New here? Start with</span><b>Repêchage Starter Kits: Which One to Choose</b><span class="link">Read it first</span></a></section><div class="topics"><div class="topic"><a class="ph" href="learn/topics/seaweed-and-repechage.html"><img src="img/art-what-does-seaweed-do-for-skin.webp" alt="" loading="lazy"></a>
 <div class="bd"><span class="cnt">4 guides</span><h2><a href="learn/topics/seaweed-and-repechage.html">Seaweed and Repêchage</a></h2><p>What seaweed does for skin, who Repêchage is, and how to choose your first kit.</p>
 <ul><li>Seaweed skin care</li><li>About Repêchage</li></ul><a class="link" href="learn/topics/seaweed-and-repechage.html">See all 4 guides</a></div></div><div class="topic"><a class="ph" href="learn/topics/facials-and-treatments.html"><img src="img/art-repechage-four-layer-facial.webp" alt="" loading="lazy"></a>
 <div class="bd"><span class="cnt">6 guides</span><h2><a href="learn/topics/facials-and-treatments.html">Facials and treatments</a></h2><p>What happens in a professional facial, how peels differ, and how to keep results going at home.</p>
