@@ -145,7 +145,7 @@
   }
   function itemHTML(x) {
     var p = P[x.id];
-    return '<div class="ci"><a href="' + root + p.u + '"><img src="' + root + p.i + '" alt="" loading="lazy"></a><div><b>' + p.n + '</b>' +
+    return '<div class="ci"><a href="' + root + p.u + '" aria-label="' + String(p.n).replace(/"/g, "&quot;") + '"><img src="' + root + p.i + '" alt="" loading="lazy"></a><div><b>' + p.n + '</b>' +
       '<span class="muted small">' + (p.s || "") + '</span><div><span class="q"><button data-q="' + x.id + '" data-d="-1" aria-label="Fewer">−</button><span>' + x.q +
       '</span><button data-q="' + x.id + '" data-d="1" aria-label="More">+</button></span><button class="rm" data-q="' + x.id + '" data-d="rm">Remove</button></div></div>' +
       '<b>' + inr(p.p * x.q) + '</b></div>';
