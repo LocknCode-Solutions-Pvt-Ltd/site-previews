@@ -1,0 +1,53 @@
+/* v2 layer (round 9, 12 Nov 2026): motion system + larger type + calmer chrome. Loaded only by the -v2 previews. */
+.v2 .sec-h{border-top:0;padding-top:0;margin-bottom:34px}
+.v2 h2{font-size:clamp(30px,3.6vw,50px);letter-spacing:-.02em;line-height:1.06}
+.v2 .sec{padding:92px 0}.v2 .sec.tight{padding:68px 0}
+@media(max-width:720px){.v2 .sec{padding:54px 0}.v2 .sec.tight{padding:42px 0}.v2 .sec-h{margin-bottom:22px}}
+.v2 .sec-h p{font-size:17px;max-width:560px}
+.v2 .eyebrow{letter-spacing:.2em;font-size:11.5px}
+
+/* reveal on scroll: hidden only when the script is running, so content never depends on it */
+html.v2js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+html.v2js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html.v2js .rv{opacity:1;transform:none;transition:none}}
+
+/* product cards: bigger pack, second photo on hover, quiet lift */
+.v2 .card .ph{border-radius:var(--r-lg)}
+.v2 .card .ph img{transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .5s}
+.v2 .card .ph .alt2{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04)}
+@media(hover:hover){.v2 .card:hover .ph .alt2{opacity:1;transform:none}}
+.v2 .card h3{font-size:16.5px}
+.v2 .card .bestfor{letter-spacing:.12em;font-size:10.5px}
+
+/* buttons */
+.v2 .btn,.v2 .add{transition:background .25s,color .25s,border-color .25s,transform .15s,box-shadow .25s}
+.v2 .btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(20,30,40,.14)}
+.v2 .add.ok{background:var(--head-color);border-color:var(--head-color);color:#fff}
+.v2 [data-open="cart"].bump{animation:v2bump .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes v2bump{40%{transform:scale(1.28)}}
+
+/* tabs */
+.v2 .tabbar{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 0 28px}
+.v2 .tabbar::-webkit-scrollbar{display:none}
+.v2 .tabbar button{flex:none;min-height:44px;padding:0 20px;border:1.5px solid var(--line-strong);background:transparent;border-radius:var(--tab-r,999px);font:inherit;font-weight:700;font-size:15px;color:var(--ink-2);cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.v2 .tabbar button[aria-selected="true"]{background:var(--head-color);border-color:var(--head-color);color:#fff}
+.v2 .tabp[hidden]{display:none}
+.v2 .tabp{animation:v2fade .5s ease}
+@keyframes v2fade{from{opacity:0;transform:translateY(10px)}}
+.v2 .sec-h.withtabs{align-items:center;flex-wrap:wrap}
+.v2 .sec-h.withtabs .tabbar{margin:0}
+@media(max-width:720px){.v2 .sec-h.withtabs{display:block}.v2 .sec-h.withtabs .tabbar{margin:14px -16px 0;padding:0 16px}}
+
+/* big numbers */
+.v2 .statrow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line-strong);margin-top:44px}
+.v2 .statrow div{padding:26px 22px 4px 0;border-right:1px solid var(--line);margin-right:22px}
+.v2 .statrow div:last-child{border-right:0;margin-right:0}
+.v2 .statrow b{display:block;font-family:var(--head);font-weight:var(--head-weight,600);color:var(--head-color);font-size:clamp(38px,4.6vw,68px);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.v2 .statrow b small{font-size:.42em;letter-spacing:0;margin-left:3px}
+.v2 .statrow div>span{display:block;margin-top:10px;color:var(--ink-2);font-size:14.5px;max-width:220px}
+@media(max-width:820px){.v2 .statrow{grid-template-columns:1fr 1fr}.v2 .statrow div{padding:20px 12px 14px 0;margin-right:12px}.v2 .statrow div:nth-child(2){border-right:0;margin-right:0}.v2 .statrow div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+/* header gets lighter as you scroll */
+.v2 .hdr{transition:box-shadow .3s,background .3s}
+.v2 .hdr.scrolled{background:color-mix(in srgb,var(--hdr-bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px)}
+.v2 .facts,.v2 .proof{border-top:0}
