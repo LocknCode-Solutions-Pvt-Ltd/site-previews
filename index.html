@@ -18,6 +18,7 @@ button{margin-top:12px;width:100%;height:50px;border:0;border-radius:12px;backgr
 .g a:hover{transform:translateY(-3px)}
 .g img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
 .g div{padding:18px 20px}.g b{font-size:20px}.g span{display:block;color:#a9b6c6;font-size:14px;margin-top:4px}
+.nw{font-style:normal;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:#e9eef5;color:#0f1720;border-radius:6px;padding:3px 7px;margin-left:6px;vertical-align:middle}
 @media(max-width:700px){.g{grid-template-columns:1fr}}
 </style></head><body><div class="top">LOCKNCODE</div><main>
 <form class="box" id="f"><h1>Website previews</h1><p>Design previews of the proposed Skinolin and JB Skincare stores, prepared by LockNCode. Enter the password you were given.</p>
@@ -25,7 +26,9 @@ button{margin-top:12px;width:100%;height:50px;border:0;border-radius:12px;backgr
 <div class="err" id="err">That password did not work. Please try again.</div></form>
 <section class="brands" id="b"><h1>Choose a preview</h1><p>Both stores work on a phone and a laptop. Nothing here takes orders or payments.</p>
 <div class="g"><a href="skinolin/index.html"><img src="skinolin/img/chooser.webp" alt="" style="object-position:62% 50%"><div><b>Skinolin</b><span>Proposed store: waterless SPF 50, concern shopping, reviews up front</span></div></a>
-<a href="jbskincare/index.html"><img src="jbskincare/img/hero-rep-wide.webp" alt=""><div><b>JB Skincare</b><span>Proposed store: India's home of Repêchage and VOESH</span></div></a></div></section>
+<a href="jbskincare/index.html"><img src="jbskincare/img/hero-rep-wide.webp" alt=""><div><b>JB Skincare</b><span>Proposed store: India's home of Repêchage and VOESH</span></div></a>
+<a href="skinolin-v2/index.html"><img src="skinolin-v2/img/hero-pollution-tall.webp" alt=""><div><b>Skinolin v2 <i class="nw">New</i></b><span>12 November: animated hero, larger product photos, shorter home page</span></div></a>
+<a href="jbskincare-v2/index.html"><img src="jbskincare-v2/img/slide-vitacura-poster.webp" alt=""><div><b>JB Skincare v2 <i class="nw">New</i></b><span>12 November: full-width hero, official packshots, shorter home page</span></div></a></div></section>
 </main><script>
 var H="10cd3ee3d084acc01fd377fdb450decd824ceb0e53153d8b14065a3501eeaf11";
 function go(){var n=new URLSearchParams(location.search).get("next");if(n&&n.indexOf(location.origin)===0){location.replace(n);return}document.getElementById("f").style.display="none";document.getElementById("b").style.display="block"}
