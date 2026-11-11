@@ -321,7 +321,7 @@
   if (vOn && vOn.parentNode.scrollWidth > vOn.parentNode.clientWidth) vOn.parentNode.scrollLeft = vOn.offsetLeft - vOn.parentNode.offsetLeft - 16;
   var mainAdd = $("#mainAdd"), bar = $(".stickybar");
   if (mainAdd && bar) {
-    var sb = function () { bar.classList.toggle("on", mainAdd.getBoundingClientRect().bottom < 0); };
+    var sb = function () { var r = mainAdd.getBoundingClientRect(); bar.classList.toggle("on", r.bottom < 0 || r.top > window.innerHeight); };
     window.addEventListener("scroll", sb, { passive: true }); window.addEventListener("resize", sb); sb();
   }
 

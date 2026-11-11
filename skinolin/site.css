@@ -578,3 +578,9 @@ html.ss-open{overflow:hidden}
 .ss-card .rw{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto}.ss-card .add{padding:8px 12px;font-size:13.5px;min-height:40px;text-decoration:none;display:inline-flex;align-items:center}
 @media(max-width:720px){.ss{padding:0;align-items:flex-end}.ss-panel{max-height:94dvh;border-radius:18px 18px 0 0;padding:22px 16px 20px}.ss-tips{grid-template-columns:1fr}.ss-res{grid-template-columns:1fr}.ss-res .ss-shot{width:min(240px,70%);margin:0 auto}
 .ss-grid{grid-template-columns:1fr 1fr}.ss-act .btn{flex:1 1 auto;justify-content:center;text-align:center}}
+
+/* round 6: audit GL-070 */
+.card .add{min-height:44px}
+.cattiles{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}.cattiles a{display:flex;flex-direction:column;gap:8px;text-align:center;font-weight:700;color:var(--ink);text-decoration:none}
+.cattiles span{display:block;aspect-ratio:1;border-radius:var(--r);overflow:hidden;background:var(--pk-bg,var(--soft))}.cattiles img{width:100%;height:100%;object-fit:cover}
+@media(max-width:900px){.cattiles{grid-template-columns:repeat(3,1fr);gap:10px}.cattiles a{font-size:13.5px}}
