@@ -161,10 +161,12 @@
 .calls li::after{background:var(--line-strong)}.calls .c0::before,.calls .c1::before,.calls .c2::before,.calls .c3::before{background:#fff;border:2px solid var(--head-color);width:9px;height:9px;top:5px}
 .calls b::after{content:"";display:block;width:26px;height:2px;background:var(--accent);margin:5px 0 0}
 .calls .c0 b::after,.calls .c2 b::after{margin-left:auto}
-@media(max-width:620px){.calls b::after,.calls .c0 b::after,.calls .c2 b::after{margin-left:0}}
+.calls .ci{position:static;left:auto;top:auto;transform:none;filter:none;display:block;width:58px;height:58px;border-radius:50%;object-fit:cover;margin:0 0 8px;box-shadow:0 0 0 3px #fff,0 6px 14px rgba(0,0,0,.10)}.calls .c0 .ci,.calls .c2 .ci{margin-left:auto}
+.calls .c0,.calls .c1{top:0}.calls .c2,.calls .c3{top:196px}.calls li::after{top:75px}.calls .c0::before,.calls .c1::before,.calls .c2::before,.calls .c3::before{top:71px}
+.sfig{height:470px}
+@media(max-width:620px){.calls b::after,.calls .c0 b::after,.calls .c2 b::after{margin-left:0}.sfig{height:auto}.calls .c0 .ci,.calls .c2 .ci{margin-left:0}.calls .ci{width:48px;height:48px}}
 .diwali.holiday h2{color:#7A1F12}.diwali.holiday .eyebrow{color:#2f5d3a}
-.diwali.holiday{background:#F7ECD9 var(--diw) center top/100% auto no-repeat;padding-top:calc(13vw + 10px)}
-@media(max-width:720px){.diwali.holiday{padding-top:96px;background:#F7ECD9 var(--diwt) center top/auto 84px repeat-x}}
+.diwali.holiday{background:#F5E3CE var(--diw) center top/auto clamp(104px,21vw,290px) no-repeat;padding-top:clamp(112px,21.5vw,298px)}
 
 @media(max-width:640px){.probanner{display:none}.prophone{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;border-radius:var(--r-lg);padding:28px 18px;background:linear-gradient(135deg,#eef2f6,#c5d1dd)}.prophone img{height:26px;width:auto}.prophone b{font-family:var(--head);font-size:28px;color:var(--navy);letter-spacing:.02em;text-transform:uppercase;line-height:1.1}.prophone i{font-family:var(--head);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.25);font-size:16px}}
 </style>
