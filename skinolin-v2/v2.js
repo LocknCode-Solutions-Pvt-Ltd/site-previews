@@ -93,13 +93,13 @@
       var clear = ease((t - 2.1) / 1.5);          /* 0 = city haze everywhere, 1 = cleared around the packs */
       var k = 0.05 + 0.95 * clear;                /* dome size */
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
-      /* haze: a warm grey veil, thick at first, then thin */
-      var veil = 0.46 * (1 - clear) + 0.07;
-      ctx.fillStyle = "rgba(108,98,90," + veil.toFixed(3) + ")"; ctx.fillRect(0, 0, W, H);
+      /* haze: a pale, cool veil, thick at first, then thin (24 Nov: founder wants the hero lighter and paler, packs standing out) */
+      var veil = 0.42 * (1 - clear) + 0.16;
+      ctx.fillStyle = "rgba(238,239,242," + veil.toFixed(3) + ")"; ctx.fillRect(0, 0, W, H);
       for (var j = 0; j < puffs.length; j++) {
         var q = puffs[j]; q.x += q.v * dt; if (q.x - q.r > W) q.x = -q.r;
         var g = ctx.createRadialGradient(q.x, q.y, 0, q.x, q.y, q.r); var a = q.a * (1.5 - 0.9 * clear);
-        g.addColorStop(0, "rgba(96,88,82," + a.toFixed(3) + ")"); g.addColorStop(1, "rgba(96,88,82,0)"); ctx.fillStyle = g; ctx.fillRect(q.x - q.r, q.y - q.r, q.r * 2, q.r * 2);
+        g.addColorStop(0, "rgba(206,208,214," + a.toFixed(3) + ")"); g.addColorStop(1, "rgba(206,208,214,0)"); ctx.fillStyle = g; ctx.fillRect(q.x - q.r, q.y - q.r, q.r * 2, q.r * 2);
       }
       /* specks of dust and soot, blown toward the packs */
       for (var i = 0; i < parts.length; i++) {
@@ -110,7 +110,7 @@
           var dx = p.x - dome.cx, dy = p.y - dome.cy, d = Math.sqrt(dx * dx + dy * dy) || 1; p.x += dx / d * 46 * dt - p.vx * dt * 0.9; p.y += dy / d * 46 * dt - 14 * dt; p.life -= dt * 1.9;
         }
         if (p.life <= 0 || p.x > W + 20 || p.y > H + 20 || p.y < -30) { spawn(p, false); continue; }
-        ctx.globalAlpha = p.a * p.life * (1 - 0.35 * clear); ctx.fillStyle = "#4a403a"; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832); ctx.fill();
+        ctx.globalAlpha = 0.75 * p.a * p.life * (1 - 0.35 * clear); ctx.fillStyle = "#7a7c84"; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832); ctx.fill();
       }
       ctx.globalAlpha = 1;
       /* clean air around the packs: wipe the haze inside the dome */

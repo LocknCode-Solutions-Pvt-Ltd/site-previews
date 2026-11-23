@@ -181,10 +181,10 @@
 .v2 .add{border-radius:999px}
 /* hero */
 .v2 .hero .smogfx{position:absolute;z-index:0;pointer-events:none;left:0;top:0}
-.v2 .hero.smog::after{background:linear-gradient(90deg,rgba(250,243,235,.86) 0%,rgba(250,243,235,.58) 30%,rgba(250,243,235,0) 56%)}
+.v2 .hero.smog{background:#eef0f3}.v2 .hero.smog::after{background:linear-gradient(90deg,rgba(248,248,250,.86) 0%,rgba(248,248,250,.58) 30%,rgba(248,248,250,0) 56%)}
 .v2 .hero picture img{height:min(86vh,780px);min-height:560px}
 .v2 .hero h1{font-size:clamp(46px,6.4vw,96px);line-height:.98;letter-spacing:-.035em;font-weight:500;margin:16px 0 20px}
-.v2 .hero h1 em{font-style:italic;font-weight:400;color:#8a5724}
+.v2 .hero h1 em{font-style:italic;font-weight:400;color:#2f5d8a}
 .v2 .hero p.l{font-size:19px;max-width:440px;line-height:1.5}
 .v2 .hero .zero.city{background:rgba(255,255,255,.8);backdrop-filter:blur(6px)}
 .v2 .hero .box>*{animation:v2up .9s cubic-bezier(.2,.7,.2,1) both}
@@ -194,11 +194,17 @@
 @media(prefers-reduced-motion:reduce){.v2 .hero .box>*{animation:none}}
 .v2 .hero .fxr{position:absolute;left:32px;bottom:16px;z-index:2;border:0;background:rgba(255,255,255,.72);backdrop-filter:blur(6px);color:var(--navy);font:inherit;font-size:12.5px;font-weight:700;padding:7px 12px;border-radius:999px;cursor:pointer;display:none}
 .v2 .hero.fx-on .fxr{display:inline-flex;gap:6px;align-items:center}
-@media(max-width:900px){.v2 .hero picture img{height:auto;min-height:0}.v2 .hero h1{font-size:46px;margin:0 0 10px}.v2 .hero .fxr{display:none!important}.v2 .hero.smog{background:#f7f2ea}}
+@media(max-width:900px){.v2 .hero picture img{height:auto;min-height:0}.v2 .hero h1{font-size:46px;margin:0 0 10px}.v2 .hero .fxr{display:none!important}.v2 .hero.smog{background:#f4f5f7}}
 @media(prefers-reduced-motion:reduce){.v2 .hero .fxr{display:none!important}}
-/* cards: the pack fills the card */
-.v2 .card .ph img.pk{transform:scale(1.52);transform-origin:50% 55%}
-@media(hover:hover){.v2 .card:hover .ph img.pk{transform:scale(1.6)}}
+/* cards (24 Nov, founder call 19 Nov): plain white behind every pack, taller 4:5 cards so the packs are bigger,
+   pack height follows pack size (30 ml serum < 50 ml SPF < 100 ml cleanser), all drawn into the image by white_cards.py */
+.v2{--pk-bg:#fff}
+.v2 .card .ph{aspect-ratio:4/5;background:#fff;box-shadow:inset 0 0 0 1px #ECEAE6}
+.v2 .card .ph img.pk,.v2 article.card .ph img.pk{transform:none;transform-origin:50% 100%}
+@media(hover:hover){.v2 .card:hover .ph img.pk{transform:scale(1.04)}}
+.v2 .pstep .pic{background:#fff;box-shadow:inset 0 0 0 1px #ECEAE6}
+.v2 .sfig::before{background:radial-gradient(circle,#F3F3F1 0%,#F3F3F1 58%,transparent 72%)}
+.v2 .tile{background:#fff;box-shadow:inset 0 0 0 1px #ECEAE6}.v2 .tile:hover{background:#FAFAF8}
 .v2 .stars{font-size:13px}
 /* watch */
 .v2 .watch2{display:grid;grid-template-columns:minmax(220px,.8fr) 3fr;gap:44px;align-items:center}
@@ -263,9 +269,9 @@
   </div>
 </div></header>
 <main><div class="wrap"><div class="crumbs"><a href="../index.html">Home</a> / <a href="../shop.html?cat=serums">Serums</a> / Aquaglow Hydrating Serum</div>
-<div class="pdp"><div class="pdp-gal"><div class="gal-main"><img src="../img/card-aquaglow-hydrating-serum-for-dry-skin.webp" alt="Aquaglow Hydrating Serum" width="1000" height="1000" fetchpriority="high"></div><div class="gal-strip"><button class="on" data-src="../img/card-aquaglow-hydrating-serum-for-dry-skin.webp" data-alt="Aquaglow Hydrating Serum" aria-label="Photo 1"><img src="../img/card-aquaglow-hydrating-serum-for-dry-skin.webp" alt=""></button><button class="" data-src="../img/g-aquaglow-hydrating-serum-for-dry-skin-0.webp" data-alt="Aquaglow Hydrating Serum" aria-label="Photo 2"><img src="../img/g-aquaglow-hydrating-serum-for-dry-skin-0.webp" alt=""></button><button class="" data-src="../img/g-aquaglow-hydrating-serum-for-dry-skin-1.webp" data-alt="Aquaglow Hydrating Serum" aria-label="Photo 3"><img src="../img/g-aquaglow-hydrating-serum-for-dry-skin-1.webp" alt=""></button><button class="" data-src="../img/g-aquaglow-hydrating-serum-for-dry-skin-2.webp" data-alt="Aquaglow Hydrating Serum" aria-label="Photo 4"><img src="../img/g-aquaglow-hydrating-serum-for-dry-skin-2.webp" alt=""></button><button class="" data-src="../img/g-aquaglow-hydrating-serum-for-dry-skin-3.webp" data-alt="Aquaglow Hydrating Serum" aria-label="Photo 5"><img src="../img/g-aquaglow-hydrating-serum-for-dry-skin-3.webp" alt=""></button><button class="" data-src="../img/g-aquaglow-hydrating-serum-for-dry-skin-4.webp" data-alt="Aquaglow Hydrating Serum" aria-label="Photo 6"><img src="../img/g-aquaglow-hydrating-serum-for-dry-skin-4.webp" alt=""></button></div></div>
+<div class="pdp"><div class="pdp-gal"><div class="gal-main"><img src="../img/card-aquaglow-hydrating-serum-for-dry-skin.webp" alt="Aquaglow Hydrating Serum" width="1000" height="1000" fetchpriority="high"></div><div class="gal-strip"><button class="on" data-src="../img/card-aquaglow-hydrating-serum-for-dry-skin.webp" data-alt="Aquaglow Hydrating Serum" aria-label="Photo 1"><img src="../img/card-aquaglow-hydrating-serum-for-dry-skin.webp" alt=""></button><button class="" data-src="../img/ga-aquaglow-hydrating-serum-for-dry-skin-0.webp" data-alt="Aquaglow Hydrating Serum" aria-label="Photo 2"><img src="../img/ga-aquaglow-hydrating-serum-for-dry-skin-0.webp" alt=""></button><button class="" data-src="../img/ga-aquaglow-hydrating-serum-for-dry-skin-1.webp" data-alt="Aquaglow Hydrating Serum" aria-label="Photo 3"><img src="../img/ga-aquaglow-hydrating-serum-for-dry-skin-1.webp" alt=""></button><button class="" data-src="../img/ga-aquaglow-hydrating-serum-for-dry-skin-2.webp" data-alt="Aquaglow Hydrating Serum" aria-label="Photo 4"><img src="../img/ga-aquaglow-hydrating-serum-for-dry-skin-2.webp" alt=""></button><button class="" data-src="../img/ga-aquaglow-hydrating-serum-for-dry-skin-3.webp" data-alt="Aquaglow Hydrating Serum" aria-label="Photo 5"><img src="../img/ga-aquaglow-hydrating-serum-for-dry-skin-3.webp" alt=""></button><button class="" data-src="../img/ga-aquaglow-hydrating-serum-for-dry-skin-4.webp" data-alt="Aquaglow Hydrating Serum" aria-label="Photo 6"><img src="../img/ga-aquaglow-hydrating-serum-for-dry-skin-4.webp" alt=""></button><button class="" data-src="../img/ga-aquaglow-hydrating-serum-for-dry-skin-5.webp" data-alt="Aquaglow Hydrating Serum" aria-label="Photo 7"><img src="../img/ga-aquaglow-hydrating-serum-for-dry-skin-5.webp" alt=""></button></div></div>
 <div class="buy" data-qty-scope><span class="eyebrow">Serum · 30 ml</span><h1>Aquaglow Hydrating Serum</h1>
-<a href="#reviews"><span class="stars new">Be the first to review</span></a>
+<a href="#reviews"><span class="stars" aria-label="5.0 out of 5"><i style="--pct:100%"></i>5.0 <small>(1)</small></span></a>
 <div class="pp"><b>₹800</b><span>MRP inclusive of all taxes · ₹267 per 10 ml</span></div>
 <p class="lede">A hydrating serum with hyaluronic acid and niacinamide that helps dry skin look plump and dewy.</p>
 <ul class="benefits"><li>Deep hydration for a plump, dewy look</li><li>With hyaluronic acid, niacinamide and lemongrass water</li><li>Layers easily under moisturizer</li></ul>
@@ -288,7 +294,8 @@ Niacinamide Daily Cleanser + Aquaglow Hydrating Serum<br><span style="white-spac
 </div></div>
 
 
-<section class="sec tight" id="reviews"><div class="sec-h"><div><h2>Customer reviews</h2></div></div><div class="banner-note">No reviews yet. Every buyer gets a review request 7 days after delivery.</div></section>
+<section class="sec tight" id="reviews"><div class="sec-h"><div><h2>Customer reviews</h2><p><span class="stars" aria-label="5.0 out of 5"><i style="--pct:100%"></i>5.0 <small>(1)</small></span></p></div></div><div class="revs"><div class="rev"><span class="stars"><i style="--pct:100%"></i></span><p>“I&#x27;ve been liking this serum. It feels light on my skin, absorbs quickly and keeps my skin feeling soft and hydrated. Would definitely buy it again!”</p><div class="who">Gautam Kumar · November 2026</div>
+<a class="prod" href="../p/aquaglow-hydrating-serum-for-dry-skin.html"><img src="../img/card-aquaglow-hydrating-serum-for-dry-skin.webp" alt="">Aquaglow Hydrating Serum</a></div></div></section>
 <section class="sec tight"><div class="sec-h"><div><h2>Pairs well with</h2></div></div><div class="grid"><article class="card" data-cat="cleansers" data-concern="barrier oily dull dry" data-price="600" data-rank="0" data-rating="5.0">
 <a class="ph" href="../p/niacinamide-daily-cleanser.html"><img class="full pk" src="../img/card-niacinamide-daily-cleanser.webp" alt="Niacinamide Daily Cleanser" loading=lazy width="640" height="640"><img class="alt2" src="../img/alt-niacinamide-daily-cleanser.webp" alt="" loading="lazy" width="640" height="640"></a>
 <div class="bd"><span class="bestfor"><span class="bf">Best for: </span>All skin types</span><h3><a href="../p/niacinamide-daily-cleanser.html">Niacinamide Daily Cleanser</a></h3>
